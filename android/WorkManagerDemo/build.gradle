@@ -2,22 +2,30 @@
 
 buildscript {
     ext.kotlin_version = '1.2.41'
-    ext.gradle_version = '3.2.0-alpha15'
+    ext.gradle_version = '3.2.0-alpha16'
 
     ext.appId = "com.demo.workmanager"
-    ext.compileSdkVersion = 27
+    ext.compileSdkVersion = "android-P"
     ext.buildToolsVersion = "28.0.0-rc2"
-    ext.minSdkVersion = 15
+    ext.minSdkVersion = 16
     ext.targetSdkVersion = 27
     ext.versionName = "1.0.0"
     ext.versionCode = 1
-    ext.constraint = "1.1.0"
-    ext.supportLib7 = "27.1.1"
-    ext.live = "1.1.1"
+
+    ext.constraint = "+"
+    ext.appcompat = "+"
+    ext.live = "+"
+    ext.test_runner = "+"
+    ext.espress = "+"
+    ext.work = "+"
+    ext.room = "+"
+    ext.annotation = "+"
+
     ext.junit = "4.12"
     ext.runner = "android.support.test.runner.AndroidJUnitRunner"
-    ext.test_runner = "1.0.2"
-    ext.espress = "3.0.2"
+    ext.gson = "2+"
+    ext.retrofit = "2+"
+    ext.curl = "0.1"
 
     repositories {
         google()
