@@ -1,7 +1,10 @@
 package com.demo.workmanager.ui.main
 
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import com.demo.workmanager.domain.ProductsData
 
 class MainViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+    val productData = MutableLiveData<ProductsData>()
+
 }

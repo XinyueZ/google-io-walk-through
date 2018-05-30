@@ -2,7 +2,7 @@ package com.demo.workmanager.ext
 
 import android.content.Context
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import kotlin.reflect.KClass
 
 fun <FRG : Fragment> KClass<FRG>.newInstance(

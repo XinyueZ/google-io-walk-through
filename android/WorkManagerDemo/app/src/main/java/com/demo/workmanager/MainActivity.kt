@@ -1,7 +1,7 @@
 package com.demo.workmanager
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.demo.workmanager.ext.newInstance
 import com.demo.workmanager.ui.main.MainFragment
 
