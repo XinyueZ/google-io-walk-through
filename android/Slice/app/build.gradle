@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId rootProject.ext.appId
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        testInstrumentationRunner rootProject.ext.runner
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        debug {
+            testCoverageEnabled = true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    lintOptions {
+        htmlReport false
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}"
+    implementation "androidx.appcompat:appcompat:${appcompat}"
+    implementation "androidx.constraintlayout:constraintlayout:${constraint}"
+    implementation "androidx.constraintlayout:constraintlayout-solver:${constraint}"
+    implementation "androidx.lifecycle:lifecycle-extensions:${live}"
+    implementation "androidx.lifecycle:lifecycle-common-java8:${live}"
+    testImplementation "androidx.arch.core:core-testing:${live}"
+    implementation "androidx.annotation:annotation:${annotation}"
+    implementation "androidx.room:room-runtime:${room}"
+    kapt "androidx.room:room-compiler:${room}"
+    testImplementation "androidx.room:room-testing:${room}"
+    androidTestImplementation "androidx.test:runner:${test_runner}"
+    androidTestImplementation "androidx.test.espresso:espresso-core:${espress}"
+
+    testImplementation "junit:junit:${junit}"
+
+    implementation "com.google.code.gson:gson:${gson}"
+    implementation "com.squareup.retrofit2:retrofit:${retrofit}"
+    implementation "com.squareup.retrofit2:converter-gson:${retrofit}"
+    implementation "com.github.grapesnberries:curlloggerinterceptor:${curl}"
+}
