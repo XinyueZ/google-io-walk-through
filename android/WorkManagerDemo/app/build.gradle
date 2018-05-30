@@ -35,6 +35,9 @@ android {
         }
     }
 
+    dataBinding {
+        enabled = true
+    }
 
     lintOptions {
         htmlReport false
