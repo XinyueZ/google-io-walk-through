@@ -7,19 +7,20 @@ buildscript {
 
         appId = "com.demo.slice"
         compileSdkVersion = 28
-        minSdkVersion = 16
+        minSdkVersion = 19
         targetSdkVersion = 28
         versionName = "1.0.0"
         versionCode = 1
 
         constraint = "+"
-        appcompat = "+"
+        appcompat = "1.0.0-beta01"
         live = "+"
         test_runner = "+"
         espress = "+"
         work = "+"
         room = "+"
         annotation = "+"
+        slice = "+"
 
         junit = "4.12"
         runner = "android.support.test.runner.AndroidJUnitRunner"
