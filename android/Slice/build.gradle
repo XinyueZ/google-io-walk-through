@@ -27,6 +27,11 @@ buildscript {
         gson = "2+"
         retrofit = "2+"
         curl = "0.1"
+
+        glide = "4.7.1"
+
+        coroutine = "0.23.4"
+        retrofit_coroutine = "1.0.0"
     }
 
     repositories {

@@ -21,7 +21,7 @@ data class ProductsItem(@SerializedName("clickUrl")
                         @SerializedName("sizes")
                         val sizes: List<Sizes>?,
                         @SerializedName("price")
-                        val price: Int = 0,
+                        val price: Float = 0f,
                         @SerializedName("currency")
                         val currency: String = "",
                         @SerializedName("inStock")
@@ -39,7 +39,7 @@ data class ProductsItem(@SerializedName("clickUrl")
                         @SerializedName("image")
                         val image: Image,
                         @SerializedName("salePrice")
-                        val salePrice: Int = 0,
+                        val salePrice: Float = 0f,
                         @SerializedName("retailer")
                         val retailer: Retailer,
                         @SerializedName("salePriceLabel")
