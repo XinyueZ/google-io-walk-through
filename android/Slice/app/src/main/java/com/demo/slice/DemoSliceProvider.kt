@@ -2,6 +2,7 @@ package com.demo.slice
 
 import android.app.PendingIntent
 import android.content.Intent
+import android.content.Intent.ACTION_VIEW
 import android.graphics.Bitmap
 import android.net.Uri
 import androidx.core.graphics.drawable.IconCompat
@@ -23,12 +24,12 @@ import kotlinx.coroutines.experimental.withContext
 
 class DemoSliceProvider : SliceProvider() {
 
-    private fun createActivityAction(): SliceAction {
-        with(Intent(context, MainActivity::class.java)) {
+    private fun createActivityAction(intent: Intent): SliceAction {
+        with(intent) {
             return SliceAction.create(
                 PendingIntent.getActivity(context, 0, this, 0),
                 IconCompat.createWithResource(context, R.drawable.ic_slideshow),
-                ListBuilder.ICON_IMAGE,
+                ListBuilder.SMALL_IMAGE,
                 "Enter app"
             )
         }
@@ -37,7 +38,7 @@ class DemoSliceProvider : SliceProvider() {
     override fun onCreateSliceProvider(): Boolean = true
 
     override fun onBindSlice(sliceUri: Uri): Slice {
-        val activityAction = createActivityAction()
+        val activityAction = createActivityAction(Intent(context, MainActivity::class.java))
         return when (sliceUri.path) {
             "/hello" -> sliceHelloWorld(sliceUri, activityAction)
             "/grid" -> sliceGrid(sliceUri, activityAction)
@@ -70,16 +71,7 @@ class DemoSliceProvider : SliceProvider() {
                 list(context, sliceUri, ListBuilder.INFINITY) {
                     header {
                         title = "Fashion"
-                        primaryAction = SliceAction.create(
-                            PendingIntent.getActivity(
-                                context,
-                                0,
-                                Intent(context, MainActivity::class.java),
-                                0
-                            ),
-                            IconCompat.createWithResource(context, R.drawable.ic_slideshow),
-                            ListBuilder.ICON_IMAGE, "Fashion"
-                        )
+                        summary = "Show some cloths here..."
                     }
                     gridRow {
                         products?.map { domain ->
@@ -87,14 +79,22 @@ class DemoSliceProvider : SliceProvider() {
                                 Glide.with(context).asBitmap().load(domain.image.sizes.best!!.url)
                                     .submit().get()
                             }.run {
-                                DomainItem(this, domain.name, domain.priceLabel)
+                                DomainItem(this, domain.name, domain.priceLabel, domain.clickUrl)
                             }
                         }?.forEach { domainItem ->
                             cell {
                                 addImage(
                                     IconCompat.createWithBitmap(
                                         domainItem.bitmap
-                                    ), SliceHints.LARGE_IMAGE
+                                    ), SliceHints.SMALL_IMAGE
+                                )
+                                contentIntent = PendingIntent.getActivity(
+                                    context,
+                                    0,
+                                    Intent(ACTION_VIEW).apply {
+                                        data = Uri.parse(domainItem.clickUrl)
+                                    },
+                                    0
                                 )
                                 addText(domainItem.text)
                             }
@@ -119,4 +119,4 @@ class DemoSliceProvider : SliceProvider() {
     }
 }
 
-class DomainItem(val bitmap: Bitmap, val title: String, val text: String)
+class DomainItem(val bitmap: Bitmap, val title: String, val text: String, val clickUrl: String)
