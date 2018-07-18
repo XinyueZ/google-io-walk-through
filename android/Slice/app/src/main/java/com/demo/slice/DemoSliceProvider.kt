@@ -143,7 +143,13 @@ class DemoSliceProvider : SliceProvider() {
                                 Glide.with(context).asBitmap().load(domain.image.sizes.best!!.url)
                                     .submit().get()
                             }.run {
-                                DomainItem(this, domain.name, domain.priceLabel, domain.clickUrl)
+                                DomainItem(
+                                    this,
+                                    domain.name,
+                                    domain.priceLabel,
+                                    domain.clickUrl,
+                                    domain.description
+                                )
                             }
                         }?.forEach { domainItem ->
                             cell {
