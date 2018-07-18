@@ -24,10 +24,10 @@ import kotlinx.coroutines.experimental.withContext
 
 class DemoSliceProvider : SliceProvider() {
 
-    private fun createActivityAction(intent: Intent): SliceAction {
-        with(intent) {
+    private fun createActivityAction(pending: PendingIntent): SliceAction {
+        with(pending) {
             return SliceAction.create(
-                PendingIntent.getActivity(context, 0, this, 0),
+                this,
                 IconCompat.createWithResource(context, R.drawable.ic_slideshow),
                 ListBuilder.SMALL_IMAGE,
                 "Enter app"
@@ -35,14 +35,27 @@ class DemoSliceProvider : SliceProvider() {
         }
     }
 
+    private fun openAppIntent() =
+        PendingIntent.getActivity(context, 0, Intent(context, MainActivity::class.java), 0)
+
+    private fun openWebIntent(url: String) = PendingIntent.getActivity(
+        context,
+        0,
+        Intent(ACTION_VIEW).apply {
+            data = Uri.parse(url)
+        },
+        0
+    )
+
     override fun onCreateSliceProvider(): Boolean = true
 
     override fun onBindSlice(sliceUri: Uri): Slice {
-        val activityAction = createActivityAction(Intent(context, MainActivity::class.java))
+        val openAppAction = createActivityAction(openAppIntent())
         return when (sliceUri.path) {
-            "/hello" -> sliceHelloWorld(sliceUri, activityAction)
-            "/grid" -> sliceGrid(sliceUri, activityAction)
-            else -> sliceNothing(sliceUri, activityAction)
+            "/hello" -> sliceHelloWorld(sliceUri, openAppAction)
+            "/list" -> sliceList(sliceUri, openAppAction)
+            "/grid" -> sliceGrid(sliceUri, openAppAction)
+            else -> sliceNothing(sliceUri, openAppAction)
         }
     }
 
@@ -62,6 +75,49 @@ class DemoSliceProvider : SliceProvider() {
         }
     }
 
+    private fun sliceList(
+        sliceUri: Uri,
+        activityAction: SliceAction
+    ): Slice {
+        return runBlocking {
+            provideProductsApiService().getArticles(10).await().run {
+                list(context, sliceUri, ListBuilder.INFINITY) {
+                    header {
+                        title = "Fashion"
+                        summary = "Show some cloths here..."
+                        primaryAction = activityAction
+                    }
+                    products?.map { domain ->
+                        withContext(DefaultDispatcher) {
+                            Glide.with(context).asBitmap().load(domain.image.sizes.best!!.url)
+                                .submit().get()
+                        }.run {
+                            DomainItem(
+                                this,
+                                domain.name,
+                                domain.priceLabel,
+                                domain.clickUrl,
+                                domain.description
+                            )
+                        }
+                    }?.forEach { domainItem ->
+                        row {
+                            primaryAction = createActivityAction(openWebIntent(domainItem.clickUrl))
+                            title = domainItem.title
+                            subtitle = domainItem.text
+                            contentDescription = domainItem.description
+                            addEndItem(
+                                IconCompat.createWithBitmap(
+                                    domainItem.bitmap
+                                ), SliceHints.SMALL_IMAGE
+                            )
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     private fun sliceGrid(
         sliceUri: Uri,
         activityAction: SliceAction
@@ -72,6 +128,7 @@ class DemoSliceProvider : SliceProvider() {
                     header {
                         title = "Fashion"
                         summary = "Show some cloths here..."
+                        primaryAction = activityAction
                     }
                     gridRow {
                         products?.map { domain ->
@@ -88,14 +145,7 @@ class DemoSliceProvider : SliceProvider() {
                                         domainItem.bitmap
                                     ), SliceHints.SMALL_IMAGE
                                 )
-                                contentIntent = PendingIntent.getActivity(
-                                    context,
-                                    0,
-                                    Intent(ACTION_VIEW).apply {
-                                        data = Uri.parse(domainItem.clickUrl)
-                                    },
-                                    0
-                                )
+                                contentIntent = openWebIntent(domainItem.clickUrl)
                                 addText(domainItem.text)
                             }
                             primaryAction = activityAction
@@ -119,4 +169,10 @@ class DemoSliceProvider : SliceProvider() {
     }
 }
 
-class DomainItem(val bitmap: Bitmap, val title: String, val text: String, val clickUrl: String)
+class DomainItem(
+    val bitmap: Bitmap,
+    val title: String,
+    val text: String,
+    val clickUrl: String,
+    val description: String = ""
+)
