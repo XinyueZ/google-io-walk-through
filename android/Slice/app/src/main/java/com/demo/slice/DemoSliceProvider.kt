@@ -60,7 +60,8 @@ class DemoSliceProvider : SliceProvider() {
         val openAppAction = createActivityAction(openAppIntent())
         return when (sliceUri.path) {
             "/hello" -> sliceHelloWorld(sliceUri, openAppAction)
-            "/list" -> sliceList(sliceUri, openAppAction)
+            "/list" -> sliceList(sliceUri, openAppAction, setTitleItem = false)
+            "/title-item" -> sliceList(sliceUri, openAppAction, setTitleItem = true)
             "/grid" -> sliceGrid(sliceUri, openAppAction)
             else -> sliceNothing(sliceUri, openAppAction)
         }
@@ -84,7 +85,8 @@ class DemoSliceProvider : SliceProvider() {
 
     private fun sliceList(
         sliceUri: Uri,
-        activityAction: SliceAction
+        activityAction: SliceAction,
+        setTitleItem: Boolean
     ): Slice {
         return runBlocking {
             provideProductsApiService().getArticles(10).await().run {
@@ -108,16 +110,32 @@ class DemoSliceProvider : SliceProvider() {
                             )
                         }
                     }?.forEach { domainItem ->
-                        row {
-                            primaryAction = createActivityAction(openWebIntent(domainItem.clickUrl))
-                            title = domainItem.title
-                            subtitle = domainItem.text
-                            contentDescription = domainItem.description
-                            addEndItem(
-                                IconCompat.createWithBitmap(
-                                    domainItem.bitmap
-                                ), SliceHints.SMALL_IMAGE
-                            )
+                        if (setTitleItem) {
+                            row {
+                                setTitleItem(
+                                    IconCompat.createWithBitmap(
+                                        domainItem.bitmap
+                                    ), SliceHints.SMALL_IMAGE
+                                )
+                                primaryAction =
+                                        createActivityAction(openWebIntent(domainItem.clickUrl))
+                                title = domainItem.title
+                                subtitle = domainItem.text
+                                contentDescription = domainItem.description
+                            }
+                        } else {
+                            row {
+                                primaryAction =
+                                        createActivityAction(openWebIntent(domainItem.clickUrl))
+                                title = domainItem.title
+                                subtitle = domainItem.text
+                                contentDescription = domainItem.description
+                                addEndItem(
+                                    IconCompat.createWithBitmap(
+                                        domainItem.bitmap
+                                    ), SliceHints.SMALL_IMAGE
+                                )
+                            }
                         }
                     }
                 }
