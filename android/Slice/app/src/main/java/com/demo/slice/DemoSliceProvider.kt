@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.Intent.ACTION_VIEW
 import android.graphics.Bitmap
 import android.net.Uri
+import android.util.Log
 import androidx.core.graphics.drawable.IconCompat
 import androidx.slice.Slice
 import androidx.slice.SliceProvider
@@ -46,6 +47,12 @@ class DemoSliceProvider : SliceProvider() {
         },
         0
     )
+
+    override fun onMapIntentToUri(intent: Intent?): Uri {
+        // TODO Should we do something here?
+        Log.d(TAG, "nothing")
+        return super.onMapIntentToUri(intent)
+    }
 
     override fun onCreateSliceProvider(): Boolean = true
 
@@ -166,6 +173,10 @@ class DemoSliceProvider : SliceProvider() {
                 title = "URI not recognized."
             }
         }
+    }
+
+    companion object {
+        private val TAG: String by lazy { DemoSliceProvider::class.java.name }
     }
 }
 
