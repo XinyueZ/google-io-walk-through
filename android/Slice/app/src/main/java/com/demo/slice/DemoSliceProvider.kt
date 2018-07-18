@@ -1,6 +1,8 @@
 package com.demo.slice
 
 import android.app.PendingIntent
+import android.content.ContentResolver
+import android.content.Context
 import android.content.Intent
 import android.content.Intent.ACTION_VIEW
 import android.graphics.Bitmap
@@ -56,7 +58,7 @@ class DemoSliceProvider : SliceProvider() {
 
     override fun onCreateSliceProvider(): Boolean = true
 
-    override fun onBindSlice(sliceUri: Uri): Slice {
+    override fun onBindSlice(sliceUri: Uri): Slice? {
         val openAppAction = createActivityAction(openAppIntent())
         return when (sliceUri.path) {
             "/hello" -> sliceHelloWorld(sliceUri, openAppAction)
@@ -201,6 +203,14 @@ class DemoSliceProvider : SliceProvider() {
 
     companion object {
         private val TAG: String by lazy { DemoSliceProvider::class.java.name }
+
+        fun getUri(context: Context, path: String): Uri {
+            return Uri.Builder()
+                .scheme(ContentResolver.SCHEME_CONTENT)
+                .authority(context.getPackageName())
+                .appendPath(path)
+                .build()
+        }
     }
 }
 
