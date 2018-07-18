@@ -18,7 +18,6 @@ android {
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
 
-        testInstrumentationRunner rootProject.ext.runner
         vectorDrawables.useSupportLibrary = true
     }
 
@@ -52,19 +51,10 @@ dependencies {
     implementation "androidx.constraintlayout:constraintlayout-solver:${constraint}"
     implementation "androidx.lifecycle:lifecycle-extensions:${live}"
     implementation "androidx.lifecycle:lifecycle-common-java8:${live}"
-    testImplementation "androidx.arch.core:core-testing:${live}"
     implementation "androidx.annotation:annotation:${annotation}"
-    implementation "androidx.room:room-runtime:${room}"
-    kapt "androidx.room:room-compiler:${room}"
     implementation "androidx.slice:slice-builders-ktx:${slice}"
 
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutine}"
-
-    testImplementation "androidx.room:room-testing:${room}"
-    androidTestImplementation "androidx.test:runner:${test_runner}"
-    androidTestImplementation "androidx.test.espresso:espresso-core:${espress}"
-
-    testImplementation "junit:junit:${junit}"
 
     implementation "com.google.code.gson:gson:${gson}"
     implementation "com.squareup.retrofit2:retrofit:${retrofit}"
