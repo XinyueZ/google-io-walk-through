@@ -27,7 +27,7 @@ private val retrofitBuilder: Retrofit.Builder by lazy {
         )
 }
 
-fun provideProductsApiService() =
+fun provideProductsApiService(): ProductsApi =
     retrofitBuilder
         .baseUrl("https://api.shopstyle.com/api/v2/")
         .build()
