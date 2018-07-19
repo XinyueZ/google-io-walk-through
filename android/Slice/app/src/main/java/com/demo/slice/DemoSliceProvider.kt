@@ -19,11 +19,6 @@ import androidx.slice.builders.header
 import androidx.slice.builders.list
 import androidx.slice.builders.row
 import androidx.slice.core.SliceHints
-import com.bumptech.glide.Glide
-import com.demo.slice.domain.net.provideProductsApiService
-import kotlinx.coroutines.experimental.DefaultDispatcher
-import kotlinx.coroutines.experimental.runBlocking
-import kotlinx.coroutines.experimental.withContext
 
 class DemoSliceProvider : SliceProvider() {
 
@@ -50,11 +45,7 @@ class DemoSliceProvider : SliceProvider() {
         0
     )
 
-    override fun onMapIntentToUri(intent: Intent?): Uri {
-        // TODO Should we do something here?
-        Log.d(TAG, "nothing")
-        return super.onMapIntentToUri(intent)
-    }
+    override fun onMapIntentToUri(intent: Intent?): Uri = DemoSliceProvider.getUri(context, "hello")
 
     override fun onCreateSliceProvider(): Boolean = true
 
@@ -65,6 +56,11 @@ class DemoSliceProvider : SliceProvider() {
             "/list" -> sliceList(sliceUri, openAppAction, setTitleItem = false)
             "/title-item" -> sliceList(sliceUri, openAppAction, setTitleItem = true)
             "/grid" -> sliceGrid(sliceUri, openAppAction)
+            "/load-data" -> {
+                //TODO Handle [contentResolver.notifyChange] from [DemoService]
+                Log.d(TAG, "/load-data")
+                null
+            }
             else -> sliceNothing(sliceUri, openAppAction)
         }
     }
@@ -90,58 +86,43 @@ class DemoSliceProvider : SliceProvider() {
         activityAction: SliceAction,
         setTitleItem: Boolean
     ): Slice {
-        return runBlocking {
-            provideProductsApiService().getArticles(10).await().run {
-                list(context, sliceUri, ListBuilder.INFINITY) {
-                    header {
-                        title = "Fashion"
-                        summary = "Show some cloths here..."
-                        primaryAction = activityAction
-                    }
-                    products?.map { domain ->
-                        withContext(DefaultDispatcher) {
-                            Glide.with(context).asBitmap().load(domain.image.sizes.best!!.url)
-                                .submit().get()
-                        }.run {
-                            DomainItem(
-                                this,
-                                domain.name,
-                                domain.priceLabel,
-                                domain.clickUrl,
-                                domain.description
+        return list(context, sliceUri, ListBuilder.INFINITY) {
+            header {
+                title = "Fashion"
+                summary = "Show some cloths here..."
+                primaryAction = activityAction
+            }
+            DataSource?.let { itemList ->
+                itemList.forEach { domainItem ->
+                    if (setTitleItem) {
+                        row {
+                            setTitleItem(
+                                IconCompat.createWithBitmap(
+                                    domainItem.bitmap
+                                ), SliceHints.SMALL_IMAGE
                             )
+                            primaryAction =
+                                    createActivityAction(openWebIntent(domainItem.clickUrl))
+                            title = domainItem.title
+                            subtitle = domainItem.text
+                            contentDescription = domainItem.description
                         }
-                    }?.forEach { domainItem ->
-                        if (setTitleItem) {
-                            row {
-                                setTitleItem(
-                                    IconCompat.createWithBitmap(
-                                        domainItem.bitmap
-                                    ), SliceHints.SMALL_IMAGE
-                                )
-                                primaryAction =
-                                        createActivityAction(openWebIntent(domainItem.clickUrl))
-                                title = domainItem.title
-                                subtitle = domainItem.text
-                                contentDescription = domainItem.description
-                            }
-                        } else {
-                            row {
-                                primaryAction =
-                                        createActivityAction(openWebIntent(domainItem.clickUrl))
-                                title = domainItem.title
-                                subtitle = domainItem.text
-                                contentDescription = domainItem.description
-                                addEndItem(
-                                    IconCompat.createWithBitmap(
-                                        domainItem.bitmap
-                                    ), SliceHints.SMALL_IMAGE
-                                )
-                            }
+                    } else {
+                        row {
+                            primaryAction =
+                                    createActivityAction(openWebIntent(domainItem.clickUrl))
+                            title = domainItem.title
+                            subtitle = domainItem.text
+                            contentDescription = domainItem.description
+                            addEndItem(
+                                IconCompat.createWithBitmap(
+                                    domainItem.bitmap
+                                ), SliceHints.SMALL_IMAGE
+                            )
                         }
                     }
                 }
-            }
+            } ?: kotlin.run { DemoService.start(context) }
         }
     }
 
@@ -149,42 +130,27 @@ class DemoSliceProvider : SliceProvider() {
         sliceUri: Uri,
         activityAction: SliceAction
     ): Slice {
-        return runBlocking {
-            provideProductsApiService().getArticles(10).await().run {
-                list(context, sliceUri, ListBuilder.INFINITY) {
-                    header {
-                        title = "Fashion"
-                        summary = "Show some cloths here..."
+        return list(context, sliceUri, ListBuilder.INFINITY) {
+            header {
+                title = "Fashion"
+                summary = "Show some cloths here..."
+                primaryAction = activityAction
+            }
+            gridRow {
+                DataSource?.let { itemList ->
+                    itemList.forEach { domainItem ->
+                        cell {
+                            addImage(
+                                IconCompat.createWithBitmap(
+                                    domainItem.bitmap
+                                ), SliceHints.SMALL_IMAGE
+                            )
+                            contentIntent = openWebIntent(domainItem.clickUrl)
+                            addText(domainItem.text)
+                        }
                         primaryAction = activityAction
                     }
-                    gridRow {
-                        products?.map { domain ->
-                            withContext(DefaultDispatcher) {
-                                Glide.with(context).asBitmap().load(domain.image.sizes.best!!.url)
-                                    .submit().get()
-                            }.run {
-                                DomainItem(
-                                    this,
-                                    domain.name,
-                                    domain.priceLabel,
-                                    domain.clickUrl,
-                                    domain.description
-                                )
-                            }
-                        }?.forEach { domainItem ->
-                            cell {
-                                addImage(
-                                    IconCompat.createWithBitmap(
-                                        domainItem.bitmap
-                                    ), SliceHints.SMALL_IMAGE
-                                )
-                                contentIntent = openWebIntent(domainItem.clickUrl)
-                                addText(domainItem.text)
-                            }
-                            primaryAction = activityAction
-                        }
-                    }
-                }
+                } ?: kotlin.run { DemoService.start(context) }
             }
         }
     }
@@ -207,10 +173,12 @@ class DemoSliceProvider : SliceProvider() {
         fun getUri(context: Context, path: String): Uri {
             return Uri.Builder()
                 .scheme(ContentResolver.SCHEME_CONTENT)
-                .authority(context.getPackageName())
+                .authority(context.packageName)
                 .appendPath(path)
                 .build()
         }
+
+        internal var DataSource: List<DomainItem>? = null
     }
 }
 

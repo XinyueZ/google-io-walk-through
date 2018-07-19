@@ -15,7 +15,12 @@
         tools:ignore="GoogleAppIndexingWarning"
         tools:replace="android:allowBackup">
 
-        <receiver android:name=".DemoBroadcastReceiver"/>
+        <receiver
+            android:name=".DemoReceiver"
+            android:exported="true" />
+        <service
+            android:name=".DemoService"
+            android:exported="true"/>
         <provider
             android:name=".DemoSliceProvider"
             android:authorities="com.demo.slice"
