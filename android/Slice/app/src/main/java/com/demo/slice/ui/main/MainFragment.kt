@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.demo.slice.DemoService
@@ -31,6 +32,11 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         load_btn.setOnClickListener {
             DemoService.start(requireContext())
+            Toast.makeText(
+                requireContext(),
+                "Refresh data, open Slice Viewer app to see latest data.",
+                Toast.LENGTH_LONG
+            ).show()
         }
     }
 }
