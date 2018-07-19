@@ -12,10 +12,6 @@ import kotlinx.android.synthetic.main.main_fragment.load_btn
 
 class MainFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = MainFragment()
-    }
-
     private lateinit var viewModel: MainViewModel
 
     override fun onCreateView(
