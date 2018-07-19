@@ -52,6 +52,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-extensions:${live}"
     implementation "androidx.lifecycle:lifecycle-common-java8:${live}"
     implementation "androidx.annotation:annotation:${annotation}"
+    implementation "androidx.slice:slice-core:${slice}"
     implementation "androidx.slice:slice-builders-ktx:${slice}"
 
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutine}"
