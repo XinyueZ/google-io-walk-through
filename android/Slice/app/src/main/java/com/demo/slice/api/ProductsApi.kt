@@ -8,9 +8,4 @@ import retrofit2.http.Query
 interface ProductsApi {
     @GET("products?pid=uid4100-40207790-50&fts=suit+dress")
     fun getArticles(@Query("offset") offset: Int): Deferred<ProductsData>
-
-
-    companion object {
-        lateinit var service: ProductsApi
-    }
 }
