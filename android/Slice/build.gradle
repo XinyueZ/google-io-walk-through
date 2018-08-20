@@ -26,6 +26,8 @@ buildscript {
 
         coroutine = "0.23.4"
         retrofit_coroutine = "1.0.0"
+
+        ktlint_version = '0.24.0'
     }
 
     repositories {
@@ -41,13 +43,21 @@ buildscript {
     }
 }
 
+plugins {
+    id "com.diffplug.gradle.spotless" version "3.13.0"
+}
+
 allprojects {
     repositories {
         google()
         jcenter()
+        maven { url 'https://jitpack.io' }
     }
 }
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
+spotless {
+    kotlin {
+        target "**/*.kt"
+        ktlint(ktlint_version)
+    }
 }

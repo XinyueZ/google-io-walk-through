@@ -37,9 +37,9 @@ android {
         enabled = true
     }
 
+
     lintOptions {
-        htmlReport false
-        abortOnError false
+        warningsAsErrors true
     }
 }
 

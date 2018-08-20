@@ -10,7 +10,7 @@ import android.content.Intent
 class DemoReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, p1: Intent?) {
-        //TODO Get [Intent]s from [DemoSliceProvider].
+        // TODO Get [Intent]s from [DemoSliceProvider].
     }
 
     companion object {

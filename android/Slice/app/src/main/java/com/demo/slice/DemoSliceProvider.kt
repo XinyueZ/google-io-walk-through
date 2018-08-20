@@ -18,7 +18,6 @@ import androidx.slice.builders.gridRow
 import androidx.slice.builders.header
 import androidx.slice.builders.list
 import androidx.slice.builders.row
-import androidx.slice.core.SliceHints
 
 class DemoSliceProvider : SliceProvider() {
 
@@ -57,7 +56,7 @@ class DemoSliceProvider : SliceProvider() {
             "/title-item" -> sliceList(sliceUri, openAppAction, setTitleItem = true)
             "/grid" -> sliceGrid(sliceUri, openAppAction)
             "/load-data" -> {
-                //TODO Handle [contentResolver.notifyChange] from [DemoService]
+                // TODO Handle [contentResolver.notifyChange] from [DemoService]
                 Log.d(TAG, "/load-data")
                 null
             }
@@ -65,9 +64,9 @@ class DemoSliceProvider : SliceProvider() {
         }
     }
 
-    //----------------------------------------------------------------------------------------------
+    // ----------------------------------------------------------------------------------------------
     // Define different slices
-    //----------------------------------------------------------------------------------------------
+    // ----------------------------------------------------------------------------------------------
 
     private fun sliceHelloWorld(
         sliceUri: Uri,
@@ -99,7 +98,7 @@ class DemoSliceProvider : SliceProvider() {
                             setTitleItem(
                                 IconCompat.createWithBitmap(
                                     domainItem.bitmap
-                                ), SliceHints.SMALL_IMAGE
+                                ), ListBuilder.SMALL_IMAGE
                             )
                             primaryAction =
                                     createActivityAction(openWebIntent(domainItem.clickUrl))
@@ -117,7 +116,7 @@ class DemoSliceProvider : SliceProvider() {
                             addEndItem(
                                 IconCompat.createWithBitmap(
                                     domainItem.bitmap
-                                ), SliceHints.SMALL_IMAGE
+                                ), ListBuilder.SMALL_IMAGE
                             )
                         }
                     }
@@ -143,7 +142,7 @@ class DemoSliceProvider : SliceProvider() {
                             addImage(
                                 IconCompat.createWithBitmap(
                                     domainItem.bitmap
-                                ), SliceHints.SMALL_IMAGE
+                                ), ListBuilder.SMALL_IMAGE
                             )
                             contentIntent = openWebIntent(domainItem.clickUrl)
                             addText(domainItem.text)

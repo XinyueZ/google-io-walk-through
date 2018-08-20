@@ -36,11 +36,10 @@ class DemoService : IntentService("Demo source provider service") {
 
     companion object {
         private fun List<DomainItem>?.onDataLoad(context: Context) {
-            //TODO Use below codes after [SliceProvider.onBindSlice] can handle [contentResolver.notifyChange].
+            // TODO Use below codes after [SliceProvider.onBindSlice] can handle [contentResolver.notifyChange].
             // val uri = DemoSliceProvider.getUri(context, "load-data")
             // context.applicationContext.contentResolver.notifyChange(uri, null)
             DemoSliceProvider.DataSource = this
-
         }
 
         fun start(context: Context) {

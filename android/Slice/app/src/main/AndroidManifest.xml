@@ -16,11 +16,9 @@
         tools:replace="android:allowBackup">
 
         <receiver
-            android:name=".DemoReceiver"
-            android:exported="true" />
+            android:name=".DemoReceiver"/>
         <service
-            android:name=".DemoService"
-            android:exported="true"/>
+            android:name=".DemoService"/>
         <provider
             android:name=".DemoSliceProvider"
             android:authorities="com.demo.slice"
