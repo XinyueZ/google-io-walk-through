@@ -10,3 +10,8 @@ ktlint
 /build
 /captures
 .externalNativeBuild
+!.idea/codeStyles/codeStyleConfig.xml
+!.idea/codeStyles/Project.xml
+!.idea/inspectionProfiles/profiles_settings.xml
+!.idea/inspectionProfiles/ktlint.xml
+!.idea/workspace.xml
