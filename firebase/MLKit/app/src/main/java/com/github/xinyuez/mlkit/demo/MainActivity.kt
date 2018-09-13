@@ -14,6 +14,11 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(main_appbar)
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        clearFindViewByIdCache()
+    }
+
     @Suppress("UNUSED_PARAMETER")
     fun openOCR(v: View) {
         OCRActivity.showInstance(this)

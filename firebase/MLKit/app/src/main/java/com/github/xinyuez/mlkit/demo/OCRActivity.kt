@@ -24,6 +24,11 @@ class OCRActivity : AppCompatActivity() {
         }
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        clearFindViewByIdCache()
+    }
+
     private fun openOnDevicePhotoApp() {
         with(Intent(Intent.ACTION_PICK)) {
             type = "image/*"
