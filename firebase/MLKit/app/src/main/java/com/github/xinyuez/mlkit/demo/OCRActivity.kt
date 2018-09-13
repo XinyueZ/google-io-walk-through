@@ -8,7 +8,9 @@ import android.provider.MediaStore
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.activity_ocr.*
+import kotlinx.android.synthetic.main.content_ocr.*
 
 class OCRActivity : AppCompatActivity() {
 
@@ -23,28 +25,34 @@ class OCRActivity : AppCompatActivity() {
     }
 
     private fun openOnDevicePhotoApp() {
-        with(
-            Intent(
-                Intent.ACTION_PICK,
-                MediaStore.Images.Media.INTERNAL_CONTENT_URI
-            )
-        ) {
+        with(Intent(Intent.ACTION_PICK)) {
+            type = "image/*"
             startActivityForResult(Intent.createChooser(this, getString(R.string.select_photo)), PICK_IMAGE)
         }
     }
 
-    private fun process(bitmap: Bitmap?) {
-        bitmap?.let {
-            Snackbar.make(add_photo_fab, "select bitmap", Snackbar.LENGTH_LONG).show()
-        } ?: kotlin.run {
-            Snackbar.make(add_photo_fab, R.string.select_photo_fail, Snackbar.LENGTH_LONG).show()
-        }
+    private fun process(bitmap: Bitmap) {
+        ocr_photo_iv.setImageBitmap(bitmap)
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+    private fun handlePhotoSelection(intent: Intent, block: (bitmap: Bitmap) -> Unit) {
+        val pickedImage = intent.data
+        block(MediaStore.Images.Media.getBitmap(this.contentResolver, pickedImage))
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, intent: Intent?) {
         when (requestCode) {
-            PICK_IMAGE -> process(data?.extras?.getParcelable("data") as Bitmap)
-            else -> super.onActivityResult(requestCode, resultCode, data)
+            PICK_IMAGE -> {
+                intent?.let { it ->
+                    handlePhotoSelection(it) { bitmap ->
+                        process(bitmap)
+                    }
+                } ?: kotlin.run {
+                    super.onActivityResult(requestCode, resultCode, intent)
+                    Snackbar.make(add_photo_fab, R.string.select_photo_fail, Snackbar.LENGTH_LONG).show()
+                }
+            }
+            else -> super.onActivityResult(requestCode, resultCode, intent)
         }
     }
 
