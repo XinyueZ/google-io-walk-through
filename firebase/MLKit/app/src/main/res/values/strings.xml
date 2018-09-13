@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">MLKit</string>
-    <string name="title_ocr">Demo OCR</string>
+    <string name="ocr">Demo OCR</string>
 </resources>

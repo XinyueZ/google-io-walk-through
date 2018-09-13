@@ -27,6 +27,11 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity
+                android:name=".OCRActivity"
+                android:label="@string/ocr"
+                android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
