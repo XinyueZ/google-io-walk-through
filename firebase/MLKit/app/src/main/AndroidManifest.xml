@@ -11,6 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <!--Download ML models while the app downloading from store.-->
+        <meta-data
+                android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+                android:value="ocr" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
