@@ -96,7 +96,7 @@ class OCRActivity : AppCompatActivity() {
             val blockCornerPoints = block.cornerPoints
             val blockFrame = block.boundingBox
 
-            canvas.drawRect(blockFrame,paint)
+            canvas.drawRect(blockFrame, paint)
 
             for (line in block.lines) {
                 val lineText = line.text
@@ -110,7 +110,7 @@ class OCRActivity : AppCompatActivity() {
                 val lineCornerPoints = line.cornerPoints
                 val lineFrame = line.boundingBox
 
-                canvas.drawRect(lineFrame,paint)
+                canvas.drawRect(lineFrame, paint)
 
                 for (element in line.elements) {
                     val elementText = element.text
@@ -121,7 +121,7 @@ class OCRActivity : AppCompatActivity() {
                     val elementCornerPoints = element.cornerPoints
                     val elementFrame = element.boundingBox
 
-                    canvas.drawRect(elementFrame,paint)
+                    canvas.drawRect(elementFrame, paint)
                 }
             }
         }
