@@ -14,9 +14,10 @@ import com.google.firebase.ml.vision.FirebaseVision
 import com.google.firebase.ml.vision.common.FirebaseVisionImage
 import com.google.firebase.ml.vision.text.FirebaseVisionText
 import com.google.firebase.ml.vision.text.FirebaseVisionTextRecognizer
-import kotlinx.android.synthetic.*
-import kotlinx.android.synthetic.main.activity_ocr.*
-import kotlinx.android.synthetic.main.content_ocr.*
+import kotlinx.android.synthetic.clearFindViewByIdCache
+import kotlinx.android.synthetic.main.activity_ocr.add_photo_fab
+import kotlinx.android.synthetic.main.activity_ocr.ocr_appbar
+import kotlinx.android.synthetic.main.content_ocr.ocr_photo_iv
 
 class OCRActivity : AppCompatActivity() {
 
@@ -65,13 +66,13 @@ class OCRActivity : AppCompatActivity() {
 
     private fun handleUriSelection(intent: Intent, block: (uri: Uri) -> Unit) {
         val uri = intent.data
-        block(uri!!)
+        uri?.apply { block(this) }
     }
 
     private fun process(result: FirebaseVisionText) {
         for (block in result.textBlocks) {
             val blockText = block.text
-            Log.d(TAG, "line: $blockText")
+            Log.d(TAG, "blockText: $blockText")
 
             val blockConfidence = block.confidence
             val blockLanguages = block.recognizedLanguages
@@ -79,7 +80,7 @@ class OCRActivity : AppCompatActivity() {
             val blockFrame = block.boundingBox
             for (line in block.lines) {
                 val lineText = line.text
-                Log.d(TAG, "line: $lineText")
+                Log.d(TAG, "lineText: $lineText")
 
                 val lineConfidence = line.confidence
                 val lineLanguages = line.recognizedLanguages
@@ -87,7 +88,7 @@ class OCRActivity : AppCompatActivity() {
                 val lineFrame = line.boundingBox
                 for (element in line.elements) {
                     val elementText = element.text
-                    Log.d(TAG, "line: $elementText")
+                    Log.d(TAG, "elementText: $elementText")
 
                     val elementConfidence = element.confidence
                     val elementLanguages = element.recognizedLanguages
