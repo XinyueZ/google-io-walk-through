@@ -52,16 +52,14 @@ class OCRActivity : AppCompatActivity() {
     private fun process(target: Bitmap) {
         ocr_photo_iv.setImageBitmap(target)
         val firebaseVisionBitmap = FirebaseVisionImage.fromBitmap(target)
-        val textRecognizer = FirebaseVision.getInstance()
-            .onDeviceTextRecognizer
+        val textRecognizer = FirebaseVision.getInstance().onDeviceTextRecognizer
         process(firebaseVisionBitmap, textRecognizer)
     }
 
     private fun process(target: Uri) {
         ocr_photo_iv.setImageURI(target)
         val firebaseVisionBitmap = FirebaseVisionImage.fromFilePath(application, target)
-        val textRecognizer = FirebaseVision.getInstance()
-            .onDeviceTextRecognizer
+        val textRecognizer = FirebaseVision.getInstance().onDeviceTextRecognizer
         process(firebaseVisionBitmap, textRecognizer)
     }
 
@@ -75,63 +73,88 @@ class OCRActivity : AppCompatActivity() {
         uri?.apply { block(this) }
     }
 
-    private fun process(result: FirebaseVisionText) {
-        val mutableBitmap = ocr_photo_iv.drawable.toBitmap().copy(Bitmap.Config.ARGB_8888, true)
-        val canvas = Canvas(mutableBitmap)
+    @Suppress("UNUSED_VARIABLE", "UNUSED_PARAMETER")
+    private fun FirebaseVisionText.TextBlock.handle(
+        canvas: Canvas,
+        paint: Paint
+    ): FirebaseVisionText.TextBlock {
+        val blockText = text
+        val blockConfidence = confidence
+        val blockLanguages = recognizedLanguages
+        val blockCornerPoints = cornerPoints
+        val blockFrame = boundingBox
 
-        val paint = Paint()
-        paint.style = Paint.Style.STROKE
-        paint.color = Color.RED
-        paint.isAntiAlias = true
+        paint.color = Color.BLUE
+        blockFrame?.apply { canvas.drawRect(this, paint) }
 
-        for (block in result.textBlocks) {
-            val blockText = block.text
-
-            Log.d(TAG, "###################################")
-            Log.d(TAG, "blockText: $blockText")
-            Log.d(TAG, "###################################")
-
-            val blockConfidence = block.confidence
-            val blockLanguages = block.recognizedLanguages
-            val blockCornerPoints = block.cornerPoints
-            val blockFrame = block.boundingBox
-
-            canvas.drawRect(blockFrame, paint)
-
-            for (line in block.lines) {
-                val lineText = line.text
-
-                Log.d(TAG, "###################################")
-                Log.d(TAG, "lineText: $lineText")
-                Log.d(TAG, "###################################")
-
-                val lineConfidence = line.confidence
-                val lineLanguages = line.recognizedLanguages
-                val lineCornerPoints = line.cornerPoints
-                val lineFrame = line.boundingBox
-
-                canvas.drawRect(lineFrame, paint)
-
-                for (element in line.elements) {
-                    val elementText = element.text
-                    Log.d(TAG, "elementText: $elementText")
-
-                    val elementConfidence = element.confidence
-                    val elementLanguages = element.recognizedLanguages
-                    val elementCornerPoints = element.cornerPoints
-                    val elementFrame = element.boundingBox
-
-                    canvas.drawRect(elementFrame, paint)
-                }
-            }
-        }
-        ocr_photo_iv.setImageBitmap(mutableBitmap)
+        Log.d(TAG, blockText)
+        return this
     }
 
-    private fun process(visionBitmap: FirebaseVisionImage, textRecognizer: FirebaseVisionTextRecognizer) {
+    @Suppress("UNUSED_VARIABLE", "UNUSED_PARAMETER")
+    private fun FirebaseVisionText.Line.handle(
+        canvas: Canvas,
+        paint: Paint
+    ): FirebaseVisionText.Line {
+        val lineText = text
+        val lineConfidence = confidence
+        val lineLanguages = recognizedLanguages
+        val lineCornerPoints = cornerPoints
+        val lineFrame = boundingBox
+
+        paint.color = Color.MAGENTA
+        lineFrame?.apply { canvas.drawRect(this, paint) }
+        return this
+    }
+
+    @Suppress("UNUSED_VARIABLE", "UNUSED_PARAMETER")
+    private fun FirebaseVisionText.Element.handle(
+        canvas: Canvas,
+        paint: Paint
+    ): FirebaseVisionText.Element {
+        val elementText = text
+        val elementConfidence = confidence
+        val elementLanguages = recognizedLanguages
+        val elementCornerPoints = cornerPoints
+        val elementFrame = boundingBox
+        return this
+    }
+
+    private fun process(result: FirebaseVisionText) {
+        ocr_photo_iv.drawable.toBitmap().copy(Bitmap.Config.ARGB_8888, true).let { bitmap ->
+            Canvas(bitmap).let { canvas ->
+                with(Paint()) {
+                    style = Paint.Style.STROKE
+                    isAntiAlias = true
+
+                    result.textBlocks.forEach { block ->
+                        block.handle(canvas, this)
+                        block.lines.forEach { line ->
+                            line.handle(canvas, this)
+                            line.elements.forEach { element ->
+                                element.handle(canvas, this)
+                            }
+                        }
+                    }
+                }
+            }
+            ocr_photo_iv.setImageBitmap(bitmap)
+        }
+    }
+
+    private fun process(
+        visionBitmap: FirebaseVisionImage,
+        textRecognizer: FirebaseVisionTextRecognizer
+    ) {
         textRecognizer.processImage(visionBitmap)
             .addOnSuccessListener(::process)
-            .addOnFailureListener { Snackbar.make(ocr_photo_iv, R.string.process_fail, Snackbar.LENGTH_LONG).show() }
+            .addOnFailureListener {
+                Snackbar.make(
+                    ocr_photo_iv,
+                    R.string.process_fail,
+                    Snackbar.LENGTH_LONG
+                ).show()
+            }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, intent: Intent?) {
@@ -143,7 +166,8 @@ class OCRActivity : AppCompatActivity() {
                     open_file_fab.visibility = View.VISIBLE
                 } ?: kotlin.run {
                     super.onActivityResult(requestCode, resultCode, intent)
-                    Snackbar.make(ocr_photo_iv, R.string.select_photo_fail, Snackbar.LENGTH_LONG).show()
+                    Snackbar.make(ocr_photo_iv, R.string.select_photo_fail, Snackbar.LENGTH_LONG)
+                        .show()
                 }
             }
             else -> super.onActivityResult(requestCode, resultCode, intent)
