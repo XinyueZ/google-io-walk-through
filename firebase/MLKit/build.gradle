@@ -28,8 +28,8 @@ buildscript {
             'ktlintVersion'     : "0.28.0"
     ]
     ext.names = [
-            'applicationId'            : 'com.github.xinyuez.mlkit.demo',
-            'testInstrumentationRunner': 'android.support.test.runner.AndroidJUnitRunner'
+            'applicationId'            : "com.github.xinyuez.mlkit.demo",
+            'testInstrumentationRunner': "android.support.test.runner.AndroidJUnitRunner"
     ]
     repositories {
         google()
