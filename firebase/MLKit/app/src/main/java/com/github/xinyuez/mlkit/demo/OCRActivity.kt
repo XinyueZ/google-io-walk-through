@@ -11,12 +11,14 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.graphics.drawable.toBitmap
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.ml.vision.FirebaseVision
 import com.google.firebase.ml.vision.common.FirebaseVisionImage
+import com.google.firebase.ml.vision.text.FirebaseVisionCloudTextRecognizerOptions
 import com.google.firebase.ml.vision.text.FirebaseVisionText
 import com.google.firebase.ml.vision.text.FirebaseVisionTextRecognizer
 import kotlinx.android.synthetic.clearFindViewByIdCache
@@ -24,8 +26,13 @@ import kotlinx.android.synthetic.main.activity_ocr.ocr_appbar
 import kotlinx.android.synthetic.main.activity_ocr.open_file_fab
 import kotlinx.android.synthetic.main.activity_ocr.open_file_iv
 import kotlinx.android.synthetic.main.content_ocr.ocr_photo_iv
+import java.util.Arrays
 
 class OCRActivity : AppCompatActivity() {
+    /**
+     * TODO set [false] for cloud OCR.
+     */
+    private var onDevice = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,21 +56,38 @@ class OCRActivity : AppCompatActivity() {
         }
     }
 
+    private fun getTextRecognizer(): FirebaseVisionTextRecognizer {
+        return when (onDevice) {
+            true -> {
+                Toast.makeText(applicationContext, "on device OCR", Toast.LENGTH_LONG).show()
+                FirebaseVision.getInstance().onDeviceTextRecognizer
+            }
+            else -> {
+                Toast.makeText(applicationContext, "cloud OCR", Toast.LENGTH_LONG).show()
+                val options = FirebaseVisionCloudTextRecognizerOptions.Builder()
+                    .setLanguageHints(Arrays.asList("en", "de"))
+                    .build()
+                FirebaseVision.getInstance()
+                    .getCloudTextRecognizer(options)
+            }
+        }
+    }
+
     private fun process(target: Bitmap) {
         ocr_photo_iv.setImageBitmap(target)
         val firebaseVisionBitmap = FirebaseVisionImage.fromBitmap(target)
-        val textRecognizer = FirebaseVision.getInstance().onDeviceTextRecognizer
-        process(firebaseVisionBitmap, textRecognizer)
+        val textRecognizer = getTextRecognizer()
+        target.process(firebaseVisionBitmap, textRecognizer)
     }
 
     private fun process(target: Uri) {
         ocr_photo_iv.setImageURI(target)
         val firebaseVisionBitmap = FirebaseVisionImage.fromFilePath(application, target)
-        val textRecognizer = FirebaseVision.getInstance().onDeviceTextRecognizer
-        process(firebaseVisionBitmap, textRecognizer)
+        val textRecognizer = getTextRecognizer()
+        target.process(firebaseVisionBitmap, textRecognizer)
     }
 
-    private fun handlePhotoSelection(intent: Intent, block: (bitmap: Bitmap) -> Unit) {
+    private fun handleBitmapSelection(intent: Intent, block: (bitmap: Bitmap) -> Unit) {
         val uri = intent.data
         block(MediaStore.Images.Media.getBitmap(this.contentResolver, uri))
     }
@@ -142,18 +166,27 @@ class OCRActivity : AppCompatActivity() {
         }
     }
 
-    private fun process(
+    private fun Uri.process(
         visionBitmap: FirebaseVisionImage,
         textRecognizer: FirebaseVisionTextRecognizer
     ) {
         textRecognizer.processImage(visionBitmap)
-            .addOnSuccessListener(::process)
+            .addOnSuccessListener(this@OCRActivity::process)
             .addOnFailureListener {
-                Snackbar.make(
-                    ocr_photo_iv,
-                    R.string.process_fail,
-                    Snackbar.LENGTH_LONG
-                ).show()
+                onDevice = !onDevice
+                process(this)
+            }
+    }
+
+    private fun Bitmap.process(
+        visionBitmap: FirebaseVisionImage,
+        textRecognizer: FirebaseVisionTextRecognizer
+    ) {
+        textRecognizer.processImage(visionBitmap)
+            .addOnSuccessListener(this@OCRActivity::process)
+            .addOnFailureListener {
+                onDevice = !onDevice
+                process(this)
             }
     }
 
