@@ -22,7 +22,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <ImageView
-        android:id="@+id/open_file"
+        android:id="@+id/open_file_iv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bk_download"
@@ -34,6 +34,18 @@
     <include
         layout="@layout/content_ocr"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/open_file_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:onClick="openOnDevicePhotoApp"
+        android:layout_margin="@dimen/fab_margin"
+        android:visibility="gone"
+        android:tint="@android:color/white"
+        app:srcCompat="@drawable/ic_photo_library"
+        app:useCompatPadding="true"/>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

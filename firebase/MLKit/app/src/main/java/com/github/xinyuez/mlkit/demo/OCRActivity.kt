@@ -21,7 +21,8 @@ import com.google.firebase.ml.vision.text.FirebaseVisionText
 import com.google.firebase.ml.vision.text.FirebaseVisionTextRecognizer
 import kotlinx.android.synthetic.clearFindViewByIdCache
 import kotlinx.android.synthetic.main.activity_ocr.ocr_appbar
-import kotlinx.android.synthetic.main.activity_ocr.open_file
+import kotlinx.android.synthetic.main.activity_ocr.open_file_fab
+import kotlinx.android.synthetic.main.activity_ocr.open_file_iv
 import kotlinx.android.synthetic.main.content_ocr.ocr_photo_iv
 
 class OCRActivity : AppCompatActivity() {
@@ -138,7 +139,8 @@ class OCRActivity : AppCompatActivity() {
             PICK_IMAGE -> {
                 intent?.let { it ->
                     handleUriSelection(it, ::process)
-                    open_file.visibility = View.INVISIBLE
+                    open_file_iv.visibility = View.GONE
+                    open_file_fab.visibility = View.VISIBLE
                 } ?: kotlin.run {
                     super.onActivityResult(requestCode, resultCode, intent)
                     Snackbar.make(ocr_photo_iv, R.string.select_photo_fail, Snackbar.LENGTH_LONG).show()
