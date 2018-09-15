@@ -7,6 +7,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.google.android.material.snackbar.Snackbar
@@ -15,7 +16,6 @@ import com.google.firebase.ml.vision.common.FirebaseVisionImage
 import com.google.firebase.ml.vision.text.FirebaseVisionText
 import com.google.firebase.ml.vision.text.FirebaseVisionTextRecognizer
 import kotlinx.android.synthetic.clearFindViewByIdCache
-import kotlinx.android.synthetic.main.activity_ocr.add_photo_fab
 import kotlinx.android.synthetic.main.activity_ocr.ocr_appbar
 import kotlinx.android.synthetic.main.content_ocr.ocr_photo_iv
 
@@ -25,10 +25,6 @@ class OCRActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ocr)
         setSupportActionBar(ocr_appbar)
-
-        add_photo_fab.setOnClickListener { _ ->
-            openOnDevicePhotoApp()
-        }
     }
 
     override fun onDestroy() {
@@ -36,10 +32,14 @@ class OCRActivity : AppCompatActivity() {
         clearFindViewByIdCache()
     }
 
-    private fun openOnDevicePhotoApp() {
+    @Suppress("UNUSED_PARAMETER")
+    fun openOnDevicePhotoApp(v: View) {
         with(Intent(Intent.ACTION_PICK)) {
             type = "image/*"
-            startActivityForResult(Intent.createChooser(this, getString(R.string.select_photo)), PICK_IMAGE)
+            startActivityForResult(
+                Intent.createChooser(this, getString(R.string.select_photo)),
+                PICK_IMAGE
+            )
         }
     }
 
@@ -72,7 +72,10 @@ class OCRActivity : AppCompatActivity() {
     private fun process(result: FirebaseVisionText) {
         for (block in result.textBlocks) {
             val blockText = block.text
+
+            Log.d(TAG, "###################################")
             Log.d(TAG, "blockText: $blockText")
+            Log.d(TAG, "###################################")
 
             val blockConfidence = block.confidence
             val blockLanguages = block.recognizedLanguages
@@ -80,7 +83,10 @@ class OCRActivity : AppCompatActivity() {
             val blockFrame = block.boundingBox
             for (line in block.lines) {
                 val lineText = line.text
+
+                Log.d(TAG, "###################################")
                 Log.d(TAG, "lineText: $lineText")
+                Log.d(TAG, "###################################")
 
                 val lineConfidence = line.confidence
                 val lineLanguages = line.recognizedLanguages
@@ -102,7 +108,7 @@ class OCRActivity : AppCompatActivity() {
     private fun process(visionBitmap: FirebaseVisionImage, textRecognizer: FirebaseVisionTextRecognizer) {
         textRecognizer.processImage(visionBitmap)
             .addOnSuccessListener(::process)
-            .addOnFailureListener { Snackbar.make(add_photo_fab, R.string.process_fail, Snackbar.LENGTH_LONG).show() }
+            .addOnFailureListener { Snackbar.make(ocr_photo_iv, R.string.process_fail, Snackbar.LENGTH_LONG).show() }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, intent: Intent?) {
@@ -112,7 +118,7 @@ class OCRActivity : AppCompatActivity() {
                     handleUriSelection(it, ::process)
                 } ?: kotlin.run {
                     super.onActivityResult(requestCode, resultCode, intent)
-                    Snackbar.make(add_photo_fab, R.string.select_photo_fail, Snackbar.LENGTH_LONG).show()
+                    Snackbar.make(ocr_photo_iv, R.string.select_photo_fail, Snackbar.LENGTH_LONG).show()
                 }
             }
             else -> super.onActivityResult(requestCode, resultCode, intent)
