@@ -3,6 +3,9 @@ package com.github.xinyuez.mlkit.demo
 import android.app.Activity
 import android.content.Intent
 import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.Paint
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
@@ -10,6 +13,7 @@ import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import androidx.core.graphics.drawable.toBitmap
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.ml.vision.FirebaseVision
 import com.google.firebase.ml.vision.common.FirebaseVisionImage
@@ -17,6 +21,7 @@ import com.google.firebase.ml.vision.text.FirebaseVisionText
 import com.google.firebase.ml.vision.text.FirebaseVisionTextRecognizer
 import kotlinx.android.synthetic.clearFindViewByIdCache
 import kotlinx.android.synthetic.main.activity_ocr.ocr_appbar
+import kotlinx.android.synthetic.main.activity_ocr.open_file
 import kotlinx.android.synthetic.main.content_ocr.ocr_photo_iv
 
 class OCRActivity : AppCompatActivity() {
@@ -70,6 +75,14 @@ class OCRActivity : AppCompatActivity() {
     }
 
     private fun process(result: FirebaseVisionText) {
+        val mutableBitmap = ocr_photo_iv.drawable.toBitmap().copy(Bitmap.Config.ARGB_8888, true)
+        val canvas = Canvas(mutableBitmap)
+
+        val paint = Paint()
+        paint.style = Paint.Style.STROKE
+        paint.color = Color.RED
+        paint.isAntiAlias = true
+
         for (block in result.textBlocks) {
             val blockText = block.text
 
@@ -81,6 +94,9 @@ class OCRActivity : AppCompatActivity() {
             val blockLanguages = block.recognizedLanguages
             val blockCornerPoints = block.cornerPoints
             val blockFrame = block.boundingBox
+
+            canvas.drawRect(blockFrame,paint)
+
             for (line in block.lines) {
                 val lineText = line.text
 
@@ -92,6 +108,9 @@ class OCRActivity : AppCompatActivity() {
                 val lineLanguages = line.recognizedLanguages
                 val lineCornerPoints = line.cornerPoints
                 val lineFrame = line.boundingBox
+
+                canvas.drawRect(lineFrame,paint)
+
                 for (element in line.elements) {
                     val elementText = element.text
                     Log.d(TAG, "elementText: $elementText")
@@ -100,9 +119,12 @@ class OCRActivity : AppCompatActivity() {
                     val elementLanguages = element.recognizedLanguages
                     val elementCornerPoints = element.cornerPoints
                     val elementFrame = element.boundingBox
+
+                    canvas.drawRect(elementFrame,paint)
                 }
             }
         }
+        ocr_photo_iv.setImageBitmap(mutableBitmap)
     }
 
     private fun process(visionBitmap: FirebaseVisionImage, textRecognizer: FirebaseVisionTextRecognizer) {
@@ -116,6 +138,7 @@ class OCRActivity : AppCompatActivity() {
             PICK_IMAGE -> {
                 intent?.let { it ->
                     handleUriSelection(it, ::process)
+                    open_file.visibility = View.INVISIBLE
                 } ?: kotlin.run {
                     super.onActivityResult(requestCode, resultCode, intent)
                     Snackbar.make(ocr_photo_iv, R.string.select_photo_fail, Snackbar.LENGTH_LONG).show()
