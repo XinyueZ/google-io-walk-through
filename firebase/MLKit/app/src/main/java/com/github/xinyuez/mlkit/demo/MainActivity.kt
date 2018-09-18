@@ -23,4 +23,9 @@ class MainActivity : AppCompatActivity() {
     fun openOCR(v: View) {
         OCRActivity.showInstance(this)
     }
+
+    @Suppress("UNUSED_PARAMETER")
+    fun openFace(v: View) {
+        FaceActivity.showInstance(this)
+    }
 }

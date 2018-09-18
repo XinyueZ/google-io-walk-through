@@ -35,6 +35,11 @@
                 android:name=".OCRActivity"
                 android:label="@string/ocr"
                 android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+                android:name=".FaceActivity"
+                android:label="@string/face"
+                android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
