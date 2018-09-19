@@ -43,6 +43,7 @@ dependencies {
     implementation "androidx.core:core-ktx:${versions.ktxCore}"
     implementation "androidx.constraintlayout:constraintlayout:${versions.constraintlayout}"
     implementation "com.google.android.material:material:${versions.design}"
+    implementation "com.wonderkiln:camerakit:${versions.cameraLib}"
 
     implementation "com.google.firebase:firebase-ml-vision:${versions.firebaseMLVision}"
 

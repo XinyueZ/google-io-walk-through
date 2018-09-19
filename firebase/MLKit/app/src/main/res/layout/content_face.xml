@@ -9,11 +9,19 @@
         tools:context=".OCRActivity"
         tools:showIn="@layout/activity_ocr">
 
-    <ImageView
-            android:id="@+id/ocr_photo_iv"
-            android:layout_width="wrap_content"
-            tools:ignore="contentDescription"
-            android:layout_height="wrap_content"
+    <com.wonderkiln.camerakit.CameraView
+            android:id="@+id/camera"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:keepScreenOn="true"
+            app:ckDoubleTapToToggleFacing="true"
+            app:ckFocus="tapWithMarker"
+            app:ckJpegQuality="100"
+            app:ckMethod="standard"
+            app:ckPinchToZoom="true"
+            app:ckVideoQuality="highest"
+            app:ckFlash="auto"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"

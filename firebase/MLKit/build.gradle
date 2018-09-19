@@ -3,7 +3,7 @@
 buildscript {
     ext.versions = [
             'compileSdk'        : 28,
-            'minSdk'            : 14,
+            'minSdk'            : 15,
             'targetSdk'         : 28,
             'versionName'       : "1.0",
             'versionCode'       : "1",
@@ -25,7 +25,9 @@ buildscript {
             'firebaseMLVision'  : "17.0.0",
             'playServiceVersion': "4.0.1",
 
-            'ktlintVersion'     : "0.28.0"
+            'ktlintVersion'     : "0.28.0",
+
+            'cameraLib'         : "0.13.1"
     ]
     ext.names = [
             'applicationId'            : "com.github.xinyuez.mlkit.demo",
