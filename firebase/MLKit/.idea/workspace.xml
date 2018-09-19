@@ -35,8 +35,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a967944c-409e-41d7-bb03-eb9575024e79" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/xinyuez/mlkit/demo/FaceActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/xinyuez/mlkit/demo/FaceActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_face.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_face.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +59,7 @@
     <session id="-1473205487">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
@@ -70,7 +69,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="gradle" value="49" />
+          <entry key="gradle" value="50" />
           <entry key="kt" value="1195" />
           <entry key="txt" value="110" />
           <entry key="xml" value="186" />
@@ -78,7 +77,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Groovy" value="49" />
+          <entry key="Groovy" value="50" />
           <entry key="Kotlin" value="1195" />
           <entry key="PLAIN_TEXT" value="110" />
           <entry key="XML" value="186" />
@@ -151,11 +150,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="71" />
+            <state relative-caret-position="301">
+              <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -170,7 +169,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-camerakit-1.0.0-Snapshot.aar/ffb42761a419517d378b97173bdf5e1b/jars/classes.jar!/com/camerakit/CameraKitView.class">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-7224">
@@ -182,8 +181,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/github/xinyuez/mlkit/demo/FaceActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="27" column="20" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+            <state relative-caret-position="340">
+              <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -2118,14 +2117,14 @@
                       <ExternalModuleBuildClasspathPojo>
                         <option name="entries">
                           <list>
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/3.3.0-alpha10/430558c3357256cfe56ea013ef065d68150d7b4d/gradle-3.3.0-alpha10-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/3.3.0-alpha11/8e9209ec3dd9cdf9115e9cc58f0d47a32b52048e/gradle-3.3.0-alpha11-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/1.3-M2/54bc143d217bf7c929ecd6006220032405dba647/kotlin-gradle-plugin-1.3-M2-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.gms/google-services/4.0.1/15d345a81ab5756fc59b81ba99435d20568ee8e6/google-services-4.0.1-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.spotless/spotless-plugin-gradle/3.13.0/b1a0ba009c2b1ffa0dad53007e4dd119f8d011cb/spotless-plugin-gradle-3.13.0-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/3.3.0-alpha10/9402bc33f20c3b27455d3b562beda439559d3f78/builder-3.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/crash/26.3.0-alpha10/dc277dace39cc13762742eaeeac96fec7aaaa1b7/crash-26.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-gradle-api/26.3.0-alpha10/f5501f3a5b3941e90ae93eafb5d13218a4d7829f/lint-gradle-api-26.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.databinding/databinding-compiler-common/3.3.0-alpha10/1303520b6f4aa3f4d3c4e0b0ef88dfeeeed879cc/databinding-compiler-common-3.3.0-alpha10-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/3.3.0-alpha11/6d6875159a5c6a2cd587a50adaf976246d93554f/builder-3.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/crash/26.3.0-alpha11/fc1cba9b8159e624d608c67f71154662de63328f/crash-26.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-gradle-api/26.3.0-alpha11/981a19b5b339e02927628855cf596c3003c14e5e/lint-gradle-api-26.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.databinding/databinding-compiler-common/3.3.0-alpha11/b41e944bd91837e63cd9499a784d57b4d05dc7e9/databinding-compiler-common-3.3.0-alpha11-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/transform-api/2.0.0-deprecated-use-gradle-api/f18536c1fe08673c69e869be170759616a9df16/transform-api-2.0.0-deprecated-use-gradle-api-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-analysis/6.0/66e3ec9f4ff0d70713868456142040111cc201c/asm-analysis-6.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.proguard/proguard-gradle/6.0.3/1ebac416b8402b16e02a470f41e73af880d0db0f/proguard-gradle-6.0.3-sources.jar" />
@@ -2138,16 +2137,16 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.spotless/spotless-lib/1.13.0/415b0000ef58c628abe7e1dc02b324deee30855e/spotless-lib-1.13.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.spotless/spotless-lib-extra/1.13.0/a0d6299a06895a9511863c37eddc1857cf291f55/spotless-lib-extra-1.13.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.durian/durian-io/1.2.0/dad0676a3265052cbdc78313e1f018c0d4e0d56e/durian-io-1.2.0-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-model/3.3.0-alpha10/642a3ed5fb0a7dbdba4df8c3ed0c0951824b400f/builder-model-3.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-test-api/3.3.0-alpha10/c1fc788ac77257541eb62f4bfaf44011ab417601/builder-test-api-3.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdklib/26.3.0-alpha10/72c59c201088d52711b669a65c3238c7d64464ab/sdklib-26.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdk-common/26.3.0-alpha10/fe5a875b7f37bde21d1b0f6464ec1c495977e344/sdk-common-26.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/manifest-merger/26.3.0-alpha10/f3f07313982f7df4f381fbcf1a30362f62cf75b5/manifest-merger-26.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/protos/26.3.0-alpha10/10f5af140699430f9df68f2ddb2700d1c2b57df3/protos-26.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/shared/26.3.0-alpha10/aaf2a114a70e47c05019f2741c90597334c881f1/shared-26.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/tracker/26.3.0-alpha10/42a6ccefbaa95b6921a745ea3c667b382bffad27/tracker-26.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/apksig/3.3.0-alpha10/626ffea592d20c6faeeff041bfe5b8d97f290b92/apksig-3.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/apkzlib/3.3.0-alpha10/8a265dbed3715c9c92c1f8a6b2df73e7d6339de2/apkzlib-3.3.0-alpha10-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-model/3.3.0-alpha11/ebb7e8ac4e3a8a043bd2e954cb2b8e3d68c96de0/builder-model-3.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-test-api/3.3.0-alpha11/bc6cedfbaa0ba8a8f098169624ebc72f9c3703ed/builder-test-api-3.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdklib/26.3.0-alpha11/c89e3bf3762d5b88d91d5672c7f652895cd817c3/sdklib-26.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdk-common/26.3.0-alpha11/c9a240161a9ae5ab169019e8705eb80ecb3d7b11/sdk-common-26.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/manifest-merger/26.3.0-alpha11/2c316663c025f247df495c2efe51871a346fff78/manifest-merger-26.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/protos/26.3.0-alpha11/3d68fdbbfef2c0e51b5e7fd5f45ea86be7e05c5e/protos-26.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/shared/26.3.0-alpha11/be7bec74fadadadc292e6893e42c60c3bbdc9f6e/shared-26.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/tracker/26.3.0-alpha11/703bb7e4c891b4b45473b33aadb9fa8bcf968b78/tracker-26.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/apksig/3.3.0-alpha11/c343d7614ccf49c0cc2d607df9e19dc2638511d/apksig-3.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/apkzlib/3.3.0-alpha11/c45ec63fa9e6f138f65f9aa5a54f909fd9c1a412/apkzlib-3.3.0-alpha11-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup/javawriter/2.5.0/1b2a0925ff06220c0261b6fd468183cd9e9a9a47/javawriter-2.5.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/6.0/66e3ec9f4ff0d70713868456142040111cc201c/asm-6.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-tree/6.0/66e3ec9f4ff0d70713868456142040111cc201c/asm-tree-6.0-sources.jar" />
@@ -2156,9 +2155,9 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/it.unimi.dsi/fastutil/7.2.0/a1a8e178d7813bb9596ee4e3d5e07b90ebe660af/fastutil-7.2.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.jopt-simple/jopt-simple/4.9/d965219b87f79e81b07116d451e684ab2f3acc27/jopt-simple-4.9-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.json-simple/json-simple/1.1/19c6d8dee6803c520d855ff7e8a8c3d97f1271ec/json-simple-1.1-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle-api/3.3.0-alpha10/38d7b0e40db146f4836cabab532cb46d94d0be9f/gradle-api-3.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.databinding/databinding-common/3.3.0-alpha10/48fd2403bf6dd9e96161bec3a6a1393ca7e8ffd6/databinding-common-3.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.databinding/baseLibrary/3.3.0-alpha10/2d5c9f8edd34c621ae43820d9ce855ea280b0e46/baseLibrary-3.3.0-alpha10-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle-api/3.3.0-alpha11/2b20fbe15c9d5d1398c85ee123d66f67867d54aa/gradle-api-3.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.databinding/databinding-common/3.3.0-alpha11/939ad34c7a7f2e17448f0bdf0657bd3bb0123e2b/databinding-common-3.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.databinding/baseLibrary/3.3.0-alpha11/972dd170a5fcaa728c6872d822bdc20a95a2fc49/baseLibrary-3.3.0-alpha11-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.antlr/antlr4/4.5.3/e836b2a7348320a86c3bbd91a032486798e6ab98/antlr4-4.5.3-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.4/f2d8698c46d1167ff24b06a840a87d91a02db891/commons-io-2.4-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.juniversalchardet/juniversalchardet/1.0.3/77979eaa98f90806f984155f44f63cc1fb60ac25/juniversalchardet-1.0.3-sources.jar" />
@@ -2176,11 +2175,11 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jgit/org.eclipse.jgit/4.9.0.201710071750-r/6fd1eb331447b6163898b4d10aa769e2ac193740/org.eclipse.jgit-4.9.0.201710071750-r-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.concurrent-trees/concurrent-trees/2.6.1/4c2e816b8fa6c525c1cb235c840dfb6b0a320db4/concurrent-trees-2.6.1-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-xml/2.4.7/c4bb383c972794bf9bf2b4a602530260f5e71660/groovy-xml-2.4.7-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/annotations/26.3.0-alpha10/6ed545413adfa3f3967d1186c67cf1e5dfa750/annotations-26.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.ddms/ddmlib/26.3.0-alpha10/d8b269d7a37db9934033929c35cd600ecab7ea2e/ddmlib-26.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.layoutlib/layoutlib-api/26.3.0-alpha10/7dd96d573ff7662c806ba41447bcabaf6ca873d6/layoutlib-api-26.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/dvlib/26.3.0-alpha10/35679e1762aecd200d38cb486b529d2e5b739f53/dvlib-26.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/repository/26.3.0-alpha10/528741f4f14ff895fa1018371421865dc21548f0/repository-26.3.0-alpha10-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/annotations/26.3.0-alpha11/7e4550eb70e416dae74be9baf78578dbf27d3402/annotations-26.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.ddms/ddmlib/26.3.0-alpha11/5a2459199ac7d2b92c048f7fda87af0a27bd0b85/ddmlib-26.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.layoutlib/layoutlib-api/26.3.0-alpha11/fc4f80f5d82597e478df4de204cb6db3a7d19ce1/layoutlib-api-26.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/dvlib/26.3.0-alpha11/8dc3b6f795bf1a0d0471d8fcd0faf00b940dd297/dvlib-26.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/repository/26.3.0-alpha11/4fcdd76c293d7a0eb1ccc0364308a7b78b66e235/repository-26.3.0-alpha11-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.0/baf95d8519fc1a11d388f8543cb40cd2bb9d66dc/gson-2.8.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.5.2/ca23fd61a082eab682fc0ffd29e37d09eab07180/httpmime-4.5.2-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.56/118b4633c59394749b2b2f278138beb31c930663/bcpkix-jdk15on-1.56-sources.jar" />
@@ -2191,7 +2190,7 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.javaewah/JavaEWAH/1.1.6/ca2745e91c6a51f8e6809d1579bda36ad83f1f58/JavaEWAH-1.1.6-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.2/58d38f68d4a867d4552ae27960bb348d7eaa1297/slf4j-api-1.7.2-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy/2.4.7/8d7490c6cd820826789089d537aad569642a23d2/groovy-2.4.7-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/common/26.3.0-alpha10/b29cdd11888cb8976410e8574d03f2f1e7aaecaa/common-26.3.0-alpha10-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/common/26.3.0-alpha11/f7b358e5378c36bd1a4da39f1adff21f6986f08d/common-26.3.0-alpha11-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.kxml/kxml2/2.3.0/309cd2cff7260e465792fda3dcbb063b730d8050/kxml2-2.3.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sun.activation/javax.activation/1.2.0/5b034823866d38f38f02bdad7ed8a14e650c61b6/javax.activation-1.2.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.12/1fdd1a2fed15cdf08780ed564279c0ddbff46419/commons-compress-1.12-sources.jar" />
@@ -2219,14 +2218,14 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sun.istack/istack-commons-runtime/2.21/5d42dda44aa68ff87756e93ae0042cd66d2daa78/istack-commons-runtime-2.21-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3-M2/62310206461e91e7178e241453c556eb6e5d22c9/kotlin-stdlib-common-1.3-M2-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/5991ca87ef1fb5544943d9abc5a9a37583fabe03/annotations-13.0-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/3.3.0-alpha10/d0bdec9671b66c41b4c451a25fb5307cd2f81d30/gradle-3.3.0-alpha10.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/3.3.0-alpha11/6f4bfeddbce65f2b37108dcb36dcbdeb574ab694/gradle-3.3.0-alpha11.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/1.3-M2/f1d294e832a59c57318f703f1cf7eb24c7655837/kotlin-gradle-plugin-1.3-M2.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.gms/google-services/4.0.1/a9fdd01c6f67fa7d12cc156a7a20a5086fbd1287/google-services-4.0.1.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.spotless/spotless-plugin-gradle/3.13.0/cad61a1689c80f4abde03868c34c730a2662ebbf/spotless-plugin-gradle-3.13.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/3.3.0-alpha10/b4b6843c280062d52fa0e4fda66bb5fd6f39549/builder-3.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/crash/26.3.0-alpha10/27ef9e837fee4f5cc3201ecb46d405b1d502a599/crash-26.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-gradle-api/26.3.0-alpha10/df29689675d7e6963481c37b8be3bbb4e049a421/lint-gradle-api-26.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.databinding/databinding-compiler-common/3.3.0-alpha10/b8d194edec5230a0616d6a857da7e845e935bffe/databinding-compiler-common-3.3.0-alpha10.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/3.3.0-alpha11/13de4263a0ba9ce9640ba41b4351322978ae702/builder-3.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/crash/26.3.0-alpha11/fb0c6b55143e0e9008f17125958bd3116a4e6fec/crash-26.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-gradle-api/26.3.0-alpha11/b45461a4298a334b66ff592ca8b5c8ee9c0e81e1/lint-gradle-api-26.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.databinding/databinding-compiler-common/3.3.0-alpha11/52d030268300ca1761545e05692acc002ad1d74c/databinding-compiler-common-3.3.0-alpha11.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/transform-api/2.0.0-deprecated-use-gradle-api/47f6c56527c42425742fa9b56ffd3fd80763fe03/transform-api-2.0.0-deprecated-use-gradle-api.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-analysis/6.0/dd1cc1381a970800268160203aae2d3784da779b/asm-analysis-6.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.proguard/proguard-gradle/6.0.3/e5becf2356695a396b788110e386c38bad523bfc/proguard-gradle-6.0.3.jar" />
@@ -2241,16 +2240,16 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.spotless/spotless-lib/1.13.0/5cb2ce941446653bad8fb528eb863aa4c178b1cd/spotless-lib-1.13.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.spotless/spotless-lib-extra/1.13.0/5914314cc4c3c4e3e820ea5648f59229b19f3fd3/spotless-lib-extra-1.13.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.durian/durian-io/1.2.0/fc9c103d454d04f7c5b78b437190ea3bd15fb72c/durian-io-1.2.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-model/3.3.0-alpha10/5034347184df50d6d435c0be981eaadba89e96f1/builder-model-3.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-test-api/3.3.0-alpha10/35c0e67a2d85721cafd8d52fdd77822a875c3a67/builder-test-api-3.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdklib/26.3.0-alpha10/d9032cdb50cc4af3065c23aa684f3ce1d54a016d/sdklib-26.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdk-common/26.3.0-alpha10/47459445e51b470b735543d16ba046a96855174f/sdk-common-26.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/manifest-merger/26.3.0-alpha10/b3eaf37910b33341534c00b6cdb306e2005bc924/manifest-merger-26.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/protos/26.3.0-alpha10/fea134cc63c53dfeb59afd73e4be0c6b74e69755/protos-26.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/shared/26.3.0-alpha10/ad2dc359cc52bfe83672c0d946c7fe7a0d16b85f/shared-26.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/tracker/26.3.0-alpha10/1991afd33984aa562f1284ca702af245c78c1a22/tracker-26.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/apksig/3.3.0-alpha10/e2ffd279303393be82f6c97fbf2eeb5fbd609391/apksig-3.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/apkzlib/3.3.0-alpha10/2c0c36445607d6fa6bb4978272ed1c116467ee4f/apkzlib-3.3.0-alpha10.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-model/3.3.0-alpha11/cb4b5867fe405efffdfbbda14e1ab314fdbc51f0/builder-model-3.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-test-api/3.3.0-alpha11/78dadb86425e8f99d9bcf17cdda1702b822dca25/builder-test-api-3.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdklib/26.3.0-alpha11/908bee405c66dd8688057ee0b4e41456f7255c14/sdklib-26.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdk-common/26.3.0-alpha11/410e0aa1c97afeb7f395b120c106e849f78a4f0/sdk-common-26.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/manifest-merger/26.3.0-alpha11/99dae855c7457057c1ed045bb7a45f78850bbccc/manifest-merger-26.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/protos/26.3.0-alpha11/8efd5a144d535e0d3e2b7f5d172125e62f3bbb94/protos-26.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/shared/26.3.0-alpha11/780b80e78d079eaa3e1cc1b33f11bd2aa7146fcf/shared-26.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/tracker/26.3.0-alpha11/aa05c332d6bda5b91bf44118decb6f7492deac18/tracker-26.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/apksig/3.3.0-alpha11/999208f5576bb51e43ac80b74ec6102b336e276a/apksig-3.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/apkzlib/3.3.0-alpha11/7d8cf458e3beb54750f30e80b745f56d33d46c8a/apkzlib-3.3.0-alpha11.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup/javawriter/2.5.0/81241ff7078ef14f42ea2a8995fa09c096256e6b/javawriter-2.5.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/6.0/bc6fa6b19424bb9592fe43bbc20178f92d403105/asm-6.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-tree/6.0/a624f1a6e4e428dcd680a01bab2d4c56b35b18f0/asm-tree-6.0.jar" />
@@ -2259,9 +2258,9 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/it.unimi.dsi/fastutil/7.2.0/5ad3a2bb04143f70aa0765fc29fc29571a7d6b34/fastutil-7.2.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.jopt-simple/jopt-simple/4.9/ee9e9eaa0a35360dcfeac129ff4923215fd65904/jopt-simple-4.9.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.json-simple/json-simple/1.1/5e303a03d04e6788dddfa3655272580ae0fc13bb/json-simple-1.1.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle-api/3.3.0-alpha10/a981ec35fa51fe0f9e370f363423042bc98e03fc/gradle-api-3.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.databinding/databinding-common/3.3.0-alpha10/48d2464898335a6ef26fe98fcb1c9acf95cf0da8/databinding-common-3.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.databinding/baseLibrary/3.3.0-alpha10/9496a416850b75f7d7d1d73a2c0efdede0fc77af/baseLibrary-3.3.0-alpha10.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle-api/3.3.0-alpha11/bb805553fb094c3bbea50b7a559b5ff33c8ea76d/gradle-api-3.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.databinding/databinding-common/3.3.0-alpha11/607fd0537374aa04b0f5244515d3205a777ed335/databinding-common-3.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.databinding/baseLibrary/3.3.0-alpha11/a574a0f40c75c25d5a8fb033c8703b0e549ff9ce/baseLibrary-3.3.0-alpha11.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.antlr/antlr4/4.5.3/f35db7e4b2446e4174ba6a73db7bd6b3e6bb5da1/antlr4-4.5.3.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.4/b1b6ea3b7e4aa4f492509a4952029cd8e48019ad/commons-io-2.4.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.juniversalchardet/juniversalchardet/1.0.3/cd49678784c46aa8789c060538e0154013bb421b/juniversalchardet-1.0.3.jar" />
@@ -2281,11 +2280,11 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jgit/org.eclipse.jgit/4.9.0.201710071750-r/69d8510b335d4d33d551a133505a4141311f970a/org.eclipse.jgit-4.9.0.201710071750-r.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.concurrent-trees/concurrent-trees/2.6.1/9b647240522ab67c003de9b6702ca81ac0c15efc/concurrent-trees-2.6.1.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-xml/2.4.7/864b9dc44fb0e05f329fad473e8b4df172f1b48f/groovy-xml-2.4.7.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/annotations/26.3.0-alpha10/a025b6c06ced78b55550b3b9328089ec57cf27dd/annotations-26.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.ddms/ddmlib/26.3.0-alpha10/52b1ff67c10992f9c183a9c1aba1549324444c4e/ddmlib-26.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.layoutlib/layoutlib-api/26.3.0-alpha10/ffad9cd6243e4a622a74346dc75111e8f39ecdeb/layoutlib-api-26.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/dvlib/26.3.0-alpha10/56014da4116666cf0bdb556bbdf4ff53e75ac67a/dvlib-26.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/repository/26.3.0-alpha10/8d2b64e30529eb92b7b0861ed02d264cebe8ccc6/repository-26.3.0-alpha10.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/annotations/26.3.0-alpha11/d13e55fcbb1033f6cba178afae15a0248c2bac8a/annotations-26.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.ddms/ddmlib/26.3.0-alpha11/ed7b6b83e8800cd9a4e7c085beac5fc9bcdfc075/ddmlib-26.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.layoutlib/layoutlib-api/26.3.0-alpha11/2eb2e9d8c793c8e8726f9c1113d6e69410628270/layoutlib-api-26.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/dvlib/26.3.0-alpha11/31f6eca68bbbeecd084c84f131b57aa394b42636/dvlib-26.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/repository/26.3.0-alpha11/69bbe297db493c3c7f438e0d80c481410c755fee/repository-26.3.0-alpha11.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.0/c4ba5371a29ac9b2ad6129b1d39ea38750043eff/gson-2.8.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.5.2/22b4c53dd9b6761024258de8f9240c3dce6ea368/httpmime-4.5.2.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.56/4648af70268b6fdb24674fb1fd7c1fcc73db1231/bcpkix-jdk15on-1.56.jar" />
@@ -2296,7 +2295,7 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.javaewah/JavaEWAH/1.1.6/94ad16d728b374d65bd897625f3fbb3da223a2b6/JavaEWAH-1.1.6.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.2/81d61b7f33ebeab314e07de0cc596f8e858d97/slf4j-api-1.7.2.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy/2.4.7/10870e6511f544ce45152d0ad08d7514a00c8201/groovy-2.4.7.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/common/26.3.0-alpha10/168509046bf868d79773fd168c1481ce89025c80/common-26.3.0-alpha10.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/common/26.3.0-alpha11/c332d1061acb74172cab86f374daf359ac88ea9d/common-26.3.0-alpha11.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.kxml/kxml2/2.3.0/ccbc77a5fd907ef863c29f3596c6f54ffa4e9442/kxml2-2.3.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sun.activation/javax.activation/1.2.0/bf744c1e2776ed1de3c55c8dac1057ec331ef744/javax.activation-1.2.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.12/84caa68576e345eb5e7ae61a0e5a9229eb100d7b/commons-compress-1.12.jar" />
@@ -2335,14 +2334,14 @@
                       <ExternalModuleBuildClasspathPojo>
                         <option name="entries">
                           <list>
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/3.3.0-alpha10/430558c3357256cfe56ea013ef065d68150d7b4d/gradle-3.3.0-alpha10-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/3.3.0-alpha11/8e9209ec3dd9cdf9115e9cc58f0d47a32b52048e/gradle-3.3.0-alpha11-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/1.3-M2/54bc143d217bf7c929ecd6006220032405dba647/kotlin-gradle-plugin-1.3-M2-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.gms/google-services/4.0.1/15d345a81ab5756fc59b81ba99435d20568ee8e6/google-services-4.0.1-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.spotless/spotless-plugin-gradle/3.13.0/b1a0ba009c2b1ffa0dad53007e4dd119f8d011cb/spotless-plugin-gradle-3.13.0-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/3.3.0-alpha10/9402bc33f20c3b27455d3b562beda439559d3f78/builder-3.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/crash/26.3.0-alpha10/dc277dace39cc13762742eaeeac96fec7aaaa1b7/crash-26.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-gradle-api/26.3.0-alpha10/f5501f3a5b3941e90ae93eafb5d13218a4d7829f/lint-gradle-api-26.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.databinding/databinding-compiler-common/3.3.0-alpha10/1303520b6f4aa3f4d3c4e0b0ef88dfeeeed879cc/databinding-compiler-common-3.3.0-alpha10-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/3.3.0-alpha11/6d6875159a5c6a2cd587a50adaf976246d93554f/builder-3.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/crash/26.3.0-alpha11/fc1cba9b8159e624d608c67f71154662de63328f/crash-26.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-gradle-api/26.3.0-alpha11/981a19b5b339e02927628855cf596c3003c14e5e/lint-gradle-api-26.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.databinding/databinding-compiler-common/3.3.0-alpha11/b41e944bd91837e63cd9499a784d57b4d05dc7e9/databinding-compiler-common-3.3.0-alpha11-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/transform-api/2.0.0-deprecated-use-gradle-api/f18536c1fe08673c69e869be170759616a9df16/transform-api-2.0.0-deprecated-use-gradle-api-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-analysis/6.0/66e3ec9f4ff0d70713868456142040111cc201c/asm-analysis-6.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.proguard/proguard-gradle/6.0.3/1ebac416b8402b16e02a470f41e73af880d0db0f/proguard-gradle-6.0.3-sources.jar" />
@@ -2355,16 +2354,16 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.spotless/spotless-lib/1.13.0/415b0000ef58c628abe7e1dc02b324deee30855e/spotless-lib-1.13.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.spotless/spotless-lib-extra/1.13.0/a0d6299a06895a9511863c37eddc1857cf291f55/spotless-lib-extra-1.13.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.durian/durian-io/1.2.0/dad0676a3265052cbdc78313e1f018c0d4e0d56e/durian-io-1.2.0-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-model/3.3.0-alpha10/642a3ed5fb0a7dbdba4df8c3ed0c0951824b400f/builder-model-3.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-test-api/3.3.0-alpha10/c1fc788ac77257541eb62f4bfaf44011ab417601/builder-test-api-3.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdklib/26.3.0-alpha10/72c59c201088d52711b669a65c3238c7d64464ab/sdklib-26.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdk-common/26.3.0-alpha10/fe5a875b7f37bde21d1b0f6464ec1c495977e344/sdk-common-26.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/manifest-merger/26.3.0-alpha10/f3f07313982f7df4f381fbcf1a30362f62cf75b5/manifest-merger-26.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/protos/26.3.0-alpha10/10f5af140699430f9df68f2ddb2700d1c2b57df3/protos-26.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/shared/26.3.0-alpha10/aaf2a114a70e47c05019f2741c90597334c881f1/shared-26.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/tracker/26.3.0-alpha10/42a6ccefbaa95b6921a745ea3c667b382bffad27/tracker-26.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/apksig/3.3.0-alpha10/626ffea592d20c6faeeff041bfe5b8d97f290b92/apksig-3.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/apkzlib/3.3.0-alpha10/8a265dbed3715c9c92c1f8a6b2df73e7d6339de2/apkzlib-3.3.0-alpha10-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-model/3.3.0-alpha11/ebb7e8ac4e3a8a043bd2e954cb2b8e3d68c96de0/builder-model-3.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-test-api/3.3.0-alpha11/bc6cedfbaa0ba8a8f098169624ebc72f9c3703ed/builder-test-api-3.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdklib/26.3.0-alpha11/c89e3bf3762d5b88d91d5672c7f652895cd817c3/sdklib-26.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdk-common/26.3.0-alpha11/c9a240161a9ae5ab169019e8705eb80ecb3d7b11/sdk-common-26.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/manifest-merger/26.3.0-alpha11/2c316663c025f247df495c2efe51871a346fff78/manifest-merger-26.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/protos/26.3.0-alpha11/3d68fdbbfef2c0e51b5e7fd5f45ea86be7e05c5e/protos-26.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/shared/26.3.0-alpha11/be7bec74fadadadc292e6893e42c60c3bbdc9f6e/shared-26.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/tracker/26.3.0-alpha11/703bb7e4c891b4b45473b33aadb9fa8bcf968b78/tracker-26.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/apksig/3.3.0-alpha11/c343d7614ccf49c0cc2d607df9e19dc2638511d/apksig-3.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/apkzlib/3.3.0-alpha11/c45ec63fa9e6f138f65f9aa5a54f909fd9c1a412/apkzlib-3.3.0-alpha11-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup/javawriter/2.5.0/1b2a0925ff06220c0261b6fd468183cd9e9a9a47/javawriter-2.5.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/6.0/66e3ec9f4ff0d70713868456142040111cc201c/asm-6.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-tree/6.0/66e3ec9f4ff0d70713868456142040111cc201c/asm-tree-6.0-sources.jar" />
@@ -2373,9 +2372,9 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/it.unimi.dsi/fastutil/7.2.0/a1a8e178d7813bb9596ee4e3d5e07b90ebe660af/fastutil-7.2.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.jopt-simple/jopt-simple/4.9/d965219b87f79e81b07116d451e684ab2f3acc27/jopt-simple-4.9-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.json-simple/json-simple/1.1/19c6d8dee6803c520d855ff7e8a8c3d97f1271ec/json-simple-1.1-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle-api/3.3.0-alpha10/38d7b0e40db146f4836cabab532cb46d94d0be9f/gradle-api-3.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.databinding/databinding-common/3.3.0-alpha10/48fd2403bf6dd9e96161bec3a6a1393ca7e8ffd6/databinding-common-3.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.databinding/baseLibrary/3.3.0-alpha10/2d5c9f8edd34c621ae43820d9ce855ea280b0e46/baseLibrary-3.3.0-alpha10-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle-api/3.3.0-alpha11/2b20fbe15c9d5d1398c85ee123d66f67867d54aa/gradle-api-3.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.databinding/databinding-common/3.3.0-alpha11/939ad34c7a7f2e17448f0bdf0657bd3bb0123e2b/databinding-common-3.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.databinding/baseLibrary/3.3.0-alpha11/972dd170a5fcaa728c6872d822bdc20a95a2fc49/baseLibrary-3.3.0-alpha11-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.antlr/antlr4/4.5.3/e836b2a7348320a86c3bbd91a032486798e6ab98/antlr4-4.5.3-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.4/f2d8698c46d1167ff24b06a840a87d91a02db891/commons-io-2.4-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.juniversalchardet/juniversalchardet/1.0.3/77979eaa98f90806f984155f44f63cc1fb60ac25/juniversalchardet-1.0.3-sources.jar" />
@@ -2393,11 +2392,11 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jgit/org.eclipse.jgit/4.9.0.201710071750-r/6fd1eb331447b6163898b4d10aa769e2ac193740/org.eclipse.jgit-4.9.0.201710071750-r-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.concurrent-trees/concurrent-trees/2.6.1/4c2e816b8fa6c525c1cb235c840dfb6b0a320db4/concurrent-trees-2.6.1-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-xml/2.4.7/c4bb383c972794bf9bf2b4a602530260f5e71660/groovy-xml-2.4.7-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/annotations/26.3.0-alpha10/6ed545413adfa3f3967d1186c67cf1e5dfa750/annotations-26.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.ddms/ddmlib/26.3.0-alpha10/d8b269d7a37db9934033929c35cd600ecab7ea2e/ddmlib-26.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.layoutlib/layoutlib-api/26.3.0-alpha10/7dd96d573ff7662c806ba41447bcabaf6ca873d6/layoutlib-api-26.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/dvlib/26.3.0-alpha10/35679e1762aecd200d38cb486b529d2e5b739f53/dvlib-26.3.0-alpha10-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/repository/26.3.0-alpha10/528741f4f14ff895fa1018371421865dc21548f0/repository-26.3.0-alpha10-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/annotations/26.3.0-alpha11/7e4550eb70e416dae74be9baf78578dbf27d3402/annotations-26.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.ddms/ddmlib/26.3.0-alpha11/5a2459199ac7d2b92c048f7fda87af0a27bd0b85/ddmlib-26.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.layoutlib/layoutlib-api/26.3.0-alpha11/fc4f80f5d82597e478df4de204cb6db3a7d19ce1/layoutlib-api-26.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/dvlib/26.3.0-alpha11/8dc3b6f795bf1a0d0471d8fcd0faf00b940dd297/dvlib-26.3.0-alpha11-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/repository/26.3.0-alpha11/4fcdd76c293d7a0eb1ccc0364308a7b78b66e235/repository-26.3.0-alpha11-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.0/baf95d8519fc1a11d388f8543cb40cd2bb9d66dc/gson-2.8.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.5.2/ca23fd61a082eab682fc0ffd29e37d09eab07180/httpmime-4.5.2-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.56/118b4633c59394749b2b2f278138beb31c930663/bcpkix-jdk15on-1.56-sources.jar" />
@@ -2408,7 +2407,7 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.javaewah/JavaEWAH/1.1.6/ca2745e91c6a51f8e6809d1579bda36ad83f1f58/JavaEWAH-1.1.6-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.2/58d38f68d4a867d4552ae27960bb348d7eaa1297/slf4j-api-1.7.2-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy/2.4.7/8d7490c6cd820826789089d537aad569642a23d2/groovy-2.4.7-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/common/26.3.0-alpha10/b29cdd11888cb8976410e8574d03f2f1e7aaecaa/common-26.3.0-alpha10-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/common/26.3.0-alpha11/f7b358e5378c36bd1a4da39f1adff21f6986f08d/common-26.3.0-alpha11-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.kxml/kxml2/2.3.0/309cd2cff7260e465792fda3dcbb063b730d8050/kxml2-2.3.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sun.activation/javax.activation/1.2.0/5b034823866d38f38f02bdad7ed8a14e650c61b6/javax.activation-1.2.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.12/1fdd1a2fed15cdf08780ed564279c0ddbff46419/commons-compress-1.12-sources.jar" />
@@ -2436,14 +2435,14 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sun.istack/istack-commons-runtime/2.21/5d42dda44aa68ff87756e93ae0042cd66d2daa78/istack-commons-runtime-2.21-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3-M2/62310206461e91e7178e241453c556eb6e5d22c9/kotlin-stdlib-common-1.3-M2-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/5991ca87ef1fb5544943d9abc5a9a37583fabe03/annotations-13.0-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/3.3.0-alpha10/d0bdec9671b66c41b4c451a25fb5307cd2f81d30/gradle-3.3.0-alpha10.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/3.3.0-alpha11/6f4bfeddbce65f2b37108dcb36dcbdeb574ab694/gradle-3.3.0-alpha11.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/1.3-M2/f1d294e832a59c57318f703f1cf7eb24c7655837/kotlin-gradle-plugin-1.3-M2.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.gms/google-services/4.0.1/a9fdd01c6f67fa7d12cc156a7a20a5086fbd1287/google-services-4.0.1.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.spotless/spotless-plugin-gradle/3.13.0/cad61a1689c80f4abde03868c34c730a2662ebbf/spotless-plugin-gradle-3.13.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/3.3.0-alpha10/b4b6843c280062d52fa0e4fda66bb5fd6f39549/builder-3.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/crash/26.3.0-alpha10/27ef9e837fee4f5cc3201ecb46d405b1d502a599/crash-26.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-gradle-api/26.3.0-alpha10/df29689675d7e6963481c37b8be3bbb4e049a421/lint-gradle-api-26.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.databinding/databinding-compiler-common/3.3.0-alpha10/b8d194edec5230a0616d6a857da7e845e935bffe/databinding-compiler-common-3.3.0-alpha10.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/3.3.0-alpha11/13de4263a0ba9ce9640ba41b4351322978ae702/builder-3.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/crash/26.3.0-alpha11/fb0c6b55143e0e9008f17125958bd3116a4e6fec/crash-26.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-gradle-api/26.3.0-alpha11/b45461a4298a334b66ff592ca8b5c8ee9c0e81e1/lint-gradle-api-26.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.databinding/databinding-compiler-common/3.3.0-alpha11/52d030268300ca1761545e05692acc002ad1d74c/databinding-compiler-common-3.3.0-alpha11.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/transform-api/2.0.0-deprecated-use-gradle-api/47f6c56527c42425742fa9b56ffd3fd80763fe03/transform-api-2.0.0-deprecated-use-gradle-api.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-analysis/6.0/dd1cc1381a970800268160203aae2d3784da779b/asm-analysis-6.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.proguard/proguard-gradle/6.0.3/e5becf2356695a396b788110e386c38bad523bfc/proguard-gradle-6.0.3.jar" />
@@ -2458,16 +2457,16 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.spotless/spotless-lib/1.13.0/5cb2ce941446653bad8fb528eb863aa4c178b1cd/spotless-lib-1.13.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.spotless/spotless-lib-extra/1.13.0/5914314cc4c3c4e3e820ea5648f59229b19f3fd3/spotless-lib-extra-1.13.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.durian/durian-io/1.2.0/fc9c103d454d04f7c5b78b437190ea3bd15fb72c/durian-io-1.2.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-model/3.3.0-alpha10/5034347184df50d6d435c0be981eaadba89e96f1/builder-model-3.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-test-api/3.3.0-alpha10/35c0e67a2d85721cafd8d52fdd77822a875c3a67/builder-test-api-3.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdklib/26.3.0-alpha10/d9032cdb50cc4af3065c23aa684f3ce1d54a016d/sdklib-26.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdk-common/26.3.0-alpha10/47459445e51b470b735543d16ba046a96855174f/sdk-common-26.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/manifest-merger/26.3.0-alpha10/b3eaf37910b33341534c00b6cdb306e2005bc924/manifest-merger-26.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/protos/26.3.0-alpha10/fea134cc63c53dfeb59afd73e4be0c6b74e69755/protos-26.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/shared/26.3.0-alpha10/ad2dc359cc52bfe83672c0d946c7fe7a0d16b85f/shared-26.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/tracker/26.3.0-alpha10/1991afd33984aa562f1284ca702af245c78c1a22/tracker-26.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/apksig/3.3.0-alpha10/e2ffd279303393be82f6c97fbf2eeb5fbd609391/apksig-3.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/apkzlib/3.3.0-alpha10/2c0c36445607d6fa6bb4978272ed1c116467ee4f/apkzlib-3.3.0-alpha10.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-model/3.3.0-alpha11/cb4b5867fe405efffdfbbda14e1ab314fdbc51f0/builder-model-3.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-test-api/3.3.0-alpha11/78dadb86425e8f99d9bcf17cdda1702b822dca25/builder-test-api-3.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdklib/26.3.0-alpha11/908bee405c66dd8688057ee0b4e41456f7255c14/sdklib-26.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdk-common/26.3.0-alpha11/410e0aa1c97afeb7f395b120c106e849f78a4f0/sdk-common-26.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/manifest-merger/26.3.0-alpha11/99dae855c7457057c1ed045bb7a45f78850bbccc/manifest-merger-26.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/protos/26.3.0-alpha11/8efd5a144d535e0d3e2b7f5d172125e62f3bbb94/protos-26.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/shared/26.3.0-alpha11/780b80e78d079eaa3e1cc1b33f11bd2aa7146fcf/shared-26.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/tracker/26.3.0-alpha11/aa05c332d6bda5b91bf44118decb6f7492deac18/tracker-26.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/apksig/3.3.0-alpha11/999208f5576bb51e43ac80b74ec6102b336e276a/apksig-3.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/apkzlib/3.3.0-alpha11/7d8cf458e3beb54750f30e80b745f56d33d46c8a/apkzlib-3.3.0-alpha11.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup/javawriter/2.5.0/81241ff7078ef14f42ea2a8995fa09c096256e6b/javawriter-2.5.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/6.0/bc6fa6b19424bb9592fe43bbc20178f92d403105/asm-6.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-tree/6.0/a624f1a6e4e428dcd680a01bab2d4c56b35b18f0/asm-tree-6.0.jar" />
@@ -2476,9 +2475,9 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/it.unimi.dsi/fastutil/7.2.0/5ad3a2bb04143f70aa0765fc29fc29571a7d6b34/fastutil-7.2.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.jopt-simple/jopt-simple/4.9/ee9e9eaa0a35360dcfeac129ff4923215fd65904/jopt-simple-4.9.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.json-simple/json-simple/1.1/5e303a03d04e6788dddfa3655272580ae0fc13bb/json-simple-1.1.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle-api/3.3.0-alpha10/a981ec35fa51fe0f9e370f363423042bc98e03fc/gradle-api-3.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.databinding/databinding-common/3.3.0-alpha10/48d2464898335a6ef26fe98fcb1c9acf95cf0da8/databinding-common-3.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.databinding/baseLibrary/3.3.0-alpha10/9496a416850b75f7d7d1d73a2c0efdede0fc77af/baseLibrary-3.3.0-alpha10.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle-api/3.3.0-alpha11/bb805553fb094c3bbea50b7a559b5ff33c8ea76d/gradle-api-3.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.databinding/databinding-common/3.3.0-alpha11/607fd0537374aa04b0f5244515d3205a777ed335/databinding-common-3.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.databinding/baseLibrary/3.3.0-alpha11/a574a0f40c75c25d5a8fb033c8703b0e549ff9ce/baseLibrary-3.3.0-alpha11.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.antlr/antlr4/4.5.3/f35db7e4b2446e4174ba6a73db7bd6b3e6bb5da1/antlr4-4.5.3.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.4/b1b6ea3b7e4aa4f492509a4952029cd8e48019ad/commons-io-2.4.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.juniversalchardet/juniversalchardet/1.0.3/cd49678784c46aa8789c060538e0154013bb421b/juniversalchardet-1.0.3.jar" />
@@ -2498,11 +2497,11 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jgit/org.eclipse.jgit/4.9.0.201710071750-r/69d8510b335d4d33d551a133505a4141311f970a/org.eclipse.jgit-4.9.0.201710071750-r.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.concurrent-trees/concurrent-trees/2.6.1/9b647240522ab67c003de9b6702ca81ac0c15efc/concurrent-trees-2.6.1.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-xml/2.4.7/864b9dc44fb0e05f329fad473e8b4df172f1b48f/groovy-xml-2.4.7.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/annotations/26.3.0-alpha10/a025b6c06ced78b55550b3b9328089ec57cf27dd/annotations-26.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.ddms/ddmlib/26.3.0-alpha10/52b1ff67c10992f9c183a9c1aba1549324444c4e/ddmlib-26.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.layoutlib/layoutlib-api/26.3.0-alpha10/ffad9cd6243e4a622a74346dc75111e8f39ecdeb/layoutlib-api-26.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/dvlib/26.3.0-alpha10/56014da4116666cf0bdb556bbdf4ff53e75ac67a/dvlib-26.3.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/repository/26.3.0-alpha10/8d2b64e30529eb92b7b0861ed02d264cebe8ccc6/repository-26.3.0-alpha10.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/annotations/26.3.0-alpha11/d13e55fcbb1033f6cba178afae15a0248c2bac8a/annotations-26.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.ddms/ddmlib/26.3.0-alpha11/ed7b6b83e8800cd9a4e7c085beac5fc9bcdfc075/ddmlib-26.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.layoutlib/layoutlib-api/26.3.0-alpha11/2eb2e9d8c793c8e8726f9c1113d6e69410628270/layoutlib-api-26.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/dvlib/26.3.0-alpha11/31f6eca68bbbeecd084c84f131b57aa394b42636/dvlib-26.3.0-alpha11.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/repository/26.3.0-alpha11/69bbe297db493c3c7f438e0d80c481410c755fee/repository-26.3.0-alpha11.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.0/c4ba5371a29ac9b2ad6129b1d39ea38750043eff/gson-2.8.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.5.2/22b4c53dd9b6761024258de8f9240c3dce6ea368/httpmime-4.5.2.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.56/4648af70268b6fdb24674fb1fd7c1fcc73db1231/bcpkix-jdk15on-1.56.jar" />
@@ -2513,7 +2512,7 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.javaewah/JavaEWAH/1.1.6/94ad16d728b374d65bd897625f3fbb3da223a2b6/JavaEWAH-1.1.6.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.2/81d61b7f33ebeab314e07de0cc596f8e858d97/slf4j-api-1.7.2.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy/2.4.7/10870e6511f544ce45152d0ad08d7514a00c8201/groovy-2.4.7.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/common/26.3.0-alpha10/168509046bf868d79773fd168c1481ce89025c80/common-26.3.0-alpha10.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/common/26.3.0-alpha11/c332d1061acb74172cab86f374daf359ac88ea9d/common-26.3.0-alpha11.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.kxml/kxml2/2.3.0/ccbc77a5fd907ef863c29f3596c6f54ffa4e9442/kxml2-2.3.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sun.activation/javax.activation/1.2.0/bf744c1e2776ed1de3c55c8dac1057ec331ef744/javax.activation-1.2.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.12/84caa68576e345eb5e7ae61a0e5a9229eb100d7b/commons-compress-1.12.jar" />
@@ -2729,10 +2728,10 @@
         <option value="$PROJECT_DIR$/app/proguard-rules.pro" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_face.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_face.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/github/xinyuez/mlkit/demo/FaceActivity.kt" />
+        <option value="$PROJECT_DIR$/build.gradle" />
       </list>
     </option>
   </component>
@@ -3143,10 +3142,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1086262" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1086262" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -3154,13 +3152,13 @@
       <window_info id="Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Run" order="0" />
-      <window_info anchor="bottom" id="Logcat" order="1" visible="true" weight="0.3297769" />
+      <window_info anchor="bottom" id="Logcat" order="1" weight="0.3297769" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3297769" />
-      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49749687" weight="0.3297769" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50236964" side_tool="true" weight="0.2900097" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49701315" weight="0.3297769" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50298685" side_tool="true" visible="true" weight="0.2900097" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.3297769" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49763033" weight="0.2900097" />
+      <window_info active="true" anchor="bottom" id="Build" order="7" sideWeight="0.49701315" visible="true" weight="0.2900097" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="bottom" id="Find" order="9" sideWeight="0.4993742" weight="0.3297769" />
       <window_info anchor="bottom" id="Messages" order="10" />
@@ -3348,13 +3346,6 @@
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_face.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -3363,17 +3354,24 @@
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/github/xinyuez/mlkit/demo/FaceActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="27" column="20" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-camerakit-1.0.0-Snapshot.aar/ffb42761a419517d378b97173bdf5e1b/jars/classes.jar!/com/camerakit/CameraKitView.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7224">
           <caret line="260" column="16" selection-start-line="260" selection-start-column="16" selection-end-line="260" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/github/xinyuez/mlkit/demo/FaceActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
         </state>
       </provider>
     </entry>
