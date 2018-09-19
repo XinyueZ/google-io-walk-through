@@ -15,6 +15,8 @@
             android:layout_height="match_parent"
             android:adjustViewBounds="true"
             android:keepScreenOn="true"
+            app:camera_facing="front"
+            app:camera_focus="continuous"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
