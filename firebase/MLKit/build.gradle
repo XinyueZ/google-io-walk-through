@@ -27,7 +27,7 @@ buildscript {
 
             'ktlintVersion'     : "0.28.0",
 
-            'cameraLib'         : "0.13.1"
+            'camera'            : "1.0.0-Snapshot"
     ]
     ext.names = [
             'applicationId'            : "com.github.xinyuez.mlkit.demo",
@@ -37,11 +37,13 @@ buildscript {
         google()
         jcenter()
         maven { url 'http://dl.bintray.com/kotlin/kotlin-eap' }
-    }
-    dependencies {
-        classpath "com.android.tools.build:gradle:${versions.gradle}"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
-        classpath "com.google.gms:google-services:${versions.playServiceVersion}"
+        maven { url 'https://dl.bintray.com/camerakit/camerakit-android-snapshots' }
+
+        dependencies {
+            classpath "com.android.tools.build:gradle:${versions.gradle}"
+            classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
+            classpath "com.google.gms:google-services:${versions.playServiceVersion}"
+        }
     }
 }
 
@@ -54,6 +56,7 @@ allprojects {
         google()
         jcenter()
         maven { url 'http://dl.bintray.com/kotlin/kotlin-eap' }
+        maven { url 'https://dl.bintray.com/camerakit/camerakit-android-snapshots' }
     }
 }
 

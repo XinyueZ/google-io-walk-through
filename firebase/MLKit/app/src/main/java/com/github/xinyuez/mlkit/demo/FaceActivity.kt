@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import com.camerakit.CameraKit.FLASH_OFF
+import com.camerakit.CameraKit.FLASH_ON
 import kotlinx.android.synthetic.clearFindViewByIdCache
 import kotlinx.android.synthetic.main.activity_face.face_appbar
 import kotlinx.android.synthetic.main.content_face.camera
@@ -19,11 +21,11 @@ class FaceActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        camera.start()
+        camera.onResume()
     }
 
     override fun onPause() {
-        camera.stop()
+        camera.onPause()
         super.onPause()
     }
 
@@ -39,7 +41,10 @@ class FaceActivity : AppCompatActivity() {
 
     @Suppress("UNUSED_PARAMETER")
     fun flash(v: View) {
-        camera.toggleFlash()
+        camera.flash = when (camera.flash) {
+            FLASH_OFF -> FLASH_ON
+            else -> FLASH_OFF
+        }
     }
 
     companion object {

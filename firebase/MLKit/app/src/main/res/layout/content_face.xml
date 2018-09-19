@@ -6,22 +6,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:context=".OCRActivity"
+        tools:context=".FaceActivity"
         tools:showIn="@layout/activity_ocr">
 
-    <com.wonderkiln.camerakit.CameraView
+    <com.camerakit.CameraKitView
             android:id="@+id/camera"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:adjustViewBounds="true"
             android:keepScreenOn="true"
-            app:ckDoubleTapToToggleFacing="true"
-            app:ckFocus="tapWithMarker"
-            app:ckJpegQuality="100"
-            app:ckMethod="standard"
-            app:ckPinchToZoom="true"
-            app:ckVideoQuality="highest"
-            app:ckFlash="auto"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
