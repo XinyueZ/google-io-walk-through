@@ -58,48 +58,52 @@
     <session id="-1473205487">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="gradle" value="51" />
-          <entry key="kt" value="1195" />
+          <entry key="gradle" value="58" />
+          <entry key="iml" value="5" />
+          <entry key="kt" value="1207" />
           <entry key="txt" value="110" />
           <entry key="xml" value="186" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Groovy" value="51" />
-          <entry key="Kotlin" value="1195" />
+          <entry key="Groovy" value="58" />
+          <entry key="IDEA_MODULE" value="5" />
+          <entry key="Kotlin" value="1207" />
           <entry key="PLAIN_TEXT" value="110" />
           <entry key="XML" value="186" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="12" />
-          <entry key="gradle" value="4" />
-          <entry key="kt" value="4" />
+          <entry key="class" value="13" />
+          <entry key="gradle" value="6" />
+          <entry key="iml" value="5" />
+          <entry key="kt" value="9" />
           <entry key="png" value="3" />
-          <entry key="xml" value="18" />
+          <entry key="xml" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="12" />
-          <entry key="Groovy" value="4" />
+          <entry key="CLASS" value="13" />
+          <entry key="Groovy" value="6" />
+          <entry key="IDEA_MODULE" value="5" />
           <entry key="Image" value="3" />
-          <entry key="Kotlin" value="4" />
-          <entry key="XML" value="18" />
+          <entry key="Kotlin" value="9" />
+          <entry key="XML" value="22" />
         </counts>
       </usages-collector>
     </session>
@@ -152,50 +156,49 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/github/xinyuez/mlkit/demo/FaceActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_face.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-camerakit-1.0.0-Snapshot.aar/ffb42761a419517d378b97173bdf5e1b/jars/classes.jar!/com/camerakit/CameraKitView.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="60" column="47" selection-start-line="60" selection-start-column="47" selection-end-line="60" selection-end-column="47" />
+            <state relative-caret-position="256">
+              <caret line="26" column="15" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/github/xinyuez/mlkit/demo/FaceActivity.kt">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/github/xinyuez/mlkit/demo/MainActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+            <state relative-caret-position="400">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_ocr.xml">
+        <entry file="file://$PROJECT_DIR$/app/app.iml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+            <state relative-caret-position="240">
+              <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
             </state>
           </provider>
-          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/github/xinyuez/mlkit/demo/DemoApp.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-manifest" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -211,8 +214,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="240">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -2119,7 +2122,7 @@
                         <option name="entries">
                           <list>
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/3.3.0-alpha11/8e9209ec3dd9cdf9115e9cc58f0d47a32b52048e/gradle-3.3.0-alpha11-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/1.3-M2/54bc143d217bf7c929ecd6006220032405dba647/kotlin-gradle-plugin-1.3-M2-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/1.3.0-rc-54/6775f2ab98747e46dd73468249ac254b01ecba5d/kotlin-gradle-plugin-1.3.0-rc-54-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.gms/google-services/4.0.1/15d345a81ab5756fc59b81ba99435d20568ee8e6/google-services-4.0.1-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.spotless/spotless-plugin-gradle/3.13.0/b1a0ba009c2b1ffa0dad53007e4dd119f8d011cb/spotless-plugin-gradle-3.13.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/3.3.0-alpha11/6d6875159a5c6a2cd587a50adaf976246d93554f/builder-3.3.0-alpha11-sources.jar" />
@@ -2129,12 +2132,13 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/transform-api/2.0.0-deprecated-use-gradle-api/f18536c1fe08673c69e869be170759616a9df16/transform-api-2.0.0-deprecated-use-gradle-api-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-analysis/6.0/66e3ec9f4ff0d70713868456142040111cc201c/asm-analysis-6.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.proguard/proguard-gradle/6.0.3/1ebac416b8402b16e02a470f41e73af880d0db0f/proguard-gradle-6.0.3-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-api/1.3-M2/54358ed2684561d3ab8e54b7464374a3fe6e973f/kotlin-gradle-plugin-api-1.3-M2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-model/1.3-M2/d3e5ff912155b27cef2e9ac5498db6a637c4ee48/kotlin-gradle-plugin-model-1.3-M2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.3-M2/e1901023c8ec7f9b3d428c84ff0db11161731e89/kotlin-compiler-embeddable-1.3-M2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-annotation-processing-gradle/1.3-M2/36afd047fe6cad8611fc8156c4d9d3ec67f71042/kotlin-annotation-processing-gradle-1.3-M2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.3-M2/52cae215ce0534a7ccd65529791d91b00069474/kotlin-android-extensions-1.3-M2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-runner/1.3-M2/96e15dcd8c8409cb1504ce754a34ba69621eb3d3/kotlin-compiler-runner-1.3-M2-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-api/1.3.0-rc-54/843d98aab404019778c0d3fef7266c52284fd8e5/kotlin-gradle-plugin-api-1.3.0-rc-54-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-model/1.3.0-rc-54/6a5066289e4b53e23339c23d00d26d83876425ae/kotlin-gradle-plugin-model-1.3.0-rc-54-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.3.0-rc-54/e57eeb65cd8b26aa2f28bb5a1cd9d518ec952d91/kotlin-compiler-embeddable-1.3.0-rc-54-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-annotation-processing-gradle/1.3.0-rc-54/aeab6685de1fd494e55fc24c2e82587cbe89c779/kotlin-annotation-processing-gradle-1.3.0-rc-54-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.3.0-rc-54/bf809997474a20e7cd36e65b3d6d80d5e73f9bbb/kotlin-android-extensions-1.3.0-rc-54-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-runner/1.3.0-rc-54/25005af491b5141ef1d2a925efdc126724a3cf19/kotlin-compiler-runner-1.3.0-rc-54-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-compiler-embeddable/1.3.0-rc-54/28d432cea8471df7945928f6cf9e9d2809aa5adc/kotlin-scripting-compiler-embeddable-1.3.0-rc-54-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.spotless/spotless-lib/1.13.0/415b0000ef58c628abe7e1dc02b324deee30855e/spotless-lib-1.13.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.spotless/spotless-lib-extra/1.13.0/a0d6299a06895a9511863c37eddc1857cf291f55/spotless-lib-extra-1.13.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.durian/durian-io/1.2.0/dad0676a3265052cbdc78313e1f018c0d4e0d56e/durian-io-1.2.0-sources.jar" />
@@ -2167,10 +2171,10 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.auto.value/auto-value/1.5.2/e96b1f4a9e6630a405434fca857c6b8f777163cf/auto-value-1.5.2-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java-util/3.4.0/6d5f8e6d209c309d9ef3e30aa81135ee94cc7d49/protobuf-java-util-3.4.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jdom/jdom2/2.0.6/3dcf8ba7582eeac3b67ed5155ee3659e16c8dadc/jdom2-2.0.6-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/konan-utils/1.3-M2/8ea7f3f90483000084ce3c877e68d3b684edf8e1/konan-utils-1.3-M2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.3-M2/3e4c3e461bd1881d9d2476c6bdf872e8b9dbb55f/kotlin-script-runtime-1.3-M2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-build-common/1.3-M2/a1ff325b7af72b120802853589c4271c36d46428/kotlin-build-common-1.3-M2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-client/1.3-M2/a935761655e17bbc3e13081e92f14c800eaec824/kotlin-daemon-client-1.3-M2-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-native-utils/1.3.0-rc-54/8d3e85e4bcb883eb8eab465face17375e2b07e67/kotlin-native-utils-1.3.0-rc-54-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.3.0-rc-54/800e25a270875a45e55aad6853aefdb1b517204/kotlin-script-runtime-1.3.0-rc-54-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-build-common/1.3.0-rc-54/ba1a343587dcb5013bad805d6ebb1aa54de7c6df/kotlin-build-common-1.3.0-rc-54-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-client/1.3.0-rc-54/c6b2e8e26aa642fa2715cf10a31757719520d2e8/kotlin-daemon-client-1.3.0-rc-54-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.durian/durian-core/1.2.0/3ae79e2f6cf32a7b3e64cd6d91e3fa8e95865d37/durian-core-1.2.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.durian/durian-collect/1.2.0/4841ad570a47609c7cbe7f4600122f15e0f6ebdf/durian-collect-1.2.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jgit/org.eclipse.jgit/4.9.0.201710071750-r/6fd1eb331447b6163898b4d10aa769e2ac193740/org.eclipse.jgit-4.9.0.201710071750-r-sources.jar" />
@@ -2184,7 +2188,7 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.0/baf95d8519fc1a11d388f8543cb40cd2bb9d66dc/gson-2.8.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.5.2/ca23fd61a082eab682fc0ffd29e37d09eab07180/httpmime-4.5.2-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.56/118b4633c59394749b2b2f278138beb31c930663/bcpkix-jdk15on-1.56-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.3-M2/8fbf0a1728fa2b6668adc46ea075a2ea8a9aead9/kotlin-reflect-1.3-M2-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.3.0-rc-54/4d503f68fcc98f5cc044ba2c46fb16a3bd53baea/kotlin-reflect-1.3.0-rc-54-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java/3.4.0/c57c9f6bcbdb783260d00b80c455d82a6a8b02db/protobuf-java-3.4.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/a00123f261762a7c5e0ec916a2c7c8298d29c400/javax.inject-1-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jcraft/jsch/0.1.54/91d6069df9be9e076bdb124e82fc2a9af9547616/jsch-0.1.54-sources.jar" />
@@ -2212,15 +2216,15 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.2.0/a8cd7823aa1dcd2fd6677c0c5988fdde9d1fb0a3/error_prone_annotations-2.2.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.1/dcd31de68a90e41e336f6b7afce0d39285c433d7/j2objc-annotations-1.1-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.14/886474da3f761d39fcbb723d97ecc5089e731f42/animal-sniffer-annotations-1.14-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3-M2/8208cf96f610514be121e2ab56a2f65ef866d45/kotlin-stdlib-1.3-M2-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.0-rc-54/d9006784ce38d376b90c788d8a0cda12f8e84bd3/kotlin-stdlib-1.3.0-rc-54-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jre7/1.2.61/ff2d332eaa4caed8a2b5db288306582715c7c3b9/kotlin-stdlib-jre7-1.2.61-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.xml.bind/jaxb-api/2.2.12-b140109.1041/d59f43002d3d07c6adaaeedd93e7944c273821d2/jaxb-api-2.2.12-b140109.1041-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/txw2/2.2.11/7745afc4dcc863b724f4a21fb3fc517cd5aaf891/txw2-2.2.11-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sun.istack/istack-commons-runtime/2.21/5d42dda44aa68ff87756e93ae0042cd66d2daa78/istack-commons-runtime-2.21-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3-M2/62310206461e91e7178e241453c556eb6e5d22c9/kotlin-stdlib-common-1.3-M2-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.0-rc-54/5f1c3ead0828bfacebab3ef00120a5d3f8ba10b9/kotlin-stdlib-common-1.3.0-rc-54-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/5991ca87ef1fb5544943d9abc5a9a37583fabe03/annotations-13.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/3.3.0-alpha11/6f4bfeddbce65f2b37108dcb36dcbdeb574ab694/gradle-3.3.0-alpha11.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/1.3-M2/f1d294e832a59c57318f703f1cf7eb24c7655837/kotlin-gradle-plugin-1.3-M2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/1.3.0-rc-54/f14c854f8dcef83a7686b4387ac97892ac6fb81f/kotlin-gradle-plugin-1.3.0-rc-54.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.gms/google-services/4.0.1/a9fdd01c6f67fa7d12cc156a7a20a5086fbd1287/google-services-4.0.1.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.spotless/spotless-plugin-gradle/3.13.0/cad61a1689c80f4abde03868c34c730a2662ebbf/spotless-plugin-gradle-3.13.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/3.3.0-alpha11/13de4263a0ba9ce9640ba41b4351322978ae702/builder-3.3.0-alpha11.jar" />
@@ -2232,12 +2236,13 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.proguard/proguard-gradle/6.0.3/e5becf2356695a396b788110e386c38bad523bfc/proguard-gradle-6.0.3.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/bundletool/0.5.1/635368477286f31d557045e241ec59fce87041da/bundletool-0.5.1.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build.jetifier/jetifier-processor/1.0.0-alpha10/6d494a04e0af27ecd4ec7a35c93759dd9c7443bc/jetifier-processor-1.0.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-api/1.3-M2/d4f218517b9c7cabfad869e688b2ffd5778faa55/kotlin-gradle-plugin-api-1.3-M2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-model/1.3-M2/9da26c54298de0e22adfaa86ccbc9cff7ff5469d/kotlin-gradle-plugin-model-1.3-M2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.3-M2/4d8194a994c6ddfc103a79f9cfe25cbd02f6178e/kotlin-compiler-embeddable-1.3-M2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-annotation-processing-gradle/1.3-M2/c0fd3c25091fa378f3a6ded4473a5cad4c4e3a1c/kotlin-annotation-processing-gradle-1.3-M2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.3-M2/71b15dc2c34b027835204787bf1cf535c2d22dca/kotlin-android-extensions-1.3-M2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-runner/1.3-M2/816340c0502b605ec430bc874589d7f0cc24eda7/kotlin-compiler-runner-1.3-M2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-api/1.3.0-rc-54/8439a72acda47a36cce744d4c44c8c860faaa07b/kotlin-gradle-plugin-api-1.3.0-rc-54.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-model/1.3.0-rc-54/889857cf8e9174077f273af59740ab46c7f84372/kotlin-gradle-plugin-model-1.3.0-rc-54.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.3.0-rc-54/fe03a9909398180b0065bd81b9400716ccb1eba0/kotlin-compiler-embeddable-1.3.0-rc-54.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-annotation-processing-gradle/1.3.0-rc-54/8a70438a8aacc635d44f0ba7a02ad468d68117c5/kotlin-annotation-processing-gradle-1.3.0-rc-54.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.3.0-rc-54/f21ee2b5b6fb771e899ffc101bc8ff10ae43ed10/kotlin-android-extensions-1.3.0-rc-54.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-runner/1.3.0-rc-54/18cd526c2fa4a5d2673873d07bcb5d68969d8c7a/kotlin-compiler-runner-1.3.0-rc-54.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-compiler-embeddable/1.3.0-rc-54/86b51876a087bd614863c4d5dc8f1e6706735419/kotlin-scripting-compiler-embeddable-1.3.0-rc-54.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.spotless/spotless-lib/1.13.0/5cb2ce941446653bad8fb528eb863aa4c178b1cd/spotless-lib-1.13.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.spotless/spotless-lib-extra/1.13.0/5914314cc4c3c4e3e820ea5648f59229b19f3fd3/spotless-lib-extra-1.13.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.durian/durian-io/1.2.0/fc9c103d454d04f7c5b78b437190ea3bd15fb72c/durian-io-1.2.0.jar" />
@@ -2272,10 +2277,10 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/aapt2-proto/0.3.1/8311800abb3dcd84426a0de834a6b884a173d864/aapt2-proto-0.3.1.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java-util/3.4.0/96aba8ab71c16018c6adf66771ce15c6491bc0fe/protobuf-java-util-3.4.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jdom/jdom2/2.0.6/6f14738ec2e9dd0011e343717fa624a10f8aab64/jdom2-2.0.6.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/konan-utils/1.3-M2/87fa4e4377a087983a408744d620afb538f25b44/konan-utils-1.3-M2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.3-M2/4b5d05fcf9bc14881b122fd683f4a6daff6133a5/kotlin-script-runtime-1.3-M2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-build-common/1.3-M2/ef390eea8e1fb051a0714013ae6a14d7cf80da50/kotlin-build-common-1.3-M2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-client/1.3-M2/3b22fb75d75ad17361918e05d32480d09c561420/kotlin-daemon-client-1.3-M2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-native-utils/1.3.0-rc-54/739add0a246b9a80a97574a09edced8f08bfdf7a/kotlin-native-utils-1.3.0-rc-54.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.3.0-rc-54/57b6e42faedc58974b18cb272f4e410ae63df2ed/kotlin-script-runtime-1.3.0-rc-54.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-build-common/1.3.0-rc-54/e8fed824211f39175f018486c143a4b7a5bbf090/kotlin-build-common-1.3.0-rc-54.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-client/1.3.0-rc-54/42cfa0e6e9f94fdb148b9f0746d001b7e995a23e/kotlin-daemon-client-1.3.0-rc-54.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.durian/durian-core/1.2.0/ddf0b08f6dccae07bcb993645a7634cbe8f9b2f8/durian-core-1.2.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.durian/durian-collect/1.2.0/eee2085a0f894527ac841b05b442656115e2877c/durian-collect-1.2.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jgit/org.eclipse.jgit/4.9.0.201710071750-r/69d8510b335d4d33d551a133505a4141311f970a/org.eclipse.jgit-4.9.0.201710071750-r.jar" />
@@ -2289,7 +2294,7 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.0/c4ba5371a29ac9b2ad6129b1d39ea38750043eff/gson-2.8.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.5.2/22b4c53dd9b6761024258de8f9240c3dce6ea368/httpmime-4.5.2.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.56/4648af70268b6fdb24674fb1fd7c1fcc73db1231/bcpkix-jdk15on-1.56.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.3-M2/3f007de0a1f668e9449d59f30f024df4f4c1a0fa/kotlin-reflect-1.3-M2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.3.0-rc-54/f37d799011aadea3d1d005beb28641335526e5ab/kotlin-reflect-1.3.0-rc-54.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java/3.4.0/b32aba0cbe737a4ca953f71688725972e3ee927c/protobuf-java-3.4.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jcraft/jsch/0.1.54/da3584329a263616e277e15462b387addd1b208d/jsch-0.1.54.jar" />
@@ -2317,12 +2322,12 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.2.0/88e3c593e9b3586e1c6177f89267da6fc6986f0c/error_prone_annotations-2.2.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.1/976d8d30bebc251db406f2bdb3eb01962b5685b3/j2objc-annotations-1.1.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.14/775b7e22fb10026eed3f86e8dc556dfafe35f2d5/animal-sniffer-annotations-1.14.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3-M2/e475d291eee6606d4512305413b0c9ed4557cae4/kotlin-stdlib-1.3-M2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.0-rc-54/ec751156dad0017ea0cd22d471c460bb0b4ab26b/kotlin-stdlib-1.3.0-rc-54.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jre7/1.2.61/8738fb53e485bd4a6441f1f0b29378c7cd5e92f/kotlin-stdlib-jre7-1.2.61.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.xml.bind/jaxb-api/2.2.12-b140109.1041/7ed0e0d01198614194d56dfb03d9d95aa311824c/jaxb-api-2.2.12-b140109.1041.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/txw2/2.2.11/2df047d8c187a62f2177bf6013f1f9786cdfc8a2/txw2-2.2.11.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sun.istack/istack-commons-runtime/2.21/c969d8f15c467f0ef7d7b04889afbe7b5d48e22f/istack-commons-runtime-2.21.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3-M2/c7119b78ac604072ee437c973570572eb173b2bc/kotlin-stdlib-common-1.3-M2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.0-rc-54/4dbca89a5cb70105b730bd70c93aa1d5f4b6994b/kotlin-stdlib-common-1.3.0-rc-54.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar" />
                           </list>
                         </option>
@@ -2336,7 +2341,7 @@
                         <option name="entries">
                           <list>
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/3.3.0-alpha11/8e9209ec3dd9cdf9115e9cc58f0d47a32b52048e/gradle-3.3.0-alpha11-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/1.3-M2/54bc143d217bf7c929ecd6006220032405dba647/kotlin-gradle-plugin-1.3-M2-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/1.3.0-rc-54/6775f2ab98747e46dd73468249ac254b01ecba5d/kotlin-gradle-plugin-1.3.0-rc-54-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.gms/google-services/4.0.1/15d345a81ab5756fc59b81ba99435d20568ee8e6/google-services-4.0.1-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.spotless/spotless-plugin-gradle/3.13.0/b1a0ba009c2b1ffa0dad53007e4dd119f8d011cb/spotless-plugin-gradle-3.13.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/3.3.0-alpha11/6d6875159a5c6a2cd587a50adaf976246d93554f/builder-3.3.0-alpha11-sources.jar" />
@@ -2346,12 +2351,13 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/transform-api/2.0.0-deprecated-use-gradle-api/f18536c1fe08673c69e869be170759616a9df16/transform-api-2.0.0-deprecated-use-gradle-api-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-analysis/6.0/66e3ec9f4ff0d70713868456142040111cc201c/asm-analysis-6.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.proguard/proguard-gradle/6.0.3/1ebac416b8402b16e02a470f41e73af880d0db0f/proguard-gradle-6.0.3-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-api/1.3-M2/54358ed2684561d3ab8e54b7464374a3fe6e973f/kotlin-gradle-plugin-api-1.3-M2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-model/1.3-M2/d3e5ff912155b27cef2e9ac5498db6a637c4ee48/kotlin-gradle-plugin-model-1.3-M2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.3-M2/e1901023c8ec7f9b3d428c84ff0db11161731e89/kotlin-compiler-embeddable-1.3-M2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-annotation-processing-gradle/1.3-M2/36afd047fe6cad8611fc8156c4d9d3ec67f71042/kotlin-annotation-processing-gradle-1.3-M2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.3-M2/52cae215ce0534a7ccd65529791d91b00069474/kotlin-android-extensions-1.3-M2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-runner/1.3-M2/96e15dcd8c8409cb1504ce754a34ba69621eb3d3/kotlin-compiler-runner-1.3-M2-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-api/1.3.0-rc-54/843d98aab404019778c0d3fef7266c52284fd8e5/kotlin-gradle-plugin-api-1.3.0-rc-54-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-model/1.3.0-rc-54/6a5066289e4b53e23339c23d00d26d83876425ae/kotlin-gradle-plugin-model-1.3.0-rc-54-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.3.0-rc-54/e57eeb65cd8b26aa2f28bb5a1cd9d518ec952d91/kotlin-compiler-embeddable-1.3.0-rc-54-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-annotation-processing-gradle/1.3.0-rc-54/aeab6685de1fd494e55fc24c2e82587cbe89c779/kotlin-annotation-processing-gradle-1.3.0-rc-54-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.3.0-rc-54/bf809997474a20e7cd36e65b3d6d80d5e73f9bbb/kotlin-android-extensions-1.3.0-rc-54-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-runner/1.3.0-rc-54/25005af491b5141ef1d2a925efdc126724a3cf19/kotlin-compiler-runner-1.3.0-rc-54-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-compiler-embeddable/1.3.0-rc-54/28d432cea8471df7945928f6cf9e9d2809aa5adc/kotlin-scripting-compiler-embeddable-1.3.0-rc-54-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.spotless/spotless-lib/1.13.0/415b0000ef58c628abe7e1dc02b324deee30855e/spotless-lib-1.13.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.spotless/spotless-lib-extra/1.13.0/a0d6299a06895a9511863c37eddc1857cf291f55/spotless-lib-extra-1.13.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.durian/durian-io/1.2.0/dad0676a3265052cbdc78313e1f018c0d4e0d56e/durian-io-1.2.0-sources.jar" />
@@ -2384,10 +2390,10 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.auto.value/auto-value/1.5.2/e96b1f4a9e6630a405434fca857c6b8f777163cf/auto-value-1.5.2-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java-util/3.4.0/6d5f8e6d209c309d9ef3e30aa81135ee94cc7d49/protobuf-java-util-3.4.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jdom/jdom2/2.0.6/3dcf8ba7582eeac3b67ed5155ee3659e16c8dadc/jdom2-2.0.6-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/konan-utils/1.3-M2/8ea7f3f90483000084ce3c877e68d3b684edf8e1/konan-utils-1.3-M2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.3-M2/3e4c3e461bd1881d9d2476c6bdf872e8b9dbb55f/kotlin-script-runtime-1.3-M2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-build-common/1.3-M2/a1ff325b7af72b120802853589c4271c36d46428/kotlin-build-common-1.3-M2-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-client/1.3-M2/a935761655e17bbc3e13081e92f14c800eaec824/kotlin-daemon-client-1.3-M2-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-native-utils/1.3.0-rc-54/8d3e85e4bcb883eb8eab465face17375e2b07e67/kotlin-native-utils-1.3.0-rc-54-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.3.0-rc-54/800e25a270875a45e55aad6853aefdb1b517204/kotlin-script-runtime-1.3.0-rc-54-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-build-common/1.3.0-rc-54/ba1a343587dcb5013bad805d6ebb1aa54de7c6df/kotlin-build-common-1.3.0-rc-54-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-client/1.3.0-rc-54/c6b2e8e26aa642fa2715cf10a31757719520d2e8/kotlin-daemon-client-1.3.0-rc-54-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.durian/durian-core/1.2.0/3ae79e2f6cf32a7b3e64cd6d91e3fa8e95865d37/durian-core-1.2.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.durian/durian-collect/1.2.0/4841ad570a47609c7cbe7f4600122f15e0f6ebdf/durian-collect-1.2.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jgit/org.eclipse.jgit/4.9.0.201710071750-r/6fd1eb331447b6163898b4d10aa769e2ac193740/org.eclipse.jgit-4.9.0.201710071750-r-sources.jar" />
@@ -2401,7 +2407,7 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.0/baf95d8519fc1a11d388f8543cb40cd2bb9d66dc/gson-2.8.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.5.2/ca23fd61a082eab682fc0ffd29e37d09eab07180/httpmime-4.5.2-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.56/118b4633c59394749b2b2f278138beb31c930663/bcpkix-jdk15on-1.56-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.3-M2/8fbf0a1728fa2b6668adc46ea075a2ea8a9aead9/kotlin-reflect-1.3-M2-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.3.0-rc-54/4d503f68fcc98f5cc044ba2c46fb16a3bd53baea/kotlin-reflect-1.3.0-rc-54-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java/3.4.0/c57c9f6bcbdb783260d00b80c455d82a6a8b02db/protobuf-java-3.4.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/a00123f261762a7c5e0ec916a2c7c8298d29c400/javax.inject-1-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jcraft/jsch/0.1.54/91d6069df9be9e076bdb124e82fc2a9af9547616/jsch-0.1.54-sources.jar" />
@@ -2429,15 +2435,15 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.2.0/a8cd7823aa1dcd2fd6677c0c5988fdde9d1fb0a3/error_prone_annotations-2.2.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.1/dcd31de68a90e41e336f6b7afce0d39285c433d7/j2objc-annotations-1.1-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.14/886474da3f761d39fcbb723d97ecc5089e731f42/animal-sniffer-annotations-1.14-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3-M2/8208cf96f610514be121e2ab56a2f65ef866d45/kotlin-stdlib-1.3-M2-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.0-rc-54/d9006784ce38d376b90c788d8a0cda12f8e84bd3/kotlin-stdlib-1.3.0-rc-54-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jre7/1.2.61/ff2d332eaa4caed8a2b5db288306582715c7c3b9/kotlin-stdlib-jre7-1.2.61-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.xml.bind/jaxb-api/2.2.12-b140109.1041/d59f43002d3d07c6adaaeedd93e7944c273821d2/jaxb-api-2.2.12-b140109.1041-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/txw2/2.2.11/7745afc4dcc863b724f4a21fb3fc517cd5aaf891/txw2-2.2.11-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sun.istack/istack-commons-runtime/2.21/5d42dda44aa68ff87756e93ae0042cd66d2daa78/istack-commons-runtime-2.21-sources.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3-M2/62310206461e91e7178e241453c556eb6e5d22c9/kotlin-stdlib-common-1.3-M2-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.0-rc-54/5f1c3ead0828bfacebab3ef00120a5d3f8ba10b9/kotlin-stdlib-common-1.3.0-rc-54-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/5991ca87ef1fb5544943d9abc5a9a37583fabe03/annotations-13.0-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/3.3.0-alpha11/6f4bfeddbce65f2b37108dcb36dcbdeb574ab694/gradle-3.3.0-alpha11.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/1.3-M2/f1d294e832a59c57318f703f1cf7eb24c7655837/kotlin-gradle-plugin-1.3-M2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/1.3.0-rc-54/f14c854f8dcef83a7686b4387ac97892ac6fb81f/kotlin-gradle-plugin-1.3.0-rc-54.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.gms/google-services/4.0.1/a9fdd01c6f67fa7d12cc156a7a20a5086fbd1287/google-services-4.0.1.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.spotless/spotless-plugin-gradle/3.13.0/cad61a1689c80f4abde03868c34c730a2662ebbf/spotless-plugin-gradle-3.13.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/3.3.0-alpha11/13de4263a0ba9ce9640ba41b4351322978ae702/builder-3.3.0-alpha11.jar" />
@@ -2449,12 +2455,13 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.proguard/proguard-gradle/6.0.3/e5becf2356695a396b788110e386c38bad523bfc/proguard-gradle-6.0.3.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/bundletool/0.5.1/635368477286f31d557045e241ec59fce87041da/bundletool-0.5.1.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build.jetifier/jetifier-processor/1.0.0-alpha10/6d494a04e0af27ecd4ec7a35c93759dd9c7443bc/jetifier-processor-1.0.0-alpha10.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-api/1.3-M2/d4f218517b9c7cabfad869e688b2ffd5778faa55/kotlin-gradle-plugin-api-1.3-M2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-model/1.3-M2/9da26c54298de0e22adfaa86ccbc9cff7ff5469d/kotlin-gradle-plugin-model-1.3-M2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.3-M2/4d8194a994c6ddfc103a79f9cfe25cbd02f6178e/kotlin-compiler-embeddable-1.3-M2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-annotation-processing-gradle/1.3-M2/c0fd3c25091fa378f3a6ded4473a5cad4c4e3a1c/kotlin-annotation-processing-gradle-1.3-M2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.3-M2/71b15dc2c34b027835204787bf1cf535c2d22dca/kotlin-android-extensions-1.3-M2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-runner/1.3-M2/816340c0502b605ec430bc874589d7f0cc24eda7/kotlin-compiler-runner-1.3-M2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-api/1.3.0-rc-54/8439a72acda47a36cce744d4c44c8c860faaa07b/kotlin-gradle-plugin-api-1.3.0-rc-54.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-model/1.3.0-rc-54/889857cf8e9174077f273af59740ab46c7f84372/kotlin-gradle-plugin-model-1.3.0-rc-54.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.3.0-rc-54/fe03a9909398180b0065bd81b9400716ccb1eba0/kotlin-compiler-embeddable-1.3.0-rc-54.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-annotation-processing-gradle/1.3.0-rc-54/8a70438a8aacc635d44f0ba7a02ad468d68117c5/kotlin-annotation-processing-gradle-1.3.0-rc-54.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.3.0-rc-54/f21ee2b5b6fb771e899ffc101bc8ff10ae43ed10/kotlin-android-extensions-1.3.0-rc-54.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-runner/1.3.0-rc-54/18cd526c2fa4a5d2673873d07bcb5d68969d8c7a/kotlin-compiler-runner-1.3.0-rc-54.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-compiler-embeddable/1.3.0-rc-54/86b51876a087bd614863c4d5dc8f1e6706735419/kotlin-scripting-compiler-embeddable-1.3.0-rc-54.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.spotless/spotless-lib/1.13.0/5cb2ce941446653bad8fb528eb863aa4c178b1cd/spotless-lib-1.13.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.spotless/spotless-lib-extra/1.13.0/5914314cc4c3c4e3e820ea5648f59229b19f3fd3/spotless-lib-extra-1.13.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.durian/durian-io/1.2.0/fc9c103d454d04f7c5b78b437190ea3bd15fb72c/durian-io-1.2.0.jar" />
@@ -2489,10 +2496,10 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/aapt2-proto/0.3.1/8311800abb3dcd84426a0de834a6b884a173d864/aapt2-proto-0.3.1.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java-util/3.4.0/96aba8ab71c16018c6adf66771ce15c6491bc0fe/protobuf-java-util-3.4.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jdom/jdom2/2.0.6/6f14738ec2e9dd0011e343717fa624a10f8aab64/jdom2-2.0.6.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/konan-utils/1.3-M2/87fa4e4377a087983a408744d620afb538f25b44/konan-utils-1.3-M2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.3-M2/4b5d05fcf9bc14881b122fd683f4a6daff6133a5/kotlin-script-runtime-1.3-M2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-build-common/1.3-M2/ef390eea8e1fb051a0714013ae6a14d7cf80da50/kotlin-build-common-1.3-M2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-client/1.3-M2/3b22fb75d75ad17361918e05d32480d09c561420/kotlin-daemon-client-1.3-M2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-native-utils/1.3.0-rc-54/739add0a246b9a80a97574a09edced8f08bfdf7a/kotlin-native-utils-1.3.0-rc-54.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.3.0-rc-54/57b6e42faedc58974b18cb272f4e410ae63df2ed/kotlin-script-runtime-1.3.0-rc-54.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-build-common/1.3.0-rc-54/e8fed824211f39175f018486c143a4b7a5bbf090/kotlin-build-common-1.3.0-rc-54.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-client/1.3.0-rc-54/42cfa0e6e9f94fdb148b9f0746d001b7e995a23e/kotlin-daemon-client-1.3.0-rc-54.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.durian/durian-core/1.2.0/ddf0b08f6dccae07bcb993645a7634cbe8f9b2f8/durian-core-1.2.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.durian/durian-collect/1.2.0/eee2085a0f894527ac841b05b442656115e2877c/durian-collect-1.2.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jgit/org.eclipse.jgit/4.9.0.201710071750-r/69d8510b335d4d33d551a133505a4141311f970a/org.eclipse.jgit-4.9.0.201710071750-r.jar" />
@@ -2506,7 +2513,7 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.0/c4ba5371a29ac9b2ad6129b1d39ea38750043eff/gson-2.8.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.5.2/22b4c53dd9b6761024258de8f9240c3dce6ea368/httpmime-4.5.2.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.56/4648af70268b6fdb24674fb1fd7c1fcc73db1231/bcpkix-jdk15on-1.56.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.3-M2/3f007de0a1f668e9449d59f30f024df4f4c1a0fa/kotlin-reflect-1.3-M2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.3.0-rc-54/f37d799011aadea3d1d005beb28641335526e5ab/kotlin-reflect-1.3.0-rc-54.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java/3.4.0/b32aba0cbe737a4ca953f71688725972e3ee927c/protobuf-java-3.4.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jcraft/jsch/0.1.54/da3584329a263616e277e15462b387addd1b208d/jsch-0.1.54.jar" />
@@ -2534,12 +2541,12 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.2.0/88e3c593e9b3586e1c6177f89267da6fc6986f0c/error_prone_annotations-2.2.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.1/976d8d30bebc251db406f2bdb3eb01962b5685b3/j2objc-annotations-1.1.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.14/775b7e22fb10026eed3f86e8dc556dfafe35f2d5/animal-sniffer-annotations-1.14.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3-M2/e475d291eee6606d4512305413b0c9ed4557cae4/kotlin-stdlib-1.3-M2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.0-rc-54/ec751156dad0017ea0cd22d471c460bb0b4ab26b/kotlin-stdlib-1.3.0-rc-54.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jre7/1.2.61/8738fb53e485bd4a6441f1f0b29378c7cd5e92f/kotlin-stdlib-jre7-1.2.61.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.xml.bind/jaxb-api/2.2.12-b140109.1041/7ed0e0d01198614194d56dfb03d9d95aa311824c/jaxb-api-2.2.12-b140109.1041.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/txw2/2.2.11/2df047d8c187a62f2177bf6013f1f9786cdfc8a2/txw2-2.2.11.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sun.istack/istack-commons-runtime/2.21/c969d8f15c467f0ef7d7b04889afbe7b5d48e22f/istack-commons-runtime-2.21.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3-M2/c7119b78ac604072ee437c973570572eb173b2bc/kotlin-stdlib-common-1.3-M2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.0-rc-54/4dbca89a5cb70105b730bd70c93aa1d5f4b6994b/kotlin-stdlib-common-1.3.0-rc-54.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar" />
                           </list>
                         </option>
@@ -2730,9 +2737,10 @@
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_face.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_face.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/github/xinyuez/mlkit/demo/FaceActivity.kt" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/app/app.iml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/github/xinyuez/mlkit/demo/FaceActivity.kt" />
       </list>
     </option>
   </component>
@@ -2797,6 +2805,9 @@
             <id>Error handlingJava</id>
           </State>
           <State>
+            <id>General</id>
+          </State>
+          <State>
             <id>Gradle</id>
           </State>
           <State>
@@ -2830,6 +2841,9 @@
             <id>JavaBeans issuesJava</id>
           </State>
           <State>
+            <id>Kotlin</id>
+          </State>
+          <State>
             <id>LintAndroid</id>
           </State>
           <State>
@@ -2846,6 +2860,9 @@
           </State>
           <State>
             <id>PerformanceLintAndroid</id>
+          </State>
+          <State>
+            <id>Plugin DevKit</id>
           </State>
           <State>
             <id>Potentially confusing code constructsGroovy</id>
@@ -2901,7 +2918,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
-      <autoscrollFromSource AndroidView="true" />
+      <autoscrollFromSource AndroidView="true" ProjectPane="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -2913,6 +2930,11 @@
             <path>
               <item name="MLKit" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="MLKit" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
             </path>
             <path>
               <item name="MLKit" type="1abcf292:AndroidViewProjectNode" />
@@ -2933,7 +2955,52 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="MLKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MLKit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="MLKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MLKit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="MLKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MLKit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MLKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MLKit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MLKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MLKit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MLKit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MLKit" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2957,7 +3024,7 @@
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Kotlin" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -3130,9 +3197,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1086262" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1086262" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -3143,10 +3211,10 @@
       <window_info anchor="bottom" id="Logcat" order="1" weight="0.3297769" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3297769" />
-      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49701315" weight="0.3297769" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49701315" visible="true" weight="0.33663365" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5035842" side_tool="true" weight="0.2900097" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.3297769" />
-      <window_info active="true" anchor="bottom" id="Build" order="7" sideWeight="0.49701315" visible="true" weight="0.2900097" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49701315" weight="0.2900097" />
       <window_info anchor="bottom" id="Android Profiler" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Find" order="9" sideWeight="0.4993742" weight="0.3297769" />
       <window_info anchor="bottom" id="Messages" order="10" />
@@ -3222,28 +3290,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/github/xinyuez/mlkit/demo/MainActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/github/xinyuez/mlkit/demo/DemoApp.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-camerakit-0.13.1.aar/f1deed0980e8a009583d946970e31ad8/jars/classes.jar!/com/wonderkiln/camerakit/CameraView.class" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -3289,13 +3335,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_face.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -3303,6 +3342,13 @@
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-camerakit-1.0.0-Snapshot.aar/ffb42761a419517d378b97173bdf5e1b/jars/classes.jar!/com/camerakit/CameraKitView.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="60" column="47" selection-start-line="60" selection-start-column="47" selection-end-line="60" selection-end-column="47" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_ocr.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -3312,6 +3358,23 @@
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../../android-sunflower/android-sunflower.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1000">
+          <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MLKit.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_face.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -3319,6 +3382,13 @@
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
     </entry>
     <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-28/android.jar!/android/app/Instrumentation.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -3343,24 +3413,39 @@
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+    <entry file="file://$PROJECT_DIR$/app/app.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-camerakit-1.0.0-Snapshot.aar/ffb42761a419517d378b97173bdf5e1b/jars/classes.jar!/com/camerakit/CameraKitView.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="60" column="47" selection-start-line="60" selection-start-column="47" selection-end-line="60" selection-end-column="47" />
+        <state relative-caret-position="240">
+          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/github/xinyuez/mlkit/demo/FaceActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        <state relative-caret-position="256">
+          <caret line="26" column="15" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/github/xinyuez/mlkit/demo/DemoApp.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/github/xinyuez/mlkit/demo/MainActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
