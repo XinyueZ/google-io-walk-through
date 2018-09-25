@@ -4,6 +4,10 @@ import android.app.Activity
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.ImageFormat
+import android.graphics.Matrix
+import android.graphics.Rect
+import android.graphics.YuvImage
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -18,14 +22,15 @@ import com.google.firebase.ml.vision.face.FirebaseVisionFaceLandmark
 import io.fotoapparat.Fotoapparat
 import io.fotoapparat.configuration.UpdateConfiguration
 import io.fotoapparat.preview.Frame
+import io.fotoapparat.preview.FrameProcessor
 import io.fotoapparat.selector.firstAvailable
 import io.fotoapparat.selector.off
 import io.fotoapparat.selector.torch
-import io.fotoapparat.util.FrameProcessor
 import kotlinx.android.synthetic.clearFindViewByIdCache
 import kotlinx.android.synthetic.main.activity_face.face_appbar
 import kotlinx.android.synthetic.main.content_face.camera_view
-
+import kotlinx.android.synthetic.main.content_face.snapshot_iv
+import java.io.ByteArrayOutputStream
 
 class FaceActivity : AppCompatActivity(), FrameProcessor {
     private var activeCamera: Camera = Camera.Back
@@ -34,18 +39,18 @@ class FaceActivity : AppCompatActivity(), FrameProcessor {
 
     private val options by lazy {
         FirebaseVisionFaceDetectorOptions.Builder()
-                .setModeType(FirebaseVisionFaceDetectorOptions.ACCURATE_MODE)
-                .setLandmarkType(FirebaseVisionFaceDetectorOptions.ALL_LANDMARKS)
-                .setClassificationType(FirebaseVisionFaceDetectorOptions.ALL_CLASSIFICATIONS)
-                .setTrackingEnabled(true)
-                .build()
+            .setModeType(FirebaseVisionFaceDetectorOptions.ACCURATE_MODE)
+            .setLandmarkType(FirebaseVisionFaceDetectorOptions.ALL_LANDMARKS)
+            .setClassificationType(FirebaseVisionFaceDetectorOptions.ALL_CLASSIFICATIONS)
+            .setTrackingEnabled(true)
+            .build()
     }
 
     private val fotoapparat by lazy {
         Fotoapparat.with(applicationContext)
-                .into(camera_view)
-                .frameProcessor(this)
-                .build()
+            .into(camera_view)
+            .frameProcessor(this)
+            .build()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -78,25 +83,25 @@ class FaceActivity : AppCompatActivity(), FrameProcessor {
         }
 
         fotoapparat.switchTo(
-                lensPosition = activeCamera.lensPosition,
-                cameraConfiguration = activeCamera.configuration
+            lensPosition = activeCamera.lensPosition,
+            cameraConfiguration = activeCamera.configuration
         )
     }
 
     @Suppress("UNUSED_PARAMETER")
     fun flash(v: View) {
         fotoapparat.updateConfiguration(
-                UpdateConfiguration(
-                        flashMode = if (flashOn) {
-                            flashOn = false
-                            firstAvailable(
-                                    off()
-                            )
-                        } else {
-                            flashOn = true
-                            torch()
-                        }
-                )
+            UpdateConfiguration(
+                flashMode = if (flashOn) {
+                    flashOn = false
+                    firstAvailable(
+                        off()
+                    )
+                } else {
+                    flashOn = true
+                    torch()
+                }
+            )
         )
     }
 
@@ -107,12 +112,25 @@ class FaceActivity : AppCompatActivity(), FrameProcessor {
     }
 
     private fun FirebaseVisionFaceDetector?.process(firebaseVisionBitmap: FirebaseVisionImage) {
+        debugSnapshot(firebaseVisionBitmap)
+
         this?.let {
             detectInImage(firebaseVisionBitmap)
-                    .addOnSuccessListener(this@FaceActivity::process)
-                    .addOnFailureListener {
-                        Log.d(TAG, it.message)
-                    }
+                .addOnSuccessListener(this@FaceActivity::process)
+                .addOnFailureListener { e ->
+                    Log.d(TAG, e.message)
+                }
+        }
+    }
+
+    @Suppress("ConstantConditionIf")
+    private fun debugSnapshot(firebaseVisionBitmap: FirebaseVisionImage) {
+        if (DEBUG) {
+            runOnUiThread {
+                snapshot_iv.setImageBitmap(firebaseVisionBitmap.bitmapForDebugging)
+            }
+        } else {
+            snapshot_iv.visibility = View.GONE
         }
     }
 
@@ -147,16 +165,47 @@ class FaceActivity : AppCompatActivity(), FrameProcessor {
         }
     }
 
-    override fun invoke(frame: Frame) {
+    override fun process(frame: Frame) {
         Log.d(TAG, "frame: ${frame.image.size}, ${frame.size}")
-        BitmapFactory.decodeByteArray(frame.image, 0, frame.image.size)?.let { bitmap ->
-            Log.d(TAG, "bitmap: $bitmap")
-            process(bitmap)
+
+        YuvImage(
+            frame.image,
+            ImageFormat.NV21,
+            frame.size.width,
+            frame.size.height,
+            null
+        ).let { yuvImage ->
+            ByteArrayOutputStream().use { output ->
+                yuvImage.compressToJpeg(
+                    Rect(0, 0, frame.size.width, frame.size.height),
+                    100,
+                    output
+                )
+                output.toByteArray().apply {
+                    BitmapFactory.decodeByteArray(this, 0, size)?.let { bitmap ->
+                        process(bitmap.rotate(-45f).flip(false, true))
+                        bitmap.recycle()
+                    }
+                }
+            }
         }
     }
 
+    private fun Bitmap.flip(horizontal: Boolean, vertical: Boolean): Bitmap {
+        val matrix = Matrix()
+        matrix.preScale((if (horizontal) -1 else 1).toFloat(), (if (vertical) -1 else 1).toFloat())
+        return Bitmap.createBitmap(this, 0, 0, width, height, matrix, true)
+    }
+
+    private fun Bitmap.rotate(degrees: Float): Bitmap {
+        val matrix = Matrix()
+        matrix.postRotate(degrees)
+        return Bitmap.createScaledBitmap(this, width, height, true)
+    }
+
     companion object {
-        private const val TAG = "face"
+        private const val DEBUG = true
+        private const val TAG = "mlkit-face"
         internal fun showInstance(cxt: Activity) {
             val intent = Intent(cxt, FaceActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP or Intent.FLAG_ACTIVITY_CLEAR_TOP

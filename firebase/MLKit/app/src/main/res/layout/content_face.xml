@@ -7,7 +7,7 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:context=".FaceActivity"
-        tools:showIn="@layout/activity_ocr">
+        tools:showIn="@layout/activity_face">
 
     <io.fotoapparat.view.CameraView
             android:id="@+id/camera_view"
@@ -15,5 +15,14 @@
             android:layout_height="match_parent"
             android:adjustViewBounds="true"
             android:keepScreenOn="true" />
+
+
+    <ImageView
+        android:id="@+id/snapshot_iv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@null"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
