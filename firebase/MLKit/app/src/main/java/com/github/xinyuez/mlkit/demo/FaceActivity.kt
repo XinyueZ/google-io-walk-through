@@ -8,13 +8,19 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import io.fotoapparat.Fotoapparat
+import io.fotoapparat.configuration.UpdateConfiguration
 import io.fotoapparat.preview.Frame
+import io.fotoapparat.selector.firstAvailable
+import io.fotoapparat.selector.off
+import io.fotoapparat.selector.torch
 import io.fotoapparat.util.FrameProcessor
 import kotlinx.android.synthetic.clearFindViewByIdCache
 import kotlinx.android.synthetic.main.activity_face.face_appbar
 import kotlinx.android.synthetic.main.content_face.camera_view
 
 class FaceActivity : AppCompatActivity(), FrameProcessor {
+    private var activeCamera: Camera = Camera.Back
+    private var flashOn = false
 
     private val fotoapparat by lazy {
         Fotoapparat.with(applicationContext)
@@ -46,10 +52,32 @@ class FaceActivity : AppCompatActivity(), FrameProcessor {
 
     @Suppress("UNUSED_PARAMETER")
     fun switchCamera(v: View) {
+        activeCamera = when (activeCamera) {
+            Camera.Front -> Camera.Back
+            Camera.Back -> Camera.Front
+        }
+
+        fotoapparat.switchTo(
+                lensPosition = activeCamera.lensPosition,
+                cameraConfiguration = activeCamera.configuration
+        )
     }
 
     @Suppress("UNUSED_PARAMETER")
     fun flash(v: View) {
+        fotoapparat.updateConfiguration(
+                UpdateConfiguration(
+                        flashMode = if (flashOn) {
+                            flashOn = false
+                            firstAvailable(
+                                    off()
+                            )
+                        } else {
+                            flashOn = true
+                            torch()
+                        }
+                )
+        )
     }
 
     override fun invoke(frame: Frame) {
