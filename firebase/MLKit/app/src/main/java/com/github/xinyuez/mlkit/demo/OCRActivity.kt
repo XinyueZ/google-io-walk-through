@@ -208,7 +208,7 @@ class OCRActivity : AppCompatActivity() {
     }
 
     companion object {
-        internal const val TAG = "ocr"
+        internal const val TAG = "mlkit-ocr"
         internal const val PICK_IMAGE = 0x2
         internal fun showInstance(cxt: Activity) {
             val intent = Intent(cxt, OCRActivity::class.java)
