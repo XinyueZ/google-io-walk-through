@@ -50,7 +50,8 @@ dependencies {
 
     implementation "io.fotoapparat:fotoapparat:${versions.camera}"
     implementation "com.github.xinyuez:easypermissions:${versions.permission}"
-    
+
+    implementation "com.google.firebase:firebase-core:${versions.firebase}"
     implementation "com.google.firebase:firebase-ml-vision:${versions.firebaseMLVision}"
 
     testImplementation "junit:junit:${versions.junit}"

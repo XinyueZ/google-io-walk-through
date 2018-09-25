@@ -2,11 +2,19 @@ package com.github.xinyuez.mlkit.demo
 
 import android.app.Activity
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import com.google.firebase.ml.vision.FirebaseVision
+import com.google.firebase.ml.vision.common.FirebaseVisionImage
+import com.google.firebase.ml.vision.face.FirebaseVisionFace
+import com.google.firebase.ml.vision.face.FirebaseVisionFaceDetector
+import com.google.firebase.ml.vision.face.FirebaseVisionFaceDetectorOptions
+import com.google.firebase.ml.vision.face.FirebaseVisionFaceLandmark
 import io.fotoapparat.Fotoapparat
 import io.fotoapparat.configuration.UpdateConfiguration
 import io.fotoapparat.preview.Frame
@@ -18,9 +26,20 @@ import kotlinx.android.synthetic.clearFindViewByIdCache
 import kotlinx.android.synthetic.main.activity_face.face_appbar
 import kotlinx.android.synthetic.main.content_face.camera_view
 
+
 class FaceActivity : AppCompatActivity(), FrameProcessor {
     private var activeCamera: Camera = Camera.Back
     private var flashOn = false
+    private var faceDetector: FirebaseVisionFaceDetector? = null
+
+    private val options by lazy {
+        FirebaseVisionFaceDetectorOptions.Builder()
+                .setModeType(FirebaseVisionFaceDetectorOptions.ACCURATE_MODE)
+                .setLandmarkType(FirebaseVisionFaceDetectorOptions.ALL_LANDMARKS)
+                .setClassificationType(FirebaseVisionFaceDetectorOptions.ALL_CLASSIFICATIONS)
+                .setTrackingEnabled(true)
+                .build()
+    }
 
     private val fotoapparat by lazy {
         Fotoapparat.with(applicationContext)
@@ -41,6 +60,7 @@ class FaceActivity : AppCompatActivity(), FrameProcessor {
     }
 
     override fun onStop() {
+        faceDetector?.close()
         super.onStop()
         fotoapparat.stop()
     }
@@ -80,8 +100,59 @@ class FaceActivity : AppCompatActivity(), FrameProcessor {
         )
     }
 
+    private fun process(target: Bitmap) {
+        val firebaseVisionBitmap = FirebaseVisionImage.fromBitmap(target)
+        faceDetector = FirebaseVision.getInstance().getVisionFaceDetector(options)
+        faceDetector.process(firebaseVisionBitmap)
+    }
+
+    private fun FirebaseVisionFaceDetector?.process(firebaseVisionBitmap: FirebaseVisionImage) {
+        this?.let {
+            detectInImage(firebaseVisionBitmap)
+                    .addOnSuccessListener(this@FaceActivity::process)
+                    .addOnFailureListener {
+                        Log.d(TAG, it.message)
+                    }
+        }
+    }
+
+    private fun process(faces: List<FirebaseVisionFace>) {
+        Log.d(TAG, "faces: $faces")
+        faces.forEach { face ->
+            Log.d(TAG, "face: $face")
+
+            val bounds = face.boundingBox
+            val rotY = face.headEulerAngleY
+            val rotZ = face.headEulerAngleZ
+
+            face.getLandmark(FirebaseVisionFaceLandmark.LEFT_EAR)?.let { leftEar ->
+                Log.d(TAG, " leftEar.position = ${leftEar.position}")
+            }
+
+            face.getLandmark(FirebaseVisionFaceLandmark.RIGHT_EAR)?.let { rightEar ->
+                Log.d(TAG, " leftEar.position = ${rightEar.position}")
+            }
+
+            if (face.smilingProbability != FirebaseVisionFace.UNCOMPUTED_PROBABILITY) {
+                Log.d(TAG, "face.smilingProbability = ${face.smilingProbability}")
+            }
+
+            if (face.rightEyeOpenProbability != FirebaseVisionFace.UNCOMPUTED_PROBABILITY) {
+                Log.d(TAG, "face.rightEyeOpenProbability = ${face.rightEyeOpenProbability}")
+            }
+
+            if (face.leftEyeOpenProbability != FirebaseVisionFace.UNCOMPUTED_PROBABILITY) {
+                Log.d(TAG, "face.leftEyeOpenProbability = ${face.leftEyeOpenProbability}")
+            }
+        }
+    }
+
     override fun invoke(frame: Frame) {
-        Log.d(TAG, "${frame.image.size}")
+        Log.d(TAG, "frame: ${frame.image.size}, ${frame.size}")
+        BitmapFactory.decodeByteArray(frame.image, 0, frame.image.size)?.let { bitmap ->
+            Log.d(TAG, "bitmap: $bitmap")
+            process(bitmap)
+        }
     }
 
     companion object {
