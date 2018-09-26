@@ -90,6 +90,7 @@ class FaceActivity : AppCompatActivity(), FrameProcessor {
             lensPosition = activeCamera.lensPosition,
             cameraConfiguration = activeCamera.configuration
         )
+        flashOn = false
     }
 
     @Suppress("UNUSED_PARAMETER")
