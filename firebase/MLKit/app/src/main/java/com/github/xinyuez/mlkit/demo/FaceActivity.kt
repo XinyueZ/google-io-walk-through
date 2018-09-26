@@ -183,7 +183,7 @@ class FaceActivity : AppCompatActivity(), FrameProcessor {
                 )
                 output.toByteArray().apply {
                     BitmapFactory.decodeByteArray(this, 0, size)?.let { bitmap ->
-                        process(bitmap.rotate(-45f).flip(false, true))
+                        process(bitmap.rotate(90f).flip(false, true))
                         bitmap.recycle()
                     }
                 }
@@ -200,7 +200,16 @@ class FaceActivity : AppCompatActivity(), FrameProcessor {
     private fun Bitmap.rotate(degrees: Float): Bitmap {
         val matrix = Matrix()
         matrix.postRotate(degrees)
-        return Bitmap.createScaledBitmap(this, width, height, true)
+        val scaledBitmap = Bitmap.createScaledBitmap(this, width, height, true);
+        return Bitmap.createBitmap(
+            scaledBitmap,
+            0,
+            0,
+            scaledBitmap.width,
+            scaledBitmap.height,
+            matrix,
+            true
+        )
     }
 
     companion object {
