@@ -24,6 +24,8 @@ import io.fotoapparat.configuration.UpdateConfiguration
 import io.fotoapparat.preview.Frame
 import io.fotoapparat.preview.FrameProcessor
 import io.fotoapparat.selector.firstAvailable
+import io.fotoapparat.selector.front
+import io.fotoapparat.selector.highestSensorSensitivity
 import io.fotoapparat.selector.off
 import io.fotoapparat.selector.torch
 import kotlinx.android.synthetic.clearFindViewByIdCache
@@ -33,7 +35,7 @@ import kotlinx.android.synthetic.main.content_face.snapshot_iv
 import java.io.ByteArrayOutputStream
 
 class FaceActivity : AppCompatActivity(), FrameProcessor {
-    private var activeCamera: Camera = Camera.Back
+    private var activeCamera: Camera = Camera.Front
     private var flashOn = false
     private var faceDetector: FirebaseVisionFaceDetector? = null
 
@@ -49,6 +51,8 @@ class FaceActivity : AppCompatActivity(), FrameProcessor {
     private val fotoapparat by lazy {
         Fotoapparat.with(applicationContext)
             .into(camera_view)
+            .lensPosition(front())
+            .sensorSensitivity(highestSensorSensitivity())
             .frameProcessor(this)
             .build()
     }
@@ -183,7 +187,11 @@ class FaceActivity : AppCompatActivity(), FrameProcessor {
                 )
                 output.toByteArray().apply {
                     BitmapFactory.decodeByteArray(this, 0, size)?.let { bitmap ->
-                        process(bitmap.rotate(90f).flip(false, true))
+                        process(
+                            bitmap.rotate(90f).flip(
+                                false, activeCamera == Camera.Front
+                            )
+                        )
                         bitmap.recycle()
                     }
                 }
@@ -200,7 +208,7 @@ class FaceActivity : AppCompatActivity(), FrameProcessor {
     private fun Bitmap.rotate(degrees: Float): Bitmap {
         val matrix = Matrix()
         matrix.postRotate(degrees)
-        val scaledBitmap = Bitmap.createScaledBitmap(this, width, height, true);
+        val scaledBitmap = Bitmap.createScaledBitmap(this, width, height, true)
         return Bitmap.createBitmap(
             scaledBitmap,
             0,
