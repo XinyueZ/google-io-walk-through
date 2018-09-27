@@ -40,7 +40,7 @@
                 android:name=".FaceActivity"
                 android:label="@string/face"
                 android:screenOrientation="portrait"
-                android:theme="@style/AppTheme.NoActionBar"/>
+                android:theme="@style/AppTheme.TransStatus"/>
     </application>
 
 </manifest>
