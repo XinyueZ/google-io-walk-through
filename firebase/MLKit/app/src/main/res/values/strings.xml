@@ -4,4 +4,7 @@
     <string name="face">Demo Detect Faces</string>
     <string name="select_photo">Select photo</string>
     <string name="select_photo_fail">Cannot select the photo.</string>
+    <string name="camera_rationale">Need camera permission.</string>
+    <string name="process_from_bytes_directly">Bytes directly</string>
+    <string name="process_from_bytes_to_bitmap">Bytes to bitmap</string>
 </resources>

@@ -39,7 +39,8 @@
         <activity
                 android:name=".FaceActivity"
                 android:label="@string/face"
-                android:theme="@style/AppTheme.NoActionBar"/>
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.TransStatus"/>
     </application>
 
 </manifest>

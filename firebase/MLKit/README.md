@@ -25,6 +25,10 @@ from the ktlint [README](https://github.com/shyiko/ktlint/blob/master/README.md)
 
 - Start Android Studio
 
+# Official sample
+
+https://github.com/firebase/quickstart-android/tree/master/mlkit/app/src/main/java/com/google/firebase/samples/apps/mlkit
+
 # License
 
                                 MIT License
