@@ -19,6 +19,21 @@
         android:orientation="vertical">
 
 
+        <!--
+        Use toggle to select whether the firebase buildIn function will be used to process (true)
+        or use logical: bytes -> bitmap -> process . (false)
+        -->
+        <ToggleButton
+            android:id="@+id/function_toggle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:background="@layout/toggle_style"
+            android:checked="false"
+            android:tint="@android:color/white"
+            android:textOff=""
+            android:textOn=""/>
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/flash_fab"
             android:layout_width="wrap_content"

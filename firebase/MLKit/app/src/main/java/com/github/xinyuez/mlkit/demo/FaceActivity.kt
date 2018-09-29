@@ -3,19 +3,23 @@ package com.github.xinyuez.mlkit.demo
 import android.app.Activity
 import android.content.Intent
 import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.graphics.Canvas
 import android.graphics.Color
+import android.graphics.ImageFormat
 import android.graphics.Matrix
 import android.graphics.Paint
+import android.graphics.Rect
+import android.graphics.YuvImage
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import com.github.xinyuez.mlkit.demo.Camera.Front
 import com.google.firebase.ml.vision.FirebaseVision
 import com.google.firebase.ml.vision.common.FirebaseVisionImage
 import com.google.firebase.ml.vision.common.FirebaseVisionImageMetadata
-import com.google.firebase.ml.vision.common.FirebaseVisionImageMetadata.ROTATION_270
 import com.google.firebase.ml.vision.face.FirebaseVisionFace
 import com.google.firebase.ml.vision.face.FirebaseVisionFaceDetector
 import com.google.firebase.ml.vision.face.FirebaseVisionFaceDetectorOptions
@@ -30,9 +34,12 @@ import io.fotoapparat.selector.highestSensorSensitivity
 import io.fotoapparat.selector.off
 import io.fotoapparat.selector.torch
 import kotlinx.android.synthetic.clearFindViewByIdCache
+import kotlinx.android.synthetic.main.activity_face.function_toggle
 import kotlinx.android.synthetic.main.content_face.camera_view
+import kotlinx.android.synthetic.main.content_face.msg_tv
 import kotlinx.android.synthetic.main.content_face.overlay
 import kotlinx.android.synthetic.main.content_face.snapshot_iv
+import java.io.ByteArrayOutputStream
 
 class FaceActivity : AppCompatActivity(), FrameProcessor {
     private var activeCamera: Camera = Camera.Front
@@ -117,7 +124,7 @@ class FaceActivity : AppCompatActivity(), FrameProcessor {
 
     private fun process(target: ByteArray, width: Int, height: Int, rotation: Int) {
         val metadata = FirebaseVisionImageMetadata.Builder()
-            .setFormat(FirebaseVisionImageMetadata.IMAGE_FORMAT_YV12)
+            .setFormat(FirebaseVisionImageMetadata.IMAGE_FORMAT_NV21)
             .setWidth(width)
             .setHeight(height)
             .setRotation(rotation)
@@ -190,32 +197,57 @@ class FaceActivity : AppCompatActivity(), FrameProcessor {
 
     override fun process(frame: Frame) {
         Log.d(TAG, "frame: ${frame.image.size}, ${frame.size}")
-        process(frame.image, frame.size.width, frame.size.height, ROTATION_270)
-//        YuvImage(
-//            frame.image,
-//            ImageFormat.NV21,
-//            frame.size.width,
-//            frame.size.height,
-//            null
-//        ).let { yuvImage ->
-//            ByteArrayOutputStream().use { output ->
-//                yuvImage.compressToJpeg(
-//                    Rect(0, 0, frame.size.width, frame.size.height),
-//                    100,
-//                    output
-//                )
-//                output.toByteArray().apply {
-//                    BitmapFactory.decodeByteArray(this, 0, size)?.let { bitmap ->
-//                        process(
-//                            bitmap.rotate(90f).flip(
-//                                false, activeCamera == Camera.Front
-//                            )
-//                        )
-//                        bitmap.recycle()
-//                    }
-//                }
-//            }
-//        }
+
+        when {
+            function_toggle.isChecked -> {
+                process(
+                    frame.image,
+                    frame.size.width,
+                    frame.size.height,
+                    FirebaseVisionImageMetadata.ROTATION_270
+                )
+                runOnUiThread {
+                    msg_tv.text = getString(R.string.process_from_bytes_directly)
+                }
+            }
+            else -> {
+                processFromBytesToBitmap(frame)
+                runOnUiThread {
+                    msg_tv.text = getString(R.string.process_from_bytes_to_bitmap)
+                }
+            }
+        }
+    }
+
+    /**
+     * Convert bytes to bitmap and process prediction.
+     */
+    private fun processFromBytesToBitmap(frame: Frame) {
+        YuvImage(
+            frame.image,
+            ImageFormat.NV21,
+            frame.size.width,
+            frame.size.height,
+            null
+        ).let { yuvImage ->
+            ByteArrayOutputStream().use { output ->
+                yuvImage.compressToJpeg(
+                    Rect(0, 0, frame.size.width, frame.size.height),
+                    100,
+                    output
+                )
+                output.toByteArray().apply {
+                    BitmapFactory.decodeByteArray(this, 0, size)?.let { bitmap ->
+                        process(
+                            bitmap.rotate(90f).flip(
+                                false, activeCamera == Front
+                            )
+                        )
+                        bitmap.recycle()
+                    }
+                }
+            }
+        }
     }
 
     companion object {
