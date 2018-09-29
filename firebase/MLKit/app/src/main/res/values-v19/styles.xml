@@ -1,0 +1,11 @@
+<resources>
+
+
+    <style name="AppTheme.TransStatus" parent="AppTheme.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+
+
+</resources>
