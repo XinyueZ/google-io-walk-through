@@ -3,14 +3,10 @@ package com.github.xinyuez.mlkit.demo
 import android.app.Activity
 import android.content.Intent
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.graphics.Canvas
 import android.graphics.Color
-import android.graphics.ImageFormat
 import android.graphics.Matrix
 import android.graphics.Paint
-import android.graphics.Rect
-import android.graphics.YuvImage
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -19,6 +15,7 @@ import androidx.core.app.ActivityCompat
 import com.google.firebase.ml.vision.FirebaseVision
 import com.google.firebase.ml.vision.common.FirebaseVisionImage
 import com.google.firebase.ml.vision.common.FirebaseVisionImageMetadata
+import com.google.firebase.ml.vision.common.FirebaseVisionImageMetadata.ROTATION_270
 import com.google.firebase.ml.vision.face.FirebaseVisionFace
 import com.google.firebase.ml.vision.face.FirebaseVisionFaceDetector
 import com.google.firebase.ml.vision.face.FirebaseVisionFaceDetectorOptions
@@ -36,7 +33,6 @@ import kotlinx.android.synthetic.clearFindViewByIdCache
 import kotlinx.android.synthetic.main.content_face.camera_view
 import kotlinx.android.synthetic.main.content_face.overlay
 import kotlinx.android.synthetic.main.content_face.snapshot_iv
-import java.io.ByteArrayOutputStream
 
 class FaceActivity : AppCompatActivity(), FrameProcessor {
     private var activeCamera: Camera = Camera.Front
@@ -194,53 +190,32 @@ class FaceActivity : AppCompatActivity(), FrameProcessor {
 
     override fun process(frame: Frame) {
         Log.d(TAG, "frame: ${frame.image.size}, ${frame.size}")
-        // process(frame.image, frame.size.width, frame.size.height, ROTATION_270)
-        YuvImage(
-            frame.image,
-            ImageFormat.NV21,
-            frame.size.width,
-            frame.size.height,
-            null
-        ).let { yuvImage ->
-            ByteArrayOutputStream().use { output ->
-                yuvImage.compressToJpeg(
-                    Rect(0, 0, frame.size.width, frame.size.height),
-                    100,
-                    output
-                )
-                output.toByteArray().apply {
-                    BitmapFactory.decodeByteArray(this, 0, size)?.let { bitmap ->
-                        process(
-                            bitmap.rotate(90f).flip(
-                                false, activeCamera == Camera.Front
-                            )
-                        )
-                        bitmap.recycle()
-                    }
-                }
-            }
-        }
-    }
-
-    private fun Bitmap.flip(horizontal: Boolean, vertical: Boolean): Bitmap {
-        val matrix = Matrix()
-        matrix.preScale((if (horizontal) -1 else 1).toFloat(), (if (vertical) -1 else 1).toFloat())
-        return Bitmap.createBitmap(this, 0, 0, width, height, matrix, true)
-    }
-
-    private fun Bitmap.rotate(degrees: Float): Bitmap {
-        val matrix = Matrix()
-        matrix.postRotate(degrees)
-        val scaledBitmap = Bitmap.createScaledBitmap(this, width, height, true)
-        return Bitmap.createBitmap(
-            scaledBitmap,
-            0,
-            0,
-            scaledBitmap.width,
-            scaledBitmap.height,
-            matrix,
-            true
-        )
+        process(frame.image, frame.size.width, frame.size.height, ROTATION_270)
+//        YuvImage(
+//            frame.image,
+//            ImageFormat.NV21,
+//            frame.size.width,
+//            frame.size.height,
+//            null
+//        ).let { yuvImage ->
+//            ByteArrayOutputStream().use { output ->
+//                yuvImage.compressToJpeg(
+//                    Rect(0, 0, frame.size.width, frame.size.height),
+//                    100,
+//                    output
+//                )
+//                output.toByteArray().apply {
+//                    BitmapFactory.decodeByteArray(this, 0, size)?.let { bitmap ->
+//                        process(
+//                            bitmap.rotate(90f).flip(
+//                                false, activeCamera == Camera.Front
+//                            )
+//                        )
+//                        bitmap.recycle()
+//                    }
+//                }
+//            }
+//        }
     }
 
     companion object {
@@ -250,6 +225,30 @@ class FaceActivity : AppCompatActivity(), FrameProcessor {
             val intent = Intent(cxt, FaceActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP or Intent.FLAG_ACTIVITY_CLEAR_TOP
             ActivityCompat.startActivity(cxt, intent, Bundle.EMPTY)
+        }
+
+        private fun Bitmap.flip(horizontal: Boolean, vertical: Boolean): Bitmap {
+            val matrix = Matrix()
+            matrix.preScale(
+                (if (horizontal) -1 else 1).toFloat(),
+                (if (vertical) -1 else 1).toFloat()
+            )
+            return Bitmap.createBitmap(this, 0, 0, width, height, matrix, true)
+        }
+
+        private fun Bitmap.rotate(degrees: Float): Bitmap {
+            val matrix = Matrix()
+            matrix.postRotate(degrees)
+            val scaledBitmap = Bitmap.createScaledBitmap(this, width, height, true)
+            return Bitmap.createBitmap(
+                scaledBitmap,
+                0,
+                0,
+                scaledBitmap.width,
+                scaledBitmap.height,
+                matrix,
+                true
+            )
         }
     }
 }
