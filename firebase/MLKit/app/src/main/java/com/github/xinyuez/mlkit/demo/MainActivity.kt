@@ -4,12 +4,15 @@ import android.Manifest
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.github.xinyuez.mlkit.demo.MainActivity.CameraBasedDemo.BARCODE
+import com.github.xinyuez.mlkit.demo.MainActivity.CameraBasedDemo.FACE
 import kotlinx.android.synthetic.clearFindViewByIdCache
 import kotlinx.android.synthetic.main.activity_main.main_appbar
 import pub.devrel.easypermissions.AfterPermissionGranted
 import pub.devrel.easypermissions.EasyPermissions
 
 class MainActivity : AppCompatActivity() {
+    private var cameraBasedDemo = CameraBasedDemo.FACE
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onDestroy() {
+        cameraBasedDemo = FACE
         super.onDestroy()
         clearFindViewByIdCache()
     }
@@ -29,23 +33,40 @@ class MainActivity : AppCompatActivity() {
 
     @Suppress("UNUSED_PARAMETER")
     fun openFace(v: View) {
-        openFaceWithPermissions()
+        cameraBasedDemo = FACE
+        openCameraBasedDemo()
+    }
+
+    @Suppress("UNUSED_PARAMETER")
+    fun openBarcode(v: View) {
+        cameraBasedDemo = BARCODE
+        openCameraBasedDemo()
     }
 
     @AfterPermissionGranted(PERMISSION)
-    private fun openFaceWithPermissions() {
+    private fun openCameraBasedDemo() {
         if (EasyPermissions.hasPermissions(this, Manifest.permission.CAMERA)) {
-            FaceActivity.showInstance(this)
+            when (cameraBasedDemo) {
+                FACE ->
+                    FaceActivity.showInstance(this)
+                BARCODE ->
+                    BarcodeActivity.showInstance(this)
+            }
         } else {
             EasyPermissions.requestPermissions(
-                    this,
-                    getString(R.string.camera_rationale),
-                    PERMISSION,
-                    Manifest.permission.CAMERA)
+                this,
+                getString(R.string.camera_rationale),
+                PERMISSION,
+                Manifest.permission.CAMERA
+            )
         }
     }
 
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<String>,
+        grantResults: IntArray
+    ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
 
         // Forward results to EasyPermissions
@@ -54,5 +75,9 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         private const val PERMISSION = 234
+    }
+
+    enum class CameraBasedDemo {
+        FACE(), BARCODE()
     }
 }
