@@ -26,7 +26,7 @@ buildscript {
             'firebaseMLVision'  : "17.0.0",
             'playServiceVersion': "4.0.1",
 
-            'ktlintVersion'     : "0.28.0",
+            'ktlintVersion'     : "0.29.0",
 
             'camera'            : "2.4.0",
             'permission'        : "2.0.1"
