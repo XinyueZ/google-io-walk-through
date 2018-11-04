@@ -13,11 +13,20 @@
 // limitations under the License.
 package com.github.xinyuez.mlkit.demo
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Canvas
 import android.util.AttributeSet
+import android.util.Log
+import android.view.GestureDetector.SimpleOnGestureListener
+import android.view.MotionEvent
 import android.view.View
+import androidx.annotation.MainThread
+import androidx.collection.ArrayMap
+import androidx.core.view.GestureDetectorCompat
 import com.github.xinyuez.mlkit.demo.GraphicOverlay.Graphic
+import com.github.xinyuez.mlkit.demo.GraphicOverlay.Graphic.OnGraphicClickListener
+import com.github.xinyuez.mlkit.demo.GraphicOverlay.GraphicOverlaySimpleOnGestureListener.clickListeners
 import java.util.HashSet
 
 /**
@@ -51,6 +60,33 @@ class GraphicOverlay(context: Context, attrs: AttributeSet) : View(context, attr
     private var heightScaleFactor = 1.8f
     private val graphics = HashSet<Graphic>()
     var activeCamera: Camera? = null
+
+    private val gestureDetector =
+        GestureDetectorCompat(context, GraphicOverlaySimpleOnGestureListener)
+
+    private object GraphicOverlaySimpleOnGestureListener : SimpleOnGestureListener() {
+        val clickListeners = ArrayMap<Graphic, OnGraphicClickListener>()
+
+        override fun onDown(event: MotionEvent?): Boolean {
+            Log.d("SimpleOnGestureListener", "onDown: $event")
+            return event?.let { ev ->
+                clickListeners.forEach { entry ->
+                    entry.key.let { graphic ->
+                        if (graphic.contains(ev.x, ev.y)) {
+                            entry.value.onClick(graphic)
+                        }
+                    }
+                }
+                true
+            } ?: kotlin.run { false }
+        }
+    }
+
+    @SuppressLint("ClickableViewAccessibility")
+    override fun onTouchEvent(event: MotionEvent?): Boolean {
+        gestureDetector.onTouchEvent(event)
+        return false
+    }
 
     /**
      * Base class for a custom graphics object to be rendered within the graphic overlay. Subclass
@@ -106,6 +142,23 @@ class GraphicOverlay(context: Context, attrs: AttributeSet) : View(context, attr
 
         fun postInvalidate() {
             overlay.postInvalidate()
+        }
+
+        open fun contains(x: Float, y: Float): Boolean = false
+
+        interface OnGraphicClickListener {
+            @MainThread
+            fun onClick(graphic: Graphic)
+        }
+
+        @MainThread
+        fun setListener(graphic: Graphic, listener: OnGraphicClickListener) {
+            clickListeners[graphic] = listener
+        }
+
+        @MainThread
+        fun removeListener() {
+            clickListeners.remove(this)
         }
     }
 
