@@ -6,11 +6,15 @@ import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.RectF
+import android.net.Uri.parse
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.annotation.MainThread
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import com.github.xinyuez.mlkit.demo.GraphicOverlay.Graphic
+import com.github.xinyuez.mlkit.demo.GraphicOverlay.Graphic.OnGraphicClickListener
 import com.google.firebase.ml.vision.FirebaseVision
 import com.google.firebase.ml.vision.barcode.FirebaseVisionBarcode
 import com.google.firebase.ml.vision.barcode.FirebaseVisionBarcodeDetector
@@ -27,8 +31,9 @@ import io.fotoapparat.selector.highestSensorSensitivity
 import io.fotoapparat.selector.off
 import io.fotoapparat.selector.torch
 import kotlinx.android.synthetic.clearFindViewByIdCache
+import kotlinx.android.synthetic.main.content_barcode.overlay
 import kotlinx.android.synthetic.main.content_face.camera_view
-import kotlinx.android.synthetic.main.content_face.overlay
+import java.lang.ref.WeakReference
 
 class BarcodeActivity : AppCompatActivity(), FrameProcessor {
     private var flashOn = false
@@ -115,7 +120,9 @@ class BarcodeActivity : AppCompatActivity(), FrameProcessor {
         overlay.clear()
 
         barcodes.forEach { barcode ->
-            overlay.add(BarcodeGraphic(overlay, barcode))
+            val graphic = BarcodeGraphic(overlay, barcode)
+            overlay.add(graphic)
+            graphic.setListener(graphic, LinkOpener(this, barcode))
         }
     }
 
@@ -128,6 +135,40 @@ class BarcodeActivity : AppCompatActivity(), FrameProcessor {
         )
     }
 
+    private class LinkOpener(activity: Activity, private val barcode: FirebaseVisionBarcode) :
+        OnGraphicClickListener {
+        private val activityWrapper = WeakReference(activity)
+
+        @MainThread
+        override fun onClick(graphic: Graphic) {
+            graphic.removeListener()
+
+            activityWrapper.get()?.let { activity ->
+                when (barcode.valueType) {
+                    FirebaseVisionBarcode.TYPE_URL -> {
+                        Intent(Intent.ACTION_VIEW, parse(barcode.url?.url)).apply {
+                            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
+                            ActivityCompat.startActivity(activity, this, Bundle.EMPTY)
+                        }
+                    }
+                    else -> {
+                        activity.runOnUiThread {
+                            Intent(
+                                Intent.ACTION_VIEW, parse(
+                                    "https://www.ean-search.org/?q=${barcode.displayValue}/"
+                                )
+                            ).apply {
+                                flags = Intent.FLAG_ACTIVITY_NEW_TASK or
+                                        Intent.FLAG_ACTIVITY_CLEAR_TOP
+                                ActivityCompat.startActivity(activity, this, Bundle.EMPTY)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     companion object {
         internal const val TAG = "mlkit-barcode"
         internal fun showInstance(cxt: Activity) {
@@ -138,8 +179,9 @@ class BarcodeActivity : AppCompatActivity(), FrameProcessor {
     }
 }
 
-//https://github.com/firebase/quickstart-android/blob/master/mlkit/app/src/main/java/com/google/firebase/samples/apps/mlkit/kotlin/barcodescanning/BarcodeGraphic.kt
-private class BarcodeGraphic(overlay: GraphicOverlay, barcode: FirebaseVisionBarcode) : GraphicOverlay.Graphic(overlay) {
+// https://github.com/firebase/quickstart-android/blob/master/mlkit/app/src/main/java/com/google/firebase/samples/apps/mlkit/kotlin/barcodescanning/BarcodeGraphic.kt
+private class BarcodeGraphic(overlay: GraphicOverlay, barcode: FirebaseVisionBarcode) :
+    GraphicOverlay.Graphic(overlay) {
 
     companion object {
         private const val TEXT_COLOR = Color.RED
@@ -150,6 +192,8 @@ private class BarcodeGraphic(overlay: GraphicOverlay, barcode: FirebaseVisionBar
     private var rectPaint: Paint
     private var barcodePaint: Paint
     private val barcode: FirebaseVisionBarcode?
+
+    private var rect: RectF? = null
 
     init {
         this.barcode = barcode
@@ -175,16 +219,19 @@ private class BarcodeGraphic(overlay: GraphicOverlay, barcode: FirebaseVisionBar
         }
 
         // Draws the bounding box around the BarcodeBlock.
-        val rect = RectF(barcode.boundingBox)
-        rect.left = translateX(rect.left)
-        rect.top = translateY(rect.top)
-        rect.right = translateX(rect.right)
-        rect.bottom = translateY(rect.bottom)
-        canvas.drawRect(rect, rectPaint)
+        rect = RectF(barcode.boundingBox).apply {
+            left = translateX(left)
+            top = translateY(top)
+            right = translateX(right)
+            bottom = translateY(bottom)
+            canvas.drawRect(this, rectPaint)
 
-        // Renders the barcode at the bottom of the box.
-        barcode.rawValue?.let { value ->
-            canvas.drawText(value, rect.left, rect.bottom, barcodePaint)
+            // Renders the barcode at the bottom of the box.
+            barcode.rawValue?.let { value ->
+                canvas.drawText(value, left, bottom, barcodePaint)
+            }
         }
     }
+
+    override fun contains(x: Float, y: Float) = rect?.contains(x, y) ?: false
 }

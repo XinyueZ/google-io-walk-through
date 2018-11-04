@@ -44,6 +44,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
     implementation "androidx.appcompat:appcompat:${versions.appcompat}"
+    implementation "androidx.annotation:annotation:${versions.annotation}"
     implementation "androidx.core:core-ktx:${versions.ktxCore}"
     implementation "androidx.constraintlayout:constraintlayout:${versions.constraintlayout}"
     implementation "com.google.android.material:material:${versions.design}"
@@ -53,6 +54,7 @@ dependencies {
 
     implementation "com.google.firebase:firebase-core:${versions.firebase}"
     implementation "com.google.firebase:firebase-ml-vision:${versions.firebaseMLVision}"
+    implementation "com.google.firebase:firebase-ml-vision-face-model:${versions.faceModel}"
 
     testImplementation "junit:junit:${versions.junit}"
     androidTestImplementation "androidx.test:rules:${versions.testRules}"
