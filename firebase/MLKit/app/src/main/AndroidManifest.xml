@@ -44,7 +44,7 @@
 
         <activity
             android:name=".BarcodeActivity"
-            android:label="@string/face"
+            android:label="@string/barcode"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.TransStatus"/>
 

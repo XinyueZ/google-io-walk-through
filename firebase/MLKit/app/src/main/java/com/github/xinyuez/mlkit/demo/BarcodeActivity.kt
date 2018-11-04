@@ -116,7 +116,6 @@ class BarcodeActivity : AppCompatActivity(), FrameProcessor {
     }
 
     private fun process(barcodes: List<FirebaseVisionBarcode>) {
-        Log.d(BarcodeActivity.TAG, "barcodes: $barcodes")
         overlay.clear()
 
         barcodes.forEach { barcode ->
@@ -146,9 +145,11 @@ class BarcodeActivity : AppCompatActivity(), FrameProcessor {
             activityWrapper.get()?.let { activity ->
                 when (barcode.valueType) {
                     FirebaseVisionBarcode.TYPE_URL -> {
-                        Intent(Intent.ACTION_VIEW, parse(barcode.url?.url)).apply {
-                            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
-                            ActivityCompat.startActivity(activity, this, Bundle.EMPTY)
+                        barcode.url?.url?.let { openUrl ->
+                            Intent(Intent.ACTION_VIEW, parse(openUrl)).apply {
+                                flags = intentFlags
+                                ActivityCompat.startActivity(activity, this, Bundle.EMPTY)
+                            }
                         }
                     }
                     else -> {
@@ -158,8 +159,7 @@ class BarcodeActivity : AppCompatActivity(), FrameProcessor {
                                     "https://www.ean-search.org/?q=${barcode.displayValue}/"
                                 )
                             ).apply {
-                                flags = Intent.FLAG_ACTIVITY_NEW_TASK or
-                                        Intent.FLAG_ACTIVITY_CLEAR_TOP
+                                flags = intentFlags
                                 ActivityCompat.startActivity(activity, this, Bundle.EMPTY)
                             }
                         }
@@ -176,6 +176,9 @@ class BarcodeActivity : AppCompatActivity(), FrameProcessor {
             intent.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP or Intent.FLAG_ACTIVITY_CLEAR_TOP
             ActivityCompat.startActivity(cxt, intent, Bundle.EMPTY)
         }
+
+        internal const val intentFlags = Intent.FLAG_ACTIVITY_NEW_TASK or
+                Intent.FLAG_ACTIVITY_CLEAR_TOP
     }
 }
 
