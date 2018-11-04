@@ -48,10 +48,10 @@ class FaceActivity : AppCompatActivity(), FrameProcessor {
 
     private val options by lazy {
         FirebaseVisionFaceDetectorOptions.Builder()
-            .setModeType(FirebaseVisionFaceDetectorOptions.ACCURATE_MODE)
-            .setLandmarkType(FirebaseVisionFaceDetectorOptions.ALL_LANDMARKS)
-            .setClassificationType(FirebaseVisionFaceDetectorOptions.ALL_CLASSIFICATIONS)
-            .setTrackingEnabled(true)
+            .setPerformanceMode(FirebaseVisionFaceDetectorOptions.ACCURATE)
+            .setLandmarkMode(FirebaseVisionFaceDetectorOptions.ALL_LANDMARKS)
+            .setClassificationMode(FirebaseVisionFaceDetectorOptions.ALL_CLASSIFICATIONS)
+            .enableTracking()
             .build()
     }
 
@@ -382,16 +382,16 @@ private class FaceGraphic(overlay: GraphicOverlay) : GraphicOverlay.Graphic(over
         canvas.drawRect(left, top, right, bottom, boxPaint)
 
         // draw landmarks
-        drawLandmarkPosition(canvas, face, FirebaseVisionFaceLandmark.BOTTOM_MOUTH)
+        drawLandmarkPosition(canvas, face, FirebaseVisionFaceLandmark.MOUTH_BOTTOM)
         drawLandmarkPosition(canvas, face, FirebaseVisionFaceLandmark.LEFT_CHEEK)
         drawLandmarkPosition(canvas, face, FirebaseVisionFaceLandmark.LEFT_EAR)
-        drawLandmarkPosition(canvas, face, FirebaseVisionFaceLandmark.LEFT_MOUTH)
+        drawLandmarkPosition(canvas, face, FirebaseVisionFaceLandmark.MOUTH_LEFT)
         drawLandmarkPosition(canvas, face, FirebaseVisionFaceLandmark.LEFT_EYE)
         drawLandmarkPosition(canvas, face, FirebaseVisionFaceLandmark.NOSE_BASE)
         drawLandmarkPosition(canvas, face, FirebaseVisionFaceLandmark.RIGHT_CHEEK)
         drawLandmarkPosition(canvas, face, FirebaseVisionFaceLandmark.RIGHT_EAR)
         drawLandmarkPosition(canvas, face, FirebaseVisionFaceLandmark.RIGHT_EYE)
-        drawLandmarkPosition(canvas, face, FirebaseVisionFaceLandmark.RIGHT_MOUTH)
+        drawLandmarkPosition(canvas, face, FirebaseVisionFaceLandmark.MOUTH_RIGHT)
     }
 
     private fun drawLandmarkPosition(canvas: Canvas, face: FirebaseVisionFace, landmarkID: Int) {
