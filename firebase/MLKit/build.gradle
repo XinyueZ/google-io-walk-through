@@ -28,7 +28,7 @@ buildscript {
             'faceModel'         : "17.0.2",
             'playServiceVersion': "4.3.0",
 
-            'ktlintVersion'     : "0.29.0",
+            'ktlintVersion'     : "0.33.0",
 
             'camera'            : "2.4.0",
             'permission'        : "2.0.1"
@@ -51,7 +51,7 @@ buildscript {
 }
 
 plugins {
-    id "com.diffplug.gradle.spotless" version "3.13.0"
+    id "com.diffplug.gradle.spotless" version "3.23.1"
 }
 
 allprojects {
