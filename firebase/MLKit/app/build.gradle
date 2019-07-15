@@ -52,9 +52,11 @@ dependencies {
     implementation "io.fotoapparat:fotoapparat:${versions.camera}"
     implementation "com.github.xinyuez:easypermissions:${versions.permission}"
 
-    implementation "com.google.firebase:firebase-core:${versions.firebaseCore}"
     implementation "com.google.firebase:firebase-ml-vision:${versions.firebaseMLVision}"
     implementation "com.google.firebase:firebase-ml-vision-face-model:${versions.firebaseFaceModel}"
+    implementation "com.google.firebase:firebase-ml-model-interpreter:${versions.firebaseModelInterpreter}"
+    implementation "com.google.firebase:firebase-ml-vision-object-detection-model:${versions.firebaseObjectDetection}"
+    implementation "com.google.firebase:firebase-ml-vision-automl:${versions.firebaseAutoML}"
 
     testImplementation "junit:junit:${versions.junit}"
     androidTestImplementation "androidx.test:rules:${versions.testRules}"
