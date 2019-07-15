@@ -34,6 +34,13 @@ android {
     lintOptions {
         warningsAsErrors true
     }
+    aaptOptions {
+        noCompress "tflite"  // Your model's file extension: "tflite", "lite", etc.
+    }
+    packagingOptions {
+        exclude 'META-INF/androidx.exifinterface_exifinterface.version'
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+    }
 }
 
 configurations.all {
