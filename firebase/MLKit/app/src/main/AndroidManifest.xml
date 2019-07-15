@@ -17,7 +17,7 @@
         <!--Download ML models while the app downloading from store.-->
         <meta-data
             android:name="com.google.firebase.ml.vision.DEPENDENCIES"
-            android:value="ocr,label,barcode,face"/>
+            android:value="ocr,label,barcode,face,ica"/>
         <!--More models is at moment not available, i.e landmarks must be called from cloud.-->
 
         <activity
