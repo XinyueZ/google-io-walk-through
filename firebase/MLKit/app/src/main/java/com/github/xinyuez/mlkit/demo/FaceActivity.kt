@@ -33,12 +33,9 @@ import io.fotoapparat.selector.front
 import io.fotoapparat.selector.highestSensorSensitivity
 import io.fotoapparat.selector.off
 import io.fotoapparat.selector.torch
-import kotlinx.android.synthetic.clearFindViewByIdCache
-import kotlinx.android.synthetic.main.activity_face.function_toggle
-import kotlinx.android.synthetic.main.content_face.camera_view
-import kotlinx.android.synthetic.main.content_face.msg_tv
-import kotlinx.android.synthetic.main.content_face.overlay
-import kotlinx.android.synthetic.main.content_face.snapshot_iv
+import kotlinx.android.synthetic.*
+import kotlinx.android.synthetic.main.activity_face.*
+import kotlinx.android.synthetic.main.content_face.*
 import java.io.ByteArrayOutputStream
 
 class FaceActivity : AppCompatActivity(), FrameProcessor {
@@ -152,7 +149,7 @@ class FaceActivity : AppCompatActivity(), FrameProcessor {
         if (DEBUG) {
             runOnUiThread {
                 snapshot_iv.visibility = View.VISIBLE
-                snapshot_iv.setImageBitmap(firebaseVisionBitmap.bitmapForDebugging)
+                snapshot_iv.setImageBitmap(firebaseVisionBitmap.bitmap)
             }
         }
     }
