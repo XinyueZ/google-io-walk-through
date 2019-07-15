@@ -4,15 +4,16 @@ import android.Manifest
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.github.xinyuez.mlkit.demo.MainActivity.CameraBasedDemo.AUTOML
 import com.github.xinyuez.mlkit.demo.MainActivity.CameraBasedDemo.BARCODE
 import com.github.xinyuez.mlkit.demo.MainActivity.CameraBasedDemo.FACE
-import kotlinx.android.synthetic.clearFindViewByIdCache
-import kotlinx.android.synthetic.main.activity_main.main_appbar
+import kotlinx.android.synthetic.*
+import kotlinx.android.synthetic.main.activity_main.*
 import pub.devrel.easypermissions.AfterPermissionGranted
 import pub.devrel.easypermissions.EasyPermissions
 
 class MainActivity : AppCompatActivity() {
-    private var cameraBasedDemo = CameraBasedDemo.FACE
+    private var cameraBasedDemo = FACE
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +44,12 @@ class MainActivity : AppCompatActivity() {
         openCameraBasedDemo()
     }
 
+    @Suppress("UNUSED_PARAMETER")
+    fun openAutoML(v: View) {
+        cameraBasedDemo = AUTOML
+        openCameraBasedDemo()
+    }
+
     @AfterPermissionGranted(PERMISSION)
     private fun openCameraBasedDemo() {
         if (EasyPermissions.hasPermissions(this, Manifest.permission.CAMERA)) {
@@ -51,6 +58,8 @@ class MainActivity : AppCompatActivity() {
                     FaceActivity.showInstance(this)
                 BARCODE ->
                     BarcodeActivity.showInstance(this)
+                AUTOML ->
+                    AutoMLActivity.showInstance(this)
             }
         } else {
             EasyPermissions.requestPermissions(
@@ -78,6 +87,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     enum class CameraBasedDemo {
-        FACE(), BARCODE()
+        FACE, BARCODE, AUTOML
     }
 }

@@ -48,6 +48,12 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.TransStatus"/>
 
+        <activity
+            android:name=".AutoMLActivity"
+            android:label="@string/automl"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TransStatus"/>
+
     </application>
 
 </manifest>
