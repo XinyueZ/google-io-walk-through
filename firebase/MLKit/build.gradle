@@ -25,8 +25,6 @@ buildscript {
 
             'firebaseMLVision'         : "22.0.0",
             'firebaseFaceModel'        : "18.0.0",
-            'firebaseModelInterpreter' : "20.0.1",
-            'firebaseObjectDetection'  : "18.0.0",
             'firebaseAutoML'           : "18.0.0",
 
             'playServiceVersion'       : "4.3.0",
