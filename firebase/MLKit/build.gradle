@@ -2,36 +2,37 @@
 
 buildscript {
     ext.versions = [
-            'compileSdk'        : 28,
-            'minSdk'            : 16,
-            'targetSdk'         : 28,
-            'versionName'       : "1.0",
-            'versionCode'       : "1",
+            'compileSdk'               : 28,
+            'minSdk'                   : 16,
+            'targetSdk'                : 28,
+            'versionName'              : "1.0",
+            'versionCode'              : "1",
 
-            'appcompat'         : "1.0.2",
-            'design'            : "1.0.0",
-            'annotation'        : "1.0.0",
-            'constraintlayout'  : "1.1.3",
+            'appcompat'                : "1.0.2",
+            'design'                   : "1.0.0",
+            'annotation'               : "1.0.0",
+            'constraintlayout'         : "1.1.3",
 
-            'ktxCore'           : "1.0.2",
+            'ktxCore'                  : "1.0.2",
 
-            'junit'             : "4.12",
-            'testRules'         : "1.1.0-alpha4",
-            'testRunner'        : "1.1.0-alpha4",
-            'espressoCore'      : "3.1.0-alpha4",
+            'junit'                    : "4.12",
+            'testRules'                : "1.1.0-alpha4",
+            'testRunner'               : "1.1.0-alpha4",
+            'espressoCore'             : "3.1.0-alpha4",
 
-            'kotlin'            : "1.3.41",
-            'gradle'            : "3.4.2",
+            'kotlin'                   : "1.3.41",
+            'gradle'                   : "3.4.2",
 
-            'firebaseCore'      : "17.0.1",
-            'firebaseMLVision'  : "22.0.0",
-            'firebaseFaceModel' : "18.0.0",
-            'playServiceVersion': "4.3.0",
+            'firebaseMLVision'         : "22.0.0",
+            'firebaseFaceModel'        : "18.0.0",
+            'firebaseAutoML'           : "18.0.0",
 
-            'ktlintVersion'     : "0.33.0",
+            'playServiceVersion'       : "4.3.0",
 
-            'camera'            : "2.4.0",
-            'permission'        : "2.0.1"
+            'ktlintVersion'            : "0.33.0",
+
+            'camera'                   : "2.4.0",
+            'permission'               : "2.0.1"
     ]
     ext.names = [
             'applicationId'            : "com.github.xinyuez.mlkit.demo",

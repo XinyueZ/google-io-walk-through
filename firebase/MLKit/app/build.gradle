@@ -34,6 +34,13 @@ android {
     lintOptions {
         warningsAsErrors true
     }
+    aaptOptions {
+        noCompress "tflite"  // Your model's file extension: "tflite", "lite", etc.
+    }
+    packagingOptions {
+        exclude 'META-INF/androidx.exifinterface_exifinterface.version'
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+    }
 }
 
 configurations.all {
@@ -52,9 +59,9 @@ dependencies {
     implementation "io.fotoapparat:fotoapparat:${versions.camera}"
     implementation "com.github.xinyuez:easypermissions:${versions.permission}"
 
-    implementation "com.google.firebase:firebase-core:${versions.firebaseCore}"
     implementation "com.google.firebase:firebase-ml-vision:${versions.firebaseMLVision}"
     implementation "com.google.firebase:firebase-ml-vision-face-model:${versions.firebaseFaceModel}"
+    implementation "com.google.firebase:firebase-ml-vision-automl:${versions.firebaseAutoML}"
 
     testImplementation "junit:junit:${versions.junit}"
     androidTestImplementation "androidx.test:rules:${versions.testRules}"

@@ -17,7 +17,7 @@
         <!--Download ML models while the app downloading from store.-->
         <meta-data
             android:name="com.google.firebase.ml.vision.DEPENDENCIES"
-            android:value="ocr,label,barcode,face"/>
+            android:value="ocr,barcode,face"/>
         <!--More models is at moment not available, i.e landmarks must be called from cloud.-->
 
         <activity
@@ -45,6 +45,12 @@
         <activity
             android:name=".BarcodeActivity"
             android:label="@string/barcode"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TransStatus"/>
+
+        <activity
+            android:name=".AutoMLActivity"
+            android:label="@string/automl"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.TransStatus"/>
 

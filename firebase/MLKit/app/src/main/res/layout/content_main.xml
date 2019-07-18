@@ -40,4 +40,15 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/face_btn"/>
+
+    <Button
+        android:id="@+id/automl_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="openAutoML"
+        android:text="@string/automl"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barcode_btn"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
